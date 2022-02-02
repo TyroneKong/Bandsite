@@ -18,6 +18,27 @@ header {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.main-nav {
+  background-color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .main-nav {
+    padding: 1.875rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .main-nav {
+    padding: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav-section {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -31,32 +52,45 @@ header {
 }
 
 .logo__image {
-  width: 12.5rem;
-  height: 6.25rem;
+  width: 120px;
+  height: 20px;
   background-position: center;
 }
 @media screen and (min-width: 48rem) {
   .logo__image {
-    margin: 1.25rem;
+    margin: 1.25rem 0 0 5rem;
   }
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-evenly;
-  color: #ffff;
+  font-size: 14px;
+  justify-content: space-around;
+  height: 30px;
 }
 @media screen and (min-width: 48rem) {
   .nav-list {
-    justify-content: space-evenly;
+    height: 80px;
+    margin-left: 50px;
+    display: flex;
     position: relative;
-    bottom: 90px;
+    bottom: -1rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .nav-list {
+    margin-left: 70px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    bottom: -1rem;
   }
 }
 
 .nav-list a {
-  color: #ffff;
+  color: #e1e1e1;
   text-decoration: none;
+  font-family: "Avenir Next Regular";
 }
 @media screen and (min-width: 48rem) {
   .nav-list a {
@@ -69,9 +103,48 @@ header {
   display: flex;
 }
 
+@media screen and (min-width: 48rem) {
+  .bio {
+    height: 5.625rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .bio {
+    height: 4.375rem;
+    margin-left: 30px;
+    position: relative;
+  }
+}
+
+.bio:hover {
+  font-weight: bold;
+  border-bottom: 1px solid #ffff;
+}
+
+.shows:hover {
+  font-weight: bold;
+  border-bottom: 1px solid #ffff;
+}
+
 .bio:active {
-  -webkit-text-decoration: #ffff;
-          text-decoration: #ffff;
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
+}
+
+@media screen and (min-width: 48rem) {
+  .shows {
+    height: 5.625rem;
+    margin-left: 30px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .shows {
+    height: 4.375rem;
+    margin-left: 30px;
+    position: relative;
+  }
 }
 
 .hero-section__image {
@@ -82,45 +155,58 @@ header {
 .hero__title {
   font-size: 1.5rem;
   color: #ffff;
-  position: relative;
-  top: -14rem;
+  position: absolute;
+  top: 10rem;
+  left: 20px;
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
     font-family: "Avenir Next Demi";
-    font-size: 2.25rem;
-    position: relative;
-    top: -34rem;
+    font-size: 3.75rem;
+    position: absolute;
+    left: 20px;
+    top: 20rem;
   }
 }
+@media screen and (min-width: 80.625rem) {
+  .hero__title {
+    font-family: "Avenir Next Demi";
+    font-size: 60px;
+    position: absolute;
+    top: 40rem;
+  }
+}
+
 .hero__flower-image {
   max-width: 100%;
   background-color: #323232;
 }
 
 .about-section {
-  margin-top: -60px;
+  margin-top: 24px;
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
   .about-section {
+    margin-top: 48px;
     display: flex;
     justify-content: center;
     padding: 1.5rem;
   }
 }
-
 @media screen and (min-width: 48rem) {
   .band__image {
     display: flex;
     justify-content: center;
+    margin: 16px;
   }
 }
 
 .info__quote {
   font-family: "Avenir Next Regular";
   font-weight: bold;
+  margin: 16px;
 }
 @media screen and (min-width: 48rem) {
   .info__quote {
@@ -166,18 +252,19 @@ header {
 .about__title {
   font-size: 14px;
   line-height: 22px;
+  margin: 16px;
 }
 @media screen and (min-width: 48rem) {
   .about__title {
     font-family: "Avenir Next Demi";
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     line-height: 32px;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .about__title {
     font-family: "Avenir Next Demi";
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     line-height: 32px;
     position: relative;
     left: 100px;
@@ -232,6 +319,10 @@ header {
   }
 }
 
+.photo-gallery {
+  background-color: #FAFAFA;
+}
+
 @media screen and (min-width: 48rem) {
   .photo-gallery--container {
     display: flex;
@@ -249,6 +340,7 @@ header {
 footer {
   background-color: #323232;
   color: #ffff;
+  padding: 16px;
 }
 
 .footer-main-title {
@@ -278,6 +370,8 @@ footer {
 }
 @media screen and (min-width: 48rem) {
   .footer-content {
+    display: flex;
+    justify-content: space-between;
     font-family: "Avenir Next Regular";
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -298,40 +392,22 @@ footer span {
 @media screen and (min-width: 48rem) {
   .footer--info {
     display: flex;
-    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .footer__get-in-touch {
+    display: flex;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .footer--info {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .footer--logo {
+  .footer__get-in-touch {
     display: flex;
   }
 }
 
-@media screen and (min-width: 48rem) {
-  .social-icons {
-    position: relative;
-    bottom: -1.5rem;
-    left: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .cam-adams,
-.Pearl-Gregg {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .facebook,
 .twitter {
-  margin-left: 1.875rem;
+  margin-left: 20px;
 }
 
 .instagram {
@@ -339,8 +415,8 @@ footer span {
 }
 
 .footer-logo {
-  width: 12.5rem;
-  height: 6.25rem;
+  width: 7.5rem;
+  height: 1.25rem;
   background-position: left;
 }
 

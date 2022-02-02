@@ -32,26 +32,29 @@ header {
   }
 }
 
-// h2 {
-//   font-size: 2rem;
-//   font-weight: 700;
 
-//   @include tablet {
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//   }
 
-//   @include desktop {
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//   }
-// }
+.main-nav{
+    background-color: $bandsite-black;
+  @include tablet{
+    padding: 1.875rem;
+  }
+  @include desktop{
+    padding: 1.875rem;
+  }
+}
 
-// h3 {
-//   font-size: 1.5rem;
-// }
+.nav-section{
+    @include tablet{
+        display: flex;
+ 
+        justify-content: flex-start;
+    }
+}
+
 
 .logo {
+    
   display: flex;
   justify-content: center;
   background-color: $bandsite-black;
@@ -62,30 +65,41 @@ header {
 }
 
 .logo__image {
-  width: 12.5rem;
-  height: 6.25rem;
+    width: 120px;
+    height: 20px;
 
   background-position: center;
   @include tablet {
-    margin: 1.25rem;
+    margin: 1.25rem 0 0 5rem;
   }
 }
 
 .nav-list {
-//   background-color: $bandsite-black;
   display: flex;
-  justify-content: space-evenly;
-  color: #ffff;
-  @include tablet {
-    justify-content: space-evenly;
+  font-size: 14px;
+  justify-content: space-around;
+  height: 30px;
+ 
+  @include tablet{
+    height: 80px;
+    margin-left: 50px;
+    display: flex;
     position: relative;
-    bottom: 90px;
+    bottom: -1rem;
+}
+  @include desktop{
+    margin-left: 70px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    bottom: -1rem;
   }
 }
 
 .nav-list a {
-  color: $primary-text-color;
+  color: $mercury;
   text-decoration: none;
+  font-family: 'Avenir Next Regular';
 
   @include tablet {
     display: flex;
@@ -95,10 +109,52 @@ header {
 .nav-list > ul {
   list-style: none;
   display: flex;
+  
 }
 
-.bio:active {
-  text-decoration: $primary-text-color;
+.bio {
+    @include tablet{
+        height: 5.625rem;
+        position: relative;
+    
+    }
+    @include desktop{
+        height:4.375rem ;
+        margin-left: 30px;
+        position: relative;
+       }
+}
+
+.bio:hover{
+    font-weight:bold;
+    border-bottom:1px solid #ffff;
+}
+
+.shows:hover{
+    font-weight: bold;
+    border-bottom:1px solid #ffff;
+}
+
+.bio:active{
+    color:$primary-text-color;
+    border-bottom:1px solid #ffff;
+
+}
+
+
+.shows{
+    @include tablet{
+        height:5.625rem ;
+        margin-left: 30px;
+        position: relative;
+        
+    }
+   @include desktop{
+    height:4.375rem ;
+    margin-left: 30px;
+    position: relative;
+   }
+
 }
 
 .hero-section__image {
@@ -109,15 +165,21 @@ header {
 .hero__title {
   font-size: 1.5rem;
   color: $primary-text-color;
-  position: relative;
-  top: -14rem;
+  position: absolute;
+  top: 10rem;
+  left: 20px;
   @include tablet {
     font-family: "Avenir Next Demi";
-    font-size: 2.25rem;
-    position: relative;
-    top: -34rem;
+    font-size: 3.75rem;
+    position: absolute;
+    left: 20px;
+    top: 20rem;
   }
   @include desktop {
+    font-family: "Avenir Next Demi";
+    font-size: 60px;
+    position: absolute;
+    top: 40rem;
   }
 }
 
@@ -127,26 +189,32 @@ header {
 }
 
 .about-section {
-  margin-top: -60px;
+  margin-top: 24px;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   @include tablet {
+      margin-top: 48px;
     display: flex;
     justify-content: center;
     padding: 1.5rem;
   }
+    @include desktop{
+
+    }  
 }
 
 .band__image {
   @include tablet {
     display: flex;
     justify-content: center;
+    margin: 16px;
   }
 }
 
 .info__quote {
   font-family: "Avenir Next Regular";
   font-weight: bold;
+  margin: 16px;
   @include tablet {
       font-size: 1.5rem;
       line-height: 2rem;
@@ -183,14 +251,15 @@ header {
 .about__title {
   font-size: 14px;
   line-height: 22px;
-  @include tablet {
+  margin: 16px; 
+   @include tablet {
     font-family: "Avenir Next Demi";
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     line-height: 32px;
   }
   @include desktop {
     font-family: "Avenir Next Demi";
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     line-height: 32px;
     position: relative;
     left: 100px;
@@ -237,6 +306,10 @@ header {
   }
 }
 
+.photo-gallery{
+    background-color: $alabasta;
+}
+
 .photo-gallery--container {
   @include tablet {
     display: flex;
@@ -252,6 +325,8 @@ header {
 footer {
   background-color: $bandsite-black;
   color: $primary-text-color;
+  padding: 16px;
+
 }
 
 .footer-main-title {
@@ -276,6 +351,9 @@ footer {
   line-height: 1.125rem;
   margin-left: 1rem;
   @include tablet {
+      display: flex;
+      justify-content: space-between;
+
     font-family: "Avenir Next Regular";
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -295,33 +373,40 @@ footer span {
 .footer--info {
   @include tablet {
     display: flex;
-    justify-content: space-between;
   }
   @include desktop {
-    display: flex;
-    justify-content: space-around;
+
   }
 }
 
 .footer--logo {
+
   @include tablet {
-    display: flex;
+
   }
+}
+
+.footer__get-in-touch{
+    @include tablet{
+      display: flex;
+
+    }
+    @include desktop{
+    display: flex;
+    }
+    
 }
 
 .social-icons {
   @include tablet {
-    position: relative;
-    bottom: -1.5rem;
-    left: 1.25rem;
+  
   }
 }
 
 .cam-adams,
 .Pearl-Gregg {
   @include tablet {
-    display: flex;
-    flex-direction: column;
+
   }
   @include desktop{
       
@@ -330,7 +415,7 @@ footer span {
 
 .facebook,
 .twitter {
-  margin-left: 1.875rem;
+  margin-left: 20px;
 }
 
 .instagram {
@@ -338,12 +423,19 @@ footer span {
 }
 
 .footer-logo {
-  width: 12.5rem;
-  height: 6.25rem;
+    width: 7.5rem;
+    height: 1.25rem;
 
   background-position: left;
 }
 
 .footer-logo p {
+   
   background: $bandsite-black;
+  @include tablet{
+
+  }
+  @include desktop{
+
+  }
 }
