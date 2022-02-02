@@ -2,52 +2,112 @@
 @use './partials/mixin' as *;
 @use './partials/variables' as *;
 
-*{
-    box-sizing: border-box;
-}
-
 
     @font-face {
-        font-family: 'Avenir';
+        font-family: 'Avenir Next Regular';
         src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
     }
 
 
     @font-face {
-        font-family: 'Avenir';
+        font-family: 'Avenir Next Demi';
         src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
     }
 
     @font-face {
-        font-family: 'Avenir';
+        font-family: 'Avenir Next Bold';
         src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+
+        
     }
 ///////////////////////////////////////
 
+
+body{
+    @include tablet{
+   
+        
+        font-size: .875rem;
+    }
+    @include desktop{
+        
+      
+}
+}
+
+header{
+    font-size: 24px;
+    line-height: 32px;
+    
+    @include tablet{
+        
+    }
+    @include desktop{
+      
+    }
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    
+    @include tablet{
+        font-size: 24px;
+        line-height: 32px;
+        
+    }
+   
+    @include desktop{
+        font-size: 24px;
+        line-height: 32px;
+        
+    }
+}
+
+h3{
+    font-size: 1.5rem;
+ 
+}
 
 .logo{
     display: flex;
     justify-content: center;
     background-color: #323232;
+    @include tablet{
+        display:flex;
+        justify-content: flex-start 
+    }
 }
 
 .logo__image{
-    width: 200px;
-    height: 100px;
+    width: 12.5rem;
+    height: 6.25rem;
 
     background-position: center;
 }
 
+
 .nav-list{
-    color: #ffff;
     background-color: #323232;
     display: flex;
-    align-items: flex-end;
-    list-style: none;
+    justify-content: space-evenly;
 }
 
-.nav-list ul{ 
-    display: flex;
+.nav-list a{
+    color: #ffff;
+    text-decoration: none;
+    
+    @include tablet{
+        display: flex;
+
+    }
+}
+
+
+.nav-list >ul{
+    list-style: none;
+    display: flex
+    
 }
 
 
@@ -57,80 +117,149 @@
 }
 
 .hero__title{
-font-size: 24px;
+font-size: 2.25rem;
 color: #ffff;
 position: relative;
-top: 200px;
+top: -14rem;
+@include tablet{
+font-family: 'Avenir Next Demi';
+}
+@include desktop{
+    
+}
 }
 
-.flower-image{
+.hero__flower-image{
     max-width: 100%;
 }
 
 .about-section{
-    margin-top: 24px;
+    margin-top: -3.5rem;
+    margin-left: 1rem;
+
+    font-size: 13px;
+    line-height: 1.125rem;
+}
+.info__quote{
+    font-family:'Avenir Next Regular' ;
+    font-weight: bold;
+}
+
+.about__paragraph{
+    @include tablet{
+        font-size: 14px;
+        line-height: 32px;
+        font-family: 'Avenir Next Regular';
+        text-align: justify;
+        -webkit-columns: 15.625rem 2;
+    }
 }
 
 
+.about__title{
+    @include tablet{
+        font-family: 'Avenir Next Demi';
+    }
 
-.band-image{
+}
+.band__image{
     max-width: 100%;
 }
 
 
 .photo {
-    margin-top: 16px;
-    max-width: 100%;
+    margin:16px;
     display: flex;
     flex-direction: column;
+    @include tablet{
+    width: 33.33%;
+
+          
+    }
 }
 
+.photo-title{
+    font-family: 'Avenir Next Demi';
+}
+
+
+.photo-gallery--container{
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+    
+    }
+}
 
 
 footer{
     background-color: #323232;
     color: #ffff;
+
+    
 }
 
 .footer-main-title{
     color: #ffff;
-}
-
-//tablet
-@media (min-width:768px) {
-body{
-    background-color: red
-}
-.logo{
-    display:flex;
-    justify-content: flex-start 
-}
-.photo {
-    margin-top: 16px;
-    max-width: 100%;
-}
-.about__paragraph{
-    text-align: justify;
-    -webkit-columns: 250px 2;
-}
-
-.photo-gallery--container{
+    position: relative;
+    bottom: -10px;
+    @include tablet{
     display: flex;
-    flex-wrap: wrap;
- 
-
-};
-
-
-
-
+    }
+   
 }
 
+.footer-content{
+    font-family: 'Avenir Next Regular';
+    font-size: 13px;
+    line-height: 18px;
+    margin-left: 16px;
+    @include tablet{
+    
 
-//desktop
-@media(min-width:1280px){
-    body{
-        background-color: green;
     }
 
 }
+
+footer span{
+    font-weight: bold;
+}
+
+.footer--info{
+    @include tablet{
+ display: flex;
+    justify-content: space-evenly;
+    }
+   
+}
+
+
+.cam-adams, .Pearl-Gregg{
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+.facebook, .twitter{
+    margin-left: 30px;
+
+}
+
+.instagram{
+    margin-left: 5px;
+}
+
+.footer-logo{
+    width: 12.5rem;
+    height: 6.25rem;
+
+    background-position: left;
+}
+
+.footer-logo p{
+    background: #323232;
+}
+
