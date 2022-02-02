@@ -11,38 +11,13 @@
   src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 body {
-  margin-left: 50px;
+  position: relative;
 }
-@media screen and (min-width: 48rem) {
-  body {
-    font-size: 0.875rem;
-  }
-}
+
 header {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 48rem) {
-  h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
 .logo {
   display: flex;
   justify-content: center;
@@ -67,13 +42,15 @@ h3 {
 }
 
 .nav-list {
-  background-color: #323232;
   display: flex;
   justify-content: space-evenly;
+  color: #ffff;
 }
 @media screen and (min-width: 48rem) {
   .nav-list {
     justify-content: space-evenly;
+    position: relative;
+    bottom: 90px;
   }
 }
 
@@ -92,24 +69,33 @@ h3 {
   display: flex;
 }
 
+.bio:active {
+  -webkit-text-decoration: #ffff;
+          text-decoration: #ffff;
+}
+
 .hero-section__image {
   width: 100%;
   height: 100%;
 }
 
 .hero__title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   color: #ffff;
   position: relative;
-  top: -24rem;
+  top: -14rem;
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
     font-family: "Avenir Next Demi";
+    font-size: 2.25rem;
+    position: relative;
+    top: -34rem;
   }
 }
 .hero__flower-image {
   max-width: 100%;
+  background-color: #323232;
 }
 
 .about-section {
@@ -136,25 +122,78 @@ h3 {
   font-family: "Avenir Next Regular";
   font-weight: bold;
 }
+@media screen and (min-width: 48rem) {
+  .info__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .info__quote {
+    position: relative;
+    left: 100px;
+  }
+}
 
+.about__paragraph {
+  font-family: "Avenir Next Regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 1rem;
+}
 @media screen and (min-width: 48rem) {
   .about__paragraph {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     line-height: 2rem;
     font-family: "Avenir Next Regular";
     text-align: justify;
     -webkit-columns: 15.625rem 2;
   }
 }
+@media screen and (min-width: 80.625rem) {
+  .about__paragraph {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-family: "Avenir Next Regular";
+    text-align: justify;
+    -webkit-columns: 15.625rem 2;
+    -moz-column-width: 100px;
+         column-width: 100px;
+    margin: 100px;
+  }
+}
 
+.about__title {
+  font-size: 14px;
+  line-height: 22px;
+}
 @media screen and (min-width: 48rem) {
   .about__title {
     font-family: "Avenir Next Demi";
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .about__title {
+    font-family: "Avenir Next Demi";
+    font-size: 1.5rem;
+    line-height: 32px;
+    position: relative;
+    left: 100px;
   }
 }
 
 .band__image {
   max-width: 100%;
+}
+@media screen and (min-width: 80.625rem) {
+  .band__image {
+    position: relative;
+    left: 100px;
+    width: 75rem;
+    height: 40rem;
+  }
 }
 
 .photo {
@@ -164,7 +203,7 @@ h3 {
 }
 @media screen and (min-width: 48rem) {
   .photo {
-    width: 25%;
+    width: 28%;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -180,14 +219,16 @@ h3 {
 }
 @media screen and (min-width: 48rem) {
   .photo-title {
+    font-size: 36px;
     position: relative;
-    left: 7rem;
+    left: 4rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .photo-title {
+    font-size: 36px;
     position: relative;
-    left: 10.5625rem;
+    left: 9.75rem;
   }
 }
 
@@ -217,8 +258,15 @@ footer {
 }
 @media screen and (min-width: 48rem) {
   .footer-main-title {
+    font-size: 14px;
     display: flex;
     left: 1.25rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .footer-main-title {
+    display: flex;
+    left: 6.875rem;
   }
 }
 
@@ -229,6 +277,13 @@ footer {
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
+  .footer-content {
+    font-family: "Avenir Next Regular";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
   .footer-content {
     font-family: "Avenir Next Regular";
     font-size: 0.875rem;
@@ -246,6 +301,18 @@ footer span {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 80.625rem) {
+  .footer--info {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .footer--logo {
+    display: flex;
+  }
+}
 
 @media screen and (min-width: 48rem) {
   .social-icons {
@@ -256,13 +323,14 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
-  .cam-adams, .Pearl-Gregg {
+  .cam-adams,
+.Pearl-Gregg {
     display: flex;
     flex-direction: column;
   }
 }
-
-.facebook, .twitter {
+.facebook,
+.twitter {
   margin-left: 1.875rem;
 }
 

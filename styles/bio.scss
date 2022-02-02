@@ -1,319 +1,349 @@
 //TODO add all the styles
-@use './partials/mixin' as *;
-@use './partials/variables' as *;
+@use "./partials/mixin" as *;
+@use "./partials/variables" as *;
 
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+}
 
-    @font-face {
-        font-family: 'Avenir Next Regular';
-        src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
-    }
+@font-face {
+  font-family: "Avenir Next Demi";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
 
-
-    @font-face {
-        font-family: 'Avenir Next Demi';
-        src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
-    }
-
-    @font-face {
-        font-family: 'Avenir Next Bold';
-        src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-
-        
-    }
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
 ///////////////////////////////////////
 
-
 body{
-    margin-left: 50px;
-    @include tablet{
-   
-        
-        font-size: .875rem;
-    }
-    @include desktop{
-        
-      
-}
+    position: relative;
 }
 
-header{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    
-    @include tablet{
-        
-    }
-    @include desktop{
-      
-    }
+header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  @include tablet {
+  }
+  @include desktop {
+  }
 }
 
-h2{
-    font-size: 2rem;
-    font-weight: 700;
-    
-    @include tablet{
-        font-size: 1.5rem;
-        line-height: 2rem;
-        
-    }
-   
-    @include desktop{
-        font-size: 1.5rem;
-        line-height: 2rem;
-        
-    }
-}
+// h2 {
+//   font-size: 2rem;
+//   font-weight: 700;
 
-h3{
-    font-size: 1.5rem;
- 
-}
+//   @include tablet {
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+//   }
 
-.logo{
+//   @include desktop {
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+//   }
+// }
+
+// h3 {
+//   font-size: 1.5rem;
+// }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  background-color: $bandsite-black;
+  @include tablet {
     display: flex;
-    justify-content: center;
-    background-color: #323232;
-    @include tablet{
-        display:flex;
-        justify-content: flex-start 
-    }
+    justify-content: flex-start;
+  }
 }
 
-.logo__image{
-    width: 12.5rem;
-    height: 6.25rem;
+.logo__image {
+  width: 12.5rem;
+  height: 6.25rem;
 
-    background-position: center;
-    @include tablet{
-        margin: 1.25rem;
-    }
+  background-position: center;
+  @include tablet {
+    margin: 1.25rem;
+  }
 }
 
-
-.nav-list{
-    background-color: #323232;
-    display: flex;
+.nav-list {
+//   background-color: $bandsite-black;
+  display: flex;
+  justify-content: space-evenly;
+  color: #ffff;
+  @include tablet {
     justify-content: space-evenly;
-    @include tablet{
-        justify-content: space-evenly;
-    }
+    position: relative;
+    bottom: 90px;
+  }
 }
 
-.nav-list a{
-    color: #ffff;
-    text-decoration: none;
-    
-    @include tablet{
-        display: flex;
+.nav-list a {
+  color: $primary-text-color;
+  text-decoration: none;
 
-    }
+  @include tablet {
+    display: flex;
+  }
 }
 
-
-.nav-list >ul{
-    list-style: none;
-    display: flex
-    
+.nav-list > ul {
+  list-style: none;
+  display: flex;
 }
 
-
-.hero-section__image{
-    width: 100%;
-    height: 100%;
+.bio:active {
+  text-decoration: $primary-text-color;
 }
 
-.hero__title{
-font-size: 2.25rem;
-color: #ffff;
-position: relative;
-top: -24rem;
-@include tablet{
-font-family: 'Avenir Next Demi';
-}
-@include desktop{
-    
-}
+.hero-section__image {
+  width: 100%;
+  height: 100%;
 }
 
-.hero__flower-image{
-    max-width: 100%;
-
+.hero__title {
+  font-size: 1.5rem;
+  color: $primary-text-color;
+  position: relative;
+  top: -14rem;
+  @include tablet {
+    font-family: "Avenir Next Demi";
+    font-size: 2.25rem;
+    position: relative;
+    top: -34rem;
+  }
+  @include desktop {
+  }
 }
 
-
-
-.about-section{
-   margin-top: -60px;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    @include tablet{
-        display: flex;
-        justify-content: center;
-        padding: 1.5rem;
-    }
+.hero__flower-image {
+  max-width: 100%;
+  background-color: $bandsite-black;
 }
 
-
-.band__image{
-   @include tablet{
+.about-section {
+  margin-top: -60px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
     display: flex;
     justify-content: center;
-   }
-   
-    
+    padding: 1.5rem;
+  }
 }
 
-.info__quote{
-    font-family:'Avenir Next Regular' ;
-    font-weight: bold;
+.band__image {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.about__paragraph{
-    @include tablet{
-        font-size: 0.875rem;
-        line-height: 2rem;
-        font-family: 'Avenir Next Regular';
-        text-align: justify;
-        -webkit-columns: 15.625rem 2;
-    }
+.info__quote {
+  font-family: "Avenir Next Regular";
+  font-weight: bold;
+  @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  @include desktop {
+      position: relative;
+      left: 100px;
+  }
 }
 
-
-.about__title{
-    @include tablet{
-        font-family: 'Avenir Next Demi';
-    }
-
+.about__paragraph {
+  font-family: "Avenir Next Regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 1rem;
+  @include tablet {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-family: "Avenir Next Regular";
+    text-align: justify;
+    -webkit-columns: 15.625rem 2;
+  }
+  @include desktop {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    font-family: "Avenir Next Regular";
+    text-align: justify;
+    -webkit-columns: 15.625rem 2;
+    column-width: 100px;
+    margin: 100px;
+  }
 }
-.band__image{
-    max-width: 100%;
-}
 
+.about__title {
+  font-size: 14px;
+  line-height: 22px;
+  @include tablet {
+    font-family: "Avenir Next Demi";
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+  @include desktop {
+    font-family: "Avenir Next Demi";
+    font-size: 1.5rem;
+    line-height: 32px;
+    position: relative;
+    left: 100px;
+  }
+}
+.band__image {
+  max-width: 100%;
+  @include tablet {
+  }
+  @include desktop {
+    position: relative;
+    left: 100px;
+    width: 75rem;
+    height: 40rem;
+  }
+}
 
 .photo {
-    margin:1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    width: 28%;
+  }
+  @include desktop {
+    width: 27%;
+  }
+}
+
+.photo-title {
+  font-family: "Avenir Next Demi";
+  position: relative;
+  left: 0.9375rem;
+
+  @include tablet {
+    font-size: 36px;
+    position: relative;
+    left: 4rem;
+  }
+  @include desktop {
+    font-size: 36px;
+    position: relative;
+    left: 9.75rem;
+  }
+}
+
+.photo-gallery--container {
+  @include tablet {
     display: flex;
-    flex-direction: column;
-    @include tablet{
-    width: 25%;
-
-          
-    }
-    @include desktop{
-        width: 27%;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include desktop {
+    display: flex;
+    justify-self: center;
+  }
 }
 
-.photo-title{
-    font-family: 'Avenir Next Demi';
-    position: relative;
-    left: 0.9375rem;
-    @include tablet{
-        position: relative;
-        left: 7rem;
-    }
-    @include desktop{
-        position: relative;
-        left:10.5625rem;
-    }
- 
+footer {
+  background-color: $bandsite-black;
+  color: $primary-text-color;
 }
 
+.footer-main-title {
+  color: $primary-text-color;
+  position: relative;
+  bottom: -0.625rem;
 
-.photo-gallery--container{
-    @include tablet{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    
-    }
-    @include desktop{
-        display: flex;
-        justify-self: center
-    }
-}
-
-
-footer{
-    background-color: #323232;
-    color: #ffff;
-
-    
-}
-
-.footer-main-title{
-    color: #ffff;
-    position: relative;
-    bottom: -0.625rem;
-   
-    @include tablet{
+  @include tablet {
+      font-size: 14px;
     display: flex;
     left: 1.25rem;
-    }
-   
+  }
+  @include desktop {
+    display: flex;
+    left: 6.875rem;
+  }
 }
 
-.footer-content{
-    font-family: 'Avenir Next Regular';
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    margin-left: 1rem;
-    @include tablet{
-    font-family: 'Avenir Next Regular';
+.footer-content {
+  font-family: "Avenir Next Regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin-left: 1rem;
+  @include tablet {
+    font-family: "Avenir Next Regular";
     font-size: 0.875rem;
     line-height: 1.25rem;
-    }
-
+  }
+  @include desktop {
+    font-family: "Avenir Next Regular";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    
+  }
 }
 
-footer span{
-    font-weight: bold;
+footer span {
+  font-weight: bold;
 }
 
-.footer--info{
-    @include tablet{
+.footer--info {
+  @include tablet {
     display: flex;
-    justify-content: space-between
-    }
-   
+    justify-content: space-between;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
-.social-icons{
-   @include tablet{
+.footer--logo {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.social-icons {
+  @include tablet {
     position: relative;
     bottom: -1.5rem;
     left: 1.25rem;
-   }
+  }
 }
 
-
-.cam-adams, .Pearl-Gregg{
-    @include tablet{
-        display: flex;
-        flex-direction: column;
-    }
-
+.cam-adams,
+.Pearl-Gregg {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop{
+      
+  }
 }
 
-
-.facebook, .twitter{
-    margin-left: 1.875rem;
-
+.facebook,
+.twitter {
+  margin-left: 1.875rem;
 }
 
-.instagram{
-    margin-left: 0.3125rem;
+.instagram {
+  margin-left: 0.3125rem;
 }
 
-.footer-logo{
-    width: 12.5rem;
-    height: 6.25rem;
+.footer-logo {
+  width: 12.5rem;
+  height: 6.25rem;
 
-    background-position: left;
+  background-position: left;
 }
 
-.footer-logo p{
-    background: #323232;
+.footer-logo p {
+  background: $bandsite-black;
 }
-
