@@ -10,14 +10,17 @@
   font-family: "Avenir Next Bold";
   src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
 }
+body {
+  margin-left: 50px;
+}
 @media screen and (min-width: 48rem) {
   body {
     font-size: 0.875rem;
   }
 }
 header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 h2 {
   font-size: 2rem;
@@ -25,14 +28,14 @@ h2 {
 }
 @media screen and (min-width: 48rem) {
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -57,11 +60,21 @@ h3 {
   height: 6.25rem;
   background-position: center;
 }
+@media screen and (min-width: 48rem) {
+  .logo__image {
+    margin: 1.25rem;
+  }
+}
 
 .nav-list {
   background-color: #323232;
   display: flex;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 48rem) {
+  .nav-list {
+    justify-content: space-evenly;
+  }
 }
 
 .nav-list a {
@@ -88,7 +101,7 @@ h3 {
   font-size: 2.25rem;
   color: #ffff;
   position: relative;
-  top: -14rem;
+  top: -24rem;
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
@@ -100,10 +113,23 @@ h3 {
 }
 
 .about-section {
-  margin-top: -3.5rem;
-  margin-left: 1rem;
-  font-size: 13px;
+  margin-top: -60px;
+  font-size: 0.8125rem;
   line-height: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .about-section {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .band__image {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .info__quote {
@@ -113,8 +139,8 @@ h3 {
 
 @media screen and (min-width: 48rem) {
   .about__paragraph {
-    font-size: 14px;
-    line-height: 32px;
+    font-size: 0.875rem;
+    line-height: 2rem;
     font-family: "Avenir Next Regular";
     text-align: justify;
     -webkit-columns: 15.625rem 2;
@@ -132,24 +158,50 @@ h3 {
 }
 
 .photo {
-  margin: 16px;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
   .photo {
-    width: 33.33%;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .photo {
+    width: 27%;
   }
 }
 
 .photo-title {
   font-family: "Avenir Next Demi";
+  position: relative;
+  left: 0.9375rem;
+}
+@media screen and (min-width: 48rem) {
+  .photo-title {
+    position: relative;
+    left: 7rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .photo-title {
+    position: relative;
+    left: 10.5625rem;
+  }
 }
 
 @media screen and (min-width: 48rem) {
   .photo-gallery--container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .photo-gallery--container {
+    display: flex;
+    justify-self: center;
   }
 }
 
@@ -161,20 +213,29 @@ footer {
 .footer-main-title {
   color: #ffff;
   position: relative;
-  bottom: -10px;
+  bottom: -0.625rem;
 }
 @media screen and (min-width: 48rem) {
   .footer-main-title {
     display: flex;
+    left: 1.25rem;
   }
 }
 
 .footer-content {
   font-family: "Avenir Next Regular";
-  font-size: 13px;
-  line-height: 18px;
-  margin-left: 16px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin-left: 1rem;
 }
+@media screen and (min-width: 48rem) {
+  .footer-content {
+    font-family: "Avenir Next Regular";
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
 footer span {
   font-weight: bold;
 }
@@ -182,7 +243,15 @@ footer span {
 @media screen and (min-width: 48rem) {
   .footer--info {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .social-icons {
+    position: relative;
+    bottom: -1.5rem;
+    left: 1.25rem;
   }
 }
 
@@ -194,11 +263,11 @@ footer span {
 }
 
 .facebook, .twitter {
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .instagram {
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 
 .footer-logo {

@@ -24,6 +24,7 @@
 
 
 body{
+    margin-left: 50px;
     @include tablet{
    
         
@@ -36,8 +37,8 @@ body{
 }
 
 header{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     
     @include tablet{
         
@@ -52,14 +53,14 @@ h2{
     font-weight: 700;
     
     @include tablet{
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 1.5rem;
+        line-height: 2rem;
         
     }
    
     @include desktop{
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 1.5rem;
+        line-height: 2rem;
         
     }
 }
@@ -84,6 +85,9 @@ h3{
     height: 6.25rem;
 
     background-position: center;
+    @include tablet{
+        margin: 1.25rem;
+    }
 }
 
 
@@ -91,6 +95,9 @@ h3{
     background-color: #323232;
     display: flex;
     justify-content: space-evenly;
+    @include tablet{
+        justify-content: space-evenly;
+    }
 }
 
 .nav-list a{
@@ -120,7 +127,7 @@ h3{
 font-size: 2.25rem;
 color: #ffff;
 position: relative;
-top: -14rem;
+top: -24rem;
 @include tablet{
 font-family: 'Avenir Next Demi';
 }
@@ -131,15 +138,32 @@ font-family: 'Avenir Next Demi';
 
 .hero__flower-image{
     max-width: 100%;
+
 }
+
+
 
 .about-section{
-    margin-top: -3.5rem;
-    margin-left: 1rem;
-
-    font-size: 13px;
+   margin-top: -60px;
+    font-size: 0.8125rem;
     line-height: 1.125rem;
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+    }
 }
+
+
+.band__image{
+   @include tablet{
+    display: flex;
+    justify-content: center;
+   }
+   
+    
+}
+
 .info__quote{
     font-family:'Avenir Next Regular' ;
     font-weight: bold;
@@ -147,8 +171,8 @@ font-family: 'Avenir Next Demi';
 
 .about__paragraph{
     @include tablet{
-        font-size: 14px;
-        line-height: 32px;
+        font-size: 0.875rem;
+        line-height: 2rem;
         font-family: 'Avenir Next Regular';
         text-align: justify;
         -webkit-columns: 15.625rem 2;
@@ -168,18 +192,32 @@ font-family: 'Avenir Next Demi';
 
 
 .photo {
-    margin:16px;
+    margin:1rem;
     display: flex;
     flex-direction: column;
     @include tablet{
-    width: 33.33%;
+    width: 25%;
 
           
+    }
+    @include desktop{
+        width: 27%;
     }
 }
 
 .photo-title{
     font-family: 'Avenir Next Demi';
+    position: relative;
+    left: 0.9375rem;
+    @include tablet{
+        position: relative;
+        left: 7rem;
+    }
+    @include desktop{
+        position: relative;
+        left:10.5625rem;
+    }
+ 
 }
 
 
@@ -187,7 +225,12 @@ font-family: 'Avenir Next Demi';
     @include tablet{
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     
+    }
+    @include desktop{
+        display: flex;
+        justify-self: center
     }
 }
 
@@ -202,21 +245,24 @@ footer{
 .footer-main-title{
     color: #ffff;
     position: relative;
-    bottom: -10px;
+    bottom: -0.625rem;
+   
     @include tablet{
     display: flex;
+    left: 1.25rem;
     }
    
 }
 
 .footer-content{
     font-family: 'Avenir Next Regular';
-    font-size: 13px;
-    line-height: 18px;
-    margin-left: 16px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    margin-left: 1rem;
     @include tablet{
-    
-
+    font-family: 'Avenir Next Regular';
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     }
 
 }
@@ -227,10 +273,18 @@ footer span{
 
 .footer--info{
     @include tablet{
- display: flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between
     }
    
+}
+
+.social-icons{
+   @include tablet{
+    position: relative;
+    bottom: -1.5rem;
+    left: 1.25rem;
+   }
 }
 
 
@@ -244,12 +298,12 @@ footer span{
 
 
 .facebook, .twitter{
-    margin-left: 30px;
+    margin-left: 1.875rem;
 
 }
 
 .instagram{
-    margin-left: 5px;
+    margin-left: 0.3125rem;
 }
 
 .footer-logo{
