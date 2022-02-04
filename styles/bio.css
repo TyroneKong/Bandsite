@@ -19,40 +19,35 @@ header {
   line-height: 2rem;
 }
 
-.main-header {
+.header {
   background-color: #323232;
 }
 @media screen and (min-width: 48rem) {
-  .main-header {
-    padding: 1.875rem;
+  .header {
+    padding: 1.875rem 6.25rem;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .nav-section {
+  .main-nav {
     display: flex;
     justify-content: flex-start;
   }
 }
 
-.nav-section-logo {
+.main-nav__logo {
   display: flex;
   justify-content: center;
   background-color: #323232;
 }
-@media screen and (min-width: 48rem) {
-  .nav-section-logo {
-    justify-content: flex-start;
-  }
-}
 
-.nav-section-logo__image {
+.main-nav__logo-image {
   width: 7.5rem;
   height: 1.25rem;
   background-position: center;
 }
 @media screen and (min-width: 48rem) {
-  .nav-section-logo__image {
+  .main-nav__logo-image {
     margin: 1.25rem 0 0 1rem;
   }
 }
@@ -67,8 +62,8 @@ header {
   .nav-list {
     height: 5rem;
     font-size: 1.5rem;
-    margin-left: 3.125rem;
-    margin-top: 15px;
+    margin-left: 4.375rem;
+    margin-top: 0.9375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -82,11 +77,6 @@ header {
   color: #e1e1e1;
   text-decoration: none;
   font-family: "Avenir Next Regular";
-}
-
-.nav-list > ul {
-  list-style: none;
-  display: flex;
 }
 
 @media screen and (min-width: 48rem) {
@@ -104,21 +94,37 @@ header {
 .nav-list__shows:hover,
 .nav-list__bio:hover {
   font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .nav-list__shows:hover,
+.nav-list__bio:hover {
+    height: 6.3125rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .nav-list__shows:hover,
+.nav-list__bio:hover {
+    height: 5.3125rem;
+  }
+}
+
+.nav-list__shows:active {
+  font-weight: 700;
   border-bottom: 0.0625rem solid #ffff;
 }
 
 @media screen and (min-width: 48rem) {
   .nav-list__shows {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 }
 
-.hero-section-image {
+.hero-section {
   width: 100%;
   height: 100%;
 }
 
-.hero-section-image__title {
+.hero-section__title {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #ffff;
@@ -127,7 +133,7 @@ header {
   left: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
-  .hero-section-image__title {
+  .hero-section__title {
     font-family: "Avenir Next Demi";
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -135,19 +141,23 @@ header {
   }
 }
 
-.hero-section-image__flower-image {
+.hero-section__flower-image {
   max-width: 100%;
-  background-color: #323232;
-  opacity: 0.5;
 }
 
-.about-section {
+@media screen and (min-width: 48rem) {
+  .hero-section {
+    background-color: rgba(50, 50, 50, 0.5);
+  }
+}
+
+.about {
   margin-top: 1.5rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section {
+  .about {
     margin-top: 3rem;
     display: flex;
     justify-content: center;
@@ -156,58 +166,58 @@ header {
 }
 
 @media screen and (min-width: 80.625rem) {
-  .about-section-container__subheading {
-    margin-left: 67px;
+  .about-section__subheading {
+    margin-left: 4.1875rem;
   }
 }
 
-.about-section-container-info__quote {
+.about-section__info-quote {
   font-family: "Avenir Next Regular";
   font-weight: bold;
   margin: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section-container-info__quote {
+  .about-section__info-quote {
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 0 6.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section-container-info__quote {
+  .about-section__info-quote {
     margin: 0 12.5rem;
   }
 }
 
-.about-section-container-image {
+.about-section__image {
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width: 48rem) {
-  .about-section-container-image {
+  .about-section__image {
     margin: 6.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section-container-image {
+  .about-section__image {
     margin: 8.75rem;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .about-section-container__bio h3 {
+  .about-section__bio h3 {
     margin-left: 6.25rem;
   }
 }
 
-.about-section-container__paragraph {
+.about-section__paragraph {
   font-family: "Avenir Next Regular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section-container__paragraph {
+  .about-section__paragraph {
     font-size: 1.125rem;
     line-height: 2rem;
     text-align: justify;
@@ -216,52 +226,56 @@ header {
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section-container__paragraph {
+  .about-section__paragraph {
     -webkit-columns: 15.625rem 2;
     margin: 0 9.5rem;
   }
 }
 
-.about-section-container__title1 {
+.about-section__about-musicians-title {
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section-container__title1 {
+  .about-section__about-musicians-title {
     font-family: "Avenir Next Demi";
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
 }
 
-.about-section-container__title2 {
+.about-section__bees-knees-title {
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section-container__title2 {
+  .about-section__bees-knees-title {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-.about-section-container-image__band-image {
+.about-section__band-image {
   max-width: 100%;
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section-container-image__band-image {
+  .about-section__band-image {
     width: 90%;
   }
 }
 
-.photo-gallery-container__photo {
+.gallery {
+  background-color: #FAFAFA;
+}
+
+.photo-gallery__container-photo {
   margin: 1rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
-  .photo-gallery-container__photo {
+  .photo-gallery__container-photo {
     width: 27%;
   }
 }
@@ -281,19 +295,15 @@ header {
   }
 }
 
-.photo-gallery {
-  background-color: #FAFAFA;
-}
-
 @media screen and (min-width: 48rem) {
-  .photo-gallery-container {
+  .photo-gallery__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .photo-gallery-container {
+  .photo-gallery__container {
     display: flex;
     justify-self: center;
   }
@@ -324,14 +334,14 @@ footer {
   }
 }
 
-.footer-content {
+.footer {
   font-family: "Avenir Next Regular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer-content {
+  .footer {
     display: flex;
     flex-direction: column;
     font-size: 0.875rem;
@@ -344,34 +354,34 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info {
+  .contact-info {
     display: flex;
     justify-content: space-around;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .footer-info {
+  .contact-info {
     justify-content: flex-start;
   }
 }
 
-.social-icons__get-in-touch {
+.contact-info__get-in-touch {
   font-size: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
-  .social-icons__get-in-touch {
+  .contact-info__get-in-touch {
     font-size: 2.1875rem;
     display: flex;
   }
 }
 @media screen and (min-width: 48rem) {
-  .social-icons {
+  .social {
     display: flex;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .social-icons-container {
+  .social__bandsite {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -379,16 +389,16 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info__Cam-Adams,
-.footer-info__Pearl-Gregg,
-.footer-info__Carson-Whyte {
+  .contact-info__Cam-Adams,
+.contact-info__Pearl-Gregg,
+.contact-info__Carson-Whyte {
     display: flex;
     flex-direction: column;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info__Cam-Adams {
+  .contact-info__Cam-Adams {
     position: relative;
     bottom: 2.5rem;
     margin-left: 20px;
@@ -396,25 +406,25 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info__Pearl-Gregg {
+  .contact-info__Pearl-Gregg {
     position: relative;
     bottom: -0.4375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .footer-info__Pearl-Gregg {
+  .contact-info__Pearl-Gregg {
     margin-left: 6.25rem;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info__Carson-Whyte {
+  .contact-info__Carson-Whyte {
     position: relative;
     bottom: -1.875rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .footer-info__Carson-Whyte {
+  .contact-info__Carson-Whyte {
     margin-left: 6.25rem;
   }
 }
@@ -433,34 +443,34 @@ footer span {
   }
 }
 
-.social-icons-images__facebook,
-.social-icons-images__twitter {
+.contact-info-image__facebook,
+.contact-info-image__twitter {
   margin-left: 1.25rem;
 }
 
-.social-icons-images__instagram {
+.contact-info-image__instagram {
   margin-left: 0.3125rem;
 }
 
-.footer-logo {
+.mobile-logo {
   width: 7.5rem;
   height: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer-logo {
+  .mobile-logo {
     display: none;
   }
 }
 
-.footer-logo p {
+.mobile-logo p {
   background: #323232;
 }
 
-.social-icons__logo {
+.social-bandsite__logo {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .social-icons__logo {
+  .social-bandsite__logo {
     display: flex;
     width: 7.5rem;
     height: 1.25rem;
@@ -468,12 +478,18 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
-  .footer-info__media {
+  .contact-info__media {
     position: relative;
     bottom: 1.25rem;
   }
 }
 
-.footer-logo-container {
-  margin-top: 6.25rem;
+.mobile-logo__container {
+  margin-top: 10.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .copyright {
+    display: flex;
+  }
 }/*# sourceMappingURL=bio.css.map */
