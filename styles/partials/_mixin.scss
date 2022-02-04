@@ -2,6 +2,7 @@
 
 @mixin tablet {
     @media screen and (min-width:$tablet-width) {
+        
         @content;
     }
 };
