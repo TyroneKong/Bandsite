@@ -120,8 +120,7 @@ header {
 }
 
 .hero-section {
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .hero-section__title {
@@ -131,7 +130,7 @@ header {
   font-weight: 700;
   color: #ffff;
   position: absolute;
-  top: 10rem;
+  top: 3rem;
   left: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
@@ -140,12 +139,13 @@ header {
     line-height: 68px;
     font-family: "Avenir Next Bold";
     font-weight: 700;
-    top: 25rem;
+    top: 20rem;
   }
 }
-
-.hero-section__flower-image {
-  max-width: 100%;
+@media screen and (min-width: 80.625rem) {
+  .hero-section__title {
+    top: 25rem;
+  }
 }
 
 .placeholder {
@@ -221,7 +221,7 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .about-section__image {
-    margin: 6.25rem;
+    margin: 4.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -274,7 +274,7 @@ header {
     line-height: 44px;
     font-family: "Avenir Next Demi";
     font-weight: 400;
-    margin-bottom: -50px;
+    margin-bottom: -3.125rem;
   }
 }
 
@@ -295,7 +295,7 @@ header {
 }
 
 .about-section__band-image {
-  max-width: 100%;
+  max-width: 90%;
 }
 @media screen and (min-width: 80.625rem) {
   .about-section__band-image {
@@ -319,10 +319,10 @@ header {
 }
 
 .photo-gallery__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: "Avenir Next Demi";
-  font-weight: 400;
+  font-weight: 600;
   margin-left: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
@@ -357,7 +357,7 @@ header {
 footer {
   background-color: #323232;
   color: #ffff;
-  padding: 2.25rem;
+  padding: 1.25rem;
 }
 
 .footer-main-title {
@@ -385,6 +385,7 @@ footer {
   font-family: "Avenir Next Regular";
   font-weight: 400;
   margin-left: 1rem;
+  margin-right: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
   .footer {
@@ -447,7 +448,7 @@ footer span {
   .contact-info__Cam-Adams {
     position: relative;
     bottom: 2.5rem;
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 }
 
@@ -523,8 +524,12 @@ footer span {
   }
 }
 
+.contact-info__media {
+  display: none;
+}
 @media screen and (min-width: 48rem) {
   .contact-info__media {
+    display: flex;
     position: relative;
     bottom: 1.25rem;
   }
@@ -537,5 +542,16 @@ footer span {
 @media screen and (min-width: 48rem) {
   .copyright {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-info__mobile-socialIcons {
+    display: none;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .contact-info__mobile-socialIcons {
+    display: none;
   }
 }/*# sourceMappingURL=bio.css.map */
