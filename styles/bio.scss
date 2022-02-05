@@ -101,11 +101,10 @@ header {
   }
 }
 
-.nav-list__shows:active{
-    font-weight: 700;
-    border-bottom: 0.0625rem solid $primary-text-color;
+.nav-list__shows:active {
+  font-weight: 700;
+  border-bottom: 0.0625rem solid $primary-text-color;
 }
-
 
 .nav-list__shows {
   @include tablet {
@@ -118,41 +117,38 @@ header {
 .hero-section {
   width: 100%;
   height: 100%;
+  
 }
 
 .hero-section__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  @include pageheaderMobile;
+  
   color: $primary-text-color;
   position: absolute;
   top: 10rem;
   left: 1.25rem;
   @include tablet {
-    font-family: "Avenir Next Demi";
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    @include pageheaderDesktopTablet;
     top: 25rem;
   }
 }
 
 .hero-section__flower-image {
   max-width: 100%;
-  
 }
 
 
-
-.hero-section{
+.placeholder{
+  max-width: 100%;
   @include tablet{
-    background-color: rgba(50, 50, 50, 0.5)
+    background-color: rgba(50, 50, 50, 0.5);
   }
 }
 //About section
 
 .about {
   margin-top: 1.5rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  
   @include tablet {
     margin-top: 3rem;
     display: flex;
@@ -162,18 +158,24 @@ header {
 }
 
 .about-section__subheading {
-  @include desktop {
-    margin-left: 4.1875rem;
+  margin-left: 1.0625rem;
+  @include tablet {
+    margin-left: .3125rem;
+    @include sectionheaderDesktopTablet;
+  }
+  @include desktop{
+    @include sectionheaderDesktopTablet;
+    margin-left: 6.875rem;
   }
 }
 
 .about-section__info-quote {
-  font-family: "Avenir Next Regular";
+  @include bodycopyMobile;
   font-weight: bold;
   margin: 1rem;
   @include tablet {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    @include bodycopyDesktopTablet;
+    font-weight: bold;
     margin: 0 6.25rem;
   }
   @include desktop {
@@ -185,9 +187,11 @@ header {
   display: flex;
   justify-content: center;
   @include tablet {
+  
     margin: 6.25rem;
   }
   @include desktop {
+    
     margin: 8.75rem;
   }
 }
@@ -199,41 +203,38 @@ header {
 }
 
 .about-section__paragraph {
-  font-family: "Avenir Next Regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  @include bodycopyMobile;
   padding: 1rem;
   @include tablet {
-    font-size: 1.125rem;
-    line-height: 2rem;
+    @include bodycopyDesktopTablet;
+  
     text-align: justify;
     -webkit-columns: 12.625rem 2;
     margin: 5.25rem;
   }
   @include desktop {
     -webkit-columns: 15.625rem 2;
-    margin: 0 9.5rem;
+    margin: 0 12.5rem;
   }
 }
 
 .about-section__about-musicians-title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+ @include sectionheaderMobile;
   margin: 1rem;
   @include tablet {
-    font-family: "Avenir Next Demi";
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    @include sectionheaderDesktopTablet;
+    margin-bottom: -50px;
   }
+ 
 }
 
 .about-section__bees-knees-title {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  @include subheaderMobile;
   @include tablet {
-    font-size: 1.5rem;
+    @include subheaderDesktopTablet;
     line-height: 2rem;
   }
+  
 }
 
 .about-section__band-image {
@@ -249,7 +250,7 @@ header {
   background-color: $alabasta;
 }
 
-.photo-gallery__container-photo{
+.photo-gallery__container-photo {
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -260,17 +261,16 @@ header {
 }
 
 .photo-gallery__title {
-  font-family: "Avenir Next Demi";
-
+  @include sectionheaderMobile;
+  margin-left: 1.25rem;
   @include tablet {
-    font-size: 2.25rem;
+    @include sectionheaderDesktopTablet;
     margin-left: 3.75rem;
   }
   @include desktop {
     margin-left: 9.25rem;
   }
 }
-
 
 .photo-gallery__container {
   @include tablet {
@@ -309,15 +309,12 @@ footer {
 }
 
 .footer {
-  font-family: "Avenir Next Regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+@include footercopyMobile;
   margin-left: 1rem;
   @include tablet {
     display: flex;
     flex-direction: column;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    @include footercopyDesktopTablet;
   }
 }
 
@@ -336,13 +333,11 @@ footer span {
 }
 
 .contact-info__get-in-touch {
-  font-size: 1.5rem;
   @include tablet {
     font-size: 2.1875rem;
     display: flex;
   }
-  @include desktop {
-  }
+ 
 }
 
 .social {
@@ -446,12 +441,9 @@ footer span {
   margin-top: 10.25rem;
 }
 
-.copyright{
-    @include tablet{
+.copyright {
+  @include tablet {
     display: flex;
-    
-    }
-    @include desktop{
-        
-    }
+  }
+ 
 }

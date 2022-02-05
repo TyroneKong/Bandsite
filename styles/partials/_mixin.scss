@@ -1,5 +1,8 @@
 @use './variables' as *;
 
+
+// screen breakpoints
+
 @mixin tablet {
     @media screen and (min-width:$tablet-width) {
         
@@ -13,3 +16,100 @@
     }
 }
 
+///Mobile styling 
+
+
+@mixin pageheaderMobile{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+}
+
+
+@mixin sectionheaderMobile{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Next Demi";
+    font-weight: 400;
+}
+
+
+@mixin subheaderMobile {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Next Demi";
+    font-weight: 600;
+}
+
+
+
+@mixin bodycopyMobile{
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+}
+
+@mixin footercopyMobile {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+}
+
+@mixin labelandbuttonsMobile {
+    font-size: .625rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+}
+
+
+
+
+
+
+/// Desktop and Tablet styling
+
+@mixin pageheaderDesktopTablet{
+    font-size: 60px;
+    line-height: 68px;
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+}
+
+@mixin sectionheaderDesktopTablet{
+    font-size: 36px;
+    line-height: 44px;
+    font-family: "Avenir Next Demi";
+    font-weight: 400;
+}
+
+@mixin subheaderDesktopTablet{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Avenir Next Demi";
+    font-weight: 600;
+}
+
+@mixin bodycopyDesktopTablet{
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+}
+
+@mixin footercopyDesktopTablet{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+}
+
+@mixin labelsandbuttonsDesktopTablet{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+}
