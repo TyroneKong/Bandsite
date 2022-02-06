@@ -93,17 +93,19 @@ header {
 .nav-list__bio:hover {
   @include tablet {
     height: 6.3125rem;
+    color: $primary-text-color;
+    border-bottom: 1px solid #ffff;
   }
   @include desktop {
     height: 5.3125rem;
   }
 }
 
-.nav-list__bio:hover,
-.nav-list__shows:hover {
-  color: $primary-text-color;
-  border-bottom: 1px solid #ffff;
-}
+// .nav-list__bio:hover,
+// .nav-list__shows:hover {
+//   color: $primary-text-color;
+//   border-bottom: 1px solid #ffff;
+// }
 
 .nav-list__bio:active,
 .nav-list__shows:active {
@@ -497,13 +499,13 @@ footer span {
 }
 
 .copyright {
-  @include tablet{
+  @include tablet {
     display: flex;
     justify-content: flex-start;
     margin-left: 4.0625rem;
   }
   @include desktop {
-  margin-left:1.25rem ;
+    margin-left: 1.25rem;
   }
 }
 
@@ -515,9 +517,6 @@ footer span {
     display: none;
   }
 }
-
-
-
 
 .contact-info__email a {
   text-decoration: none;

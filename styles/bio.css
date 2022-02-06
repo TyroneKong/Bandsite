@@ -95,6 +95,8 @@ header {
   .nav-list__shows:hover,
 .nav-list__bio:hover {
     height: 6.3125rem;
+    color: #ffff;
+    border-bottom: 1px solid #ffff;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -102,12 +104,6 @@ header {
 .nav-list__bio:hover {
     height: 5.3125rem;
   }
-}
-
-.nav-list__bio:hover,
-.nav-list__shows:hover {
-  color: #ffff;
-  border-bottom: 1px solid #ffff;
 }
 
 .nav-list__bio:active,
