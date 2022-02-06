@@ -113,24 +113,40 @@ header {
 
 //Hero section
 
-.hero-section__title h2 {
-  margin-top: 120px;
-  @include pageheaderMobile;
+.hero-section {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
 
-  color: $primary-text-color;
+.hero-section__title {
   position: absolute;
-  top: 3rem;
-  left: 1.25rem;
+  bottom: 100px;
+  color: $primary-text-color;
+  @include pageheaderMobile;
   @include tablet {
+    bottom: 300px;
     @include pageheaderDesktopTablet;
-    margin-top: 16.25rem;
-    margin-left: 11.25rem;
-    top: 20rem;
-  }
-  @include desktop {
-    top: 25rem;
   }
 }
+
+// .hero-section__title h2 {
+//   margin-top: 120px;
+//   @include pageheaderMobile;
+
+//   color: $primary-text-color;
+//   position: absolute;
+//   top: 3rem;
+//   left: 1.25rem;
+//   @include tablet {
+//     @include pageheaderDesktopTablet;
+//     margin-top: 16.25rem;
+//     margin-left: 11.25rem;
+//     top: 20rem;
+//   }
+//   @include desktop {
+//     top: 25rem;
+//   }
+// }
 
 //About section
 
@@ -151,16 +167,26 @@ header {
   }
   @include desktop {
     @include sectionheaderDesktopTablet;
-    margin-left: 6.875rem;
+    margin-left: 3.875rem;
+  }
+}
+
+.about-section__info-quote {
+  margin-left: 1rem;
+  @include tablet {
+    margin-left: .5rem;
+  }
+  @include desktop {
+    margin-left: -2.5rem;
   }
 }
 
 .about-section__info-quote p {
-  @include bodycopyMobile;
+  @include subheaderMobile;
   font-weight: bold;
   margin: 1rem;
   @include tablet {
-    @include bodycopyDesktopTablet;
+    @include subheaderDesktopTablet;
     font-weight: bold;
     margin: 0 6.25rem;
   }
@@ -169,14 +195,22 @@ header {
   }
 }
 
+.about-section__info-quote span {
+  @include bodycopyMobile;
+  @include tablet {
+    @include bodycopyDesktopTablet;
+  }
+}
+
 .about-section__image {
+  margin: 0 1.875rem;
   display: flex;
   justify-content: center;
   @include tablet {
-    margin: 4.25rem;
+    margin: 3.25rem;
   }
   @include desktop {
-    margin: 8.75rem;
+    margin: 5.75rem;
   }
 }
 
@@ -186,66 +220,66 @@ header {
   }
 }
 
-
-.about-section__row{
-  @include tablet{
+.about-section__row {
+  @include tablet {
     display: flex;
   }
 }
 
-
-.about-section__columns{
+.about-section__first-column {
+  margin: 0 1.875rem;
   @include bodycopyMobile;
-  margin: 10px 30px;
-  @include tablet{
+  @include tablet {
     flex: 50%;
-    margin: 0 3.25rem;
-    @include bodycopyDesktopTablet
+    margin-left: 6.25rem;
+    @include bodycopyDesktopTablet;
   }
-  @include desktop{
-
+  @include desktop {
+    margin-left: 9.5rem;
   }
 }
 
-
-// .about-section__paragraph {
-//   @include bodycopyMobile;
-//   padding: 1rem;
-//   @include tablet {
-//     display: flex;
-//     @include bodycopyDesktopTablet;
-
-//     // text-align: justify;
-//     // -webkit-columns: 12.625rem 2;
-//     // margin: 5.25rem;
-//   }
-//   @include desktop {
-//     // -webkit-columns: 15.625rem 2;
-//     // margin: 0 12.5rem;
-//   }
-// }
+.about-section__second-column {
+  @include bodycopyMobile;
+  margin: 0.625rem 1.875rem;
+  @include tablet {
+    flex: 50%;
+    margin: 0 2.25rem;
+    @include bodycopyDesktopTablet;
+  }
+  @include desktop {
+    margin-right: 9.5rem;
+  }
+}
 
 .about-section__about-musicians-title {
   @include sectionheaderMobile;
   margin: 1rem;
   @include tablet {
     @include sectionheaderDesktopTablet;
-    margin-bottom: -3.125rem;
+    margin-bottom: 1rem;
   }
 }
 
 .about-section__bees-knees-title {
+  margin-left: 0.75rem;
   @include subheaderMobile;
   @include tablet {
     @include subheaderDesktopTablet;
     line-height: 2rem;
   }
+
 }
 
 .about-section__band-image {
-  max-width: 90%;
+  max-width: 100%;
+  @include tablet {
+    width: 90%;
+    height: 30rem;
+  }
   @include desktop {
     width: 90%;
+    height: 46.75rem;
   }
 }
 
@@ -265,7 +299,8 @@ header {
   }
 }
 
-.photo-gallery__title h2 {
+.photo-gallery__title {
+  margin-bottom: 1rem;
   @include sectionheaderMobile;
   margin-left: 1.25rem;
   @include tablet {
@@ -273,7 +308,7 @@ header {
     margin-left: 3.75rem;
   }
   @include desktop {
-    margin-left: 9.25rem;
+    margin-left: 5.25rem;
   }
 }
 
@@ -294,7 +329,13 @@ header {
 footer {
   background-color: $bandsite-black;
   color: $primary-text-color;
-  padding: 1.25rem;
+  padding: 2.25rem;
+  @include tablet{
+padding-left: 0%;
+  }
+  @include desktop{
+    padding-left: 100px;
+  }
 }
 
 .footer-main-title {
@@ -451,7 +492,6 @@ footer span {
 
 .copyright {
   @include tablet {
-    display: flex;
   }
 }
 
@@ -479,7 +519,7 @@ a {
   right: 0;
   bottom: 0;
   width: 200%;
-  height: .125rem;
+  height: 0.125rem;
   background-color: #ffff;
 
   transform: scaleX(0);
@@ -495,16 +535,5 @@ a {
 
 a:active {
   font-weight: bold;
-  border-bottom: .0625rem solid #ffff;
+  border-bottom: 0.0625rem solid #ffff;
 }
-
-// .hero-section{
-//   display: flex;
-// }
-
-// .hero-section__overlay{
-//   height: 00px;
-//   display: flex;
-//   background-color: rgba(50, 50, 50, 0.5);
-//   width: 100%;
-// }
