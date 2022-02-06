@@ -1,4 +1,4 @@
-//TODO add all the styles
+//font styles
 @use "./partials/mixin" as *;
 @use "./partials/variables" as *;
 
@@ -120,33 +120,31 @@ header {
 
 .hero-section__title {
   position: absolute;
-  bottom: 100px;
+  left: 3.125rem;
+  bottom: 6.25rem;
+  z-index: 100;
   color: $primary-text-color;
   @include pageheaderMobile;
   @include tablet {
-    bottom: 300px;
+    left: 6.25rem;
+    bottom: 18.75rem;
     @include pageheaderDesktopTablet;
+  }
+  @include desktop{
+    bottom: 25rem;
   }
 }
 
-// .hero-section__title h2 {
-//   margin-top: 120px;
-//   @include pageheaderMobile;
-
-//   color: $primary-text-color;
-//   position: absolute;
-//   top: 3rem;
-//   left: 1.25rem;
-//   @include tablet {
-//     @include pageheaderDesktopTablet;
-//     margin-top: 16.25rem;
-//     margin-left: 11.25rem;
-//     top: 20rem;
-//   }
-//   @include desktop {
-//     top: 25rem;
-//   }
-// }
+.hero-section__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #323232;
+  opacity: 0.5;
+}
 
 //About section
 
@@ -174,7 +172,7 @@ header {
 .about-section__info-quote {
   margin-left: 1rem;
   @include tablet {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
   @include desktop {
     margin-left: -2.5rem;
@@ -268,7 +266,6 @@ header {
     @include subheaderDesktopTablet;
     line-height: 2rem;
   }
-
 }
 
 .about-section__band-image {
@@ -330,10 +327,10 @@ footer {
   background-color: $bandsite-black;
   color: $primary-text-color;
   padding: 2.25rem;
-  @include tablet{
-padding-left: 0%;
+  @include tablet {
+    padding-left: 0%;
   }
-  @include desktop{
+  @include desktop {
     padding-left: 100px;
   }
 }
