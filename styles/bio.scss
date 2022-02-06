@@ -99,6 +99,12 @@ header {
   }
 }
 
+.nav-list__bio:hover,
+.nav-list__shows:hover {
+  color: $primary-text-color;
+  border-bottom: 1px solid #ffff;
+}
+
 .nav-list__bio:active,
 .nav-list__shows:active {
   font-weight: 700;
@@ -115,22 +121,22 @@ header {
 
 .hero-section {
   position: relative;
-  margin-bottom: 1.5rem;
 }
 
 .hero-section__title {
   position: absolute;
-  left: 3.125rem;
-  bottom: 6.25rem;
+  bottom: 4.5rem;
   z-index: 100;
+  margin-left: 5.25rem;
   color: $primary-text-color;
   @include pageheaderMobile;
   @include tablet {
-    left: 6.25rem;
-    bottom: 18.75rem;
+    bottom: 4.5rem;
+    bottom: 200px;
+    margin-left: 6.25rem;
     @include pageheaderDesktopTablet;
   }
-  @include desktop{
+  @include desktop {
     bottom: 25rem;
   }
 }
@@ -252,10 +258,13 @@ header {
 
 .about-section__about-musicians-title {
   @include sectionheaderMobile;
-  margin: 1rem;
+  margin: 1rem 2rem;
   @include tablet {
     @include sectionheaderDesktopTablet;
-    margin-bottom: 1rem;
+    margin-left: 3.125rem;
+  }
+  @include desktop {
+    margin: 1rem 120px;
   }
 }
 
@@ -276,7 +285,7 @@ header {
   }
   @include desktop {
     width: 90%;
-    height: 46.75rem;
+    height: 50rem;
   }
 }
 
@@ -305,7 +314,7 @@ header {
     margin-left: 3.75rem;
   }
   @include desktop {
-    margin-left: 5.25rem;
+    margin-left: 7.5rem;
   }
 }
 
@@ -488,7 +497,13 @@ footer span {
 }
 
 .copyright {
-  @include tablet {
+  @include tablet{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4.0625rem;
+  }
+  @include desktop {
+  margin-left:1.25rem ;
   }
 }
 
@@ -501,36 +516,18 @@ footer span {
   }
 }
 
-.nav-list__bio,
-.nav-list__shows,
-a {
-  color: $primary-text-color;
+
+
+
+.contact-info__email a {
   text-decoration: none;
-  position: relative;
+  color: $primary-text-color;
 }
 
-.nav-list__bio::after,
-.nav-list__shows::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 200%;
-  height: 0.125rem;
-  background-color: #ffff;
-
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 250ms ease-in;
+.photo-gallery__container-photo {
+  transition: filter 0.5s;
 }
 
-.nav-list__bio:hover::after,
-.nav-list__shows:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-a:active {
-  font-weight: bold;
-  border-bottom: 0.0625rem solid #ffff;
+.photo-gallery__container-photo:hover {
+  filter: contrast(150%);
 }

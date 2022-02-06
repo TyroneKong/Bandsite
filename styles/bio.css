@@ -104,6 +104,12 @@ header {
   }
 }
 
+.nav-list__bio:hover,
+.nav-list__shows:hover {
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
+}
+
 .nav-list__bio:active,
 .nav-list__shows:active {
   font-weight: 700;
@@ -118,14 +124,13 @@ header {
 
 .hero-section {
   position: relative;
-  margin-bottom: 1.5rem;
 }
 
 .hero-section__title {
   position: absolute;
-  left: 3.125rem;
-  bottom: 6.25rem;
+  bottom: 4.5rem;
   z-index: 100;
+  margin-left: 5.25rem;
   color: #ffff;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -133,8 +138,9 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .hero-section__title {
-    left: 6.25rem;
-    bottom: 18.75rem;
+    bottom: 4.5rem;
+    bottom: 200px;
+    margin-left: 6.25rem;
     font-size: 60px;
     line-height: 68px;
     font-family: "Avenir Next Bold";
@@ -309,14 +315,19 @@ header {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir Next DEmi";
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
 @media screen and (min-width: 48rem) {
   .about-section__about-musicians-title {
     font-size: 36px;
     line-height: 44px;
     font-family: "Avenir Next Demi";
-    margin-bottom: 1rem;
+    margin-left: 3.125rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .about-section__about-musicians-title {
+    margin: 1rem 120px;
   }
 }
 
@@ -347,7 +358,7 @@ header {
 @media screen and (min-width: 80.625rem) {
   .about-section__band-image {
     width: 90%;
-    height: 46.75rem;
+    height: 50rem;
   }
 }
 
@@ -383,7 +394,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .photo-gallery__title {
-    margin-left: 5.25rem;
+    margin-left: 7.5rem;
   }
 }
 
@@ -595,6 +606,19 @@ footer span {
 }
 
 @media screen and (min-width: 48rem) {
+  .copyright {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4.0625rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .copyright {
+    margin-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
   .contact-info__mobile-socialIcons {
     display: none;
   }
@@ -605,35 +629,15 @@ footer span {
   }
 }
 
-.nav-list__bio,
-.nav-list__shows,
-a {
-  color: #ffff;
+.contact-info__email a {
   text-decoration: none;
-  position: relative;
+  color: #ffff;
 }
 
-.nav-list__bio::after,
-.nav-list__shows::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 200%;
-  height: 0.125rem;
-  background-color: #ffff;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 250ms ease-in;
+.photo-gallery__container-photo {
+  transition: filter 0.5s;
 }
 
-.nav-list__bio:hover::after,
-.nav-list__shows:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-a:active {
-  font-weight: bold;
-  border-bottom: 0.0625rem solid #ffff;
+.photo-gallery__container-photo:hover {
+  filter: contrast(150%);
 }/*# sourceMappingURL=bio.css.map */
