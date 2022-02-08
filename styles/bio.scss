@@ -332,6 +332,114 @@ header {
   }
 }
 
+//conversation section
+
+.conversation-section{
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+// .conversation__form {
+ 
+// }
+
+.conversation__title {
+  @include sectionheaderMobile;
+}
+
+.conversation__input-container {
+  width: 100%;
+  height: 36px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+
+  
+}
+
+.conversation__comment-container{
+  width: 100%;
+  padding: 12px;
+  margin: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conversation__label{
+  @include bodycopyMobile;
+ margin: 4px;
+  color: $silver;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.conversation__image{
+  height: 36px;
+  width: 36px;
+  background-size: cover;
+  border-radius: 50%;
+ background-image: url('../assets/Images/Mohan-muruge.jpg');
+
+ 
+}
+
+::placeholder{
+  @include bodycopyMobile;
+  color: #000000;
+
+}
+
+input{
+  width: 50%;
+  border: 4px solid  $mercury;
+  height: 36px;
+}
+
+textarea{
+  margin: 0 50px;
+  width: 50%;
+  border: 4px solid $mercury;
+}
+
+.comment-btn{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 32px;
+}
+
+button {
+  @include subheaderMobile;
+  width: 50%;
+  color: #ffff;
+  background-color: $bandsite-black;
+  height: 40px;
+  margin: 10px;
+
+}
+
+//primary CTA hover
+button:hover {
+  background-color: #000000;
+}
+
+ hr.conversation__divider{
+  border-top: 1px solid $mercury;
+}
+
+
+.comments{
+  width: 50%;
+  @include bodycopyMobile;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
 //Footer section
 
 footer {
