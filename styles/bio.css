@@ -426,15 +426,16 @@ header {
   height: 36px;
   padding: 12px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .conversation__comment-container {
-  width: 100%;
-  padding: 12px;
-  margin: 16px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.comment__list li {
+  list-style: none;
 }
 
 .conversation__label {
@@ -444,15 +445,33 @@ header {
   margin: 4px;
   color: #AFAFAF;
   display: flex;
-  justify-content: space-around;
 }
 
-.conversation__image {
+.conversation__avatar {
   height: 36px;
   width: 36px;
   background-size: cover;
   border-radius: 50%;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
+}
+
+.comment-container img {
+  height: 36px;
+  width: 36px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.comment-container h3 {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Next Regular";
+}
+
+.comment-container li {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Next Regular";
 }
 
 ::-moz-placeholder {
@@ -478,20 +497,20 @@ header {
 
 input {
   width: 50%;
-  border: 4px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   height: 36px;
 }
 
 textarea {
   margin: 0 50px;
   width: 50%;
-  border: 4px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
 }
 
 .comment-btn {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0 32px;
 }
 
@@ -510,8 +529,8 @@ button:hover {
   background-color: #000000;
 }
 
-hr.conversation__divider {
-  border-top: 1px solid #e1e1e1;
+hr {
+  border-top: 4px solid #e1e1e1;
 }
 
 .comments {
@@ -521,6 +540,32 @@ hr.conversation__divider {
   font-family: "Avenir Next Regular";
   display: flex;
   flex-direction: column;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__list {
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar__img {
+  position: relative;
+  right: 40px;
+  top: 40px;
+}
+
+.date {
+  position: absolute;
+  right: 400px;
+  bottom: 100px;
 }
 
 footer {

@@ -341,9 +341,6 @@ header {
   box-sizing: border-box;
 }
 
-// .conversation__form {
- 
-// }
 
 .conversation__title {
   @include sectionheaderMobile;
@@ -354,30 +351,32 @@ header {
   height: 36px;
   padding: 12px;
   display: flex;
-  justify-content: space-around;
-
+  justify-content: center;
   
 }
 
 .conversation__comment-container{
-  width: 100%;
-  padding: 12px;
-  margin: 16px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center
+
 }
+
+.comment__list li {
+  list-style: none;
+}
+
 
 .conversation__label{
   @include bodycopyMobile;
  margin: 4px;
   color: $silver;
   display: flex;
-  justify-content: space-around;
+
 }
 
 
 
-.conversation__image{
+.conversation__avatar{
   height: 36px;
   width: 36px;
   background-size: cover;
@@ -385,6 +384,22 @@ header {
  background-image: url('../assets/Images/Mohan-muruge.jpg');
 
  
+}
+
+.comment-container img{
+  height: 36px;
+  width: 36px;
+  background-color: $mercury;
+  border-radius: 50%;
+}
+
+
+.comment-container h3{
+  @include bodycopyMobile
+}
+
+.comment-container li {
+  @include bodycopyMobile;
 }
 
 ::placeholder{
@@ -395,20 +410,20 @@ header {
 
 input{
   width: 50%;
-  border: 4px solid  $mercury;
+  border: 1px solid  $mercury;
   height: 36px;
 }
 
 textarea{
   margin: 0 50px;
   width: 50%;
-  border: 4px solid $mercury;
+  border: 1px solid $mercury;
 }
 
 .comment-btn{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   padding: 0 32px;
 }
 
@@ -420,6 +435,7 @@ button {
   height: 40px;
   margin: 10px;
 
+
 }
 
 //primary CTA hover
@@ -427,8 +443,8 @@ button:hover {
   background-color: #000000;
 }
 
- hr.conversation__divider{
-  border-top: 1px solid $mercury;
+ hr{
+  border-top: 4px solid $mercury;
 }
 
 
@@ -439,6 +455,60 @@ button:hover {
   flex-direction: column;
  
 }
+
+
+
+
+.comment-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__list{
+  position: relative;
+}
+
+// .conversation__avatar{
+//   position: relative;
+//   top: 50px;
+//   right: 40px;
+// }
+
+
+// .comment-container{
+//   display: flex;
+//   justify-content: center;
+
+// }
+
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+}
+
+  
+// .date{
+//   d
+// }
+
+
+.avatar__img{
+  position:relative;
+  right: 40px;
+  top: 40px;
+}
+
+.date{
+  position: absolute;
+  right: 400px;
+  bottom: 100px;
+}
+
+
+
+
+
 
 //Footer section
 
