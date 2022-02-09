@@ -4,7 +4,7 @@
 // screen breakpoints
 
 @mixin tablet {
-    @media screen and (min-width:$tablet-width) {
+    @media screen and (min-width:$tablet-width){
         
         @content;
     }

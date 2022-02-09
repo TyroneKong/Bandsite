@@ -334,12 +334,13 @@ header {
 
 //conversation section
 
-.conversation-section{
+.conversation-section {
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-sizing: border-box;
 }
+
 
 
 .conversation__title {
@@ -348,83 +349,88 @@ header {
 
 .conversation__input-container {
   width: 100%;
-  height: 36px;
-  padding: 12px;
+  height: 2.25rem;
+  padding: 0.75rem;
   display: flex;
   justify-content: center;
-  
 }
 
-.conversation__comment-container{
-  display: flex;
-  justify-content: center
-
-}
 
 .comment__list li {
   list-style: none;
 }
 
-
-.conversation__label{
+.conversation__label {
   @include bodycopyMobile;
- margin: 4px;
+  margin: 0.25rem;
   color: $silver;
   display: flex;
-
 }
 
-
-
-.conversation__avatar{
-  height: 36px;
-  width: 36px;
+.conversation__avatar {
+  height: 2.25rem;
+  width: 2.25rem;
   background-size: cover;
   border-radius: 50%;
- background-image: url('../assets/Images/Mohan-muruge.jpg');
-
- 
+  background-image: url("../assets/Images/Mohan-muruge.jpg");
 }
 
-.comment-container img{
-  height: 36px;
-  width: 36px;
+.comment-container img {
+  height: 2.25rem;
+  width: 2.25rem;
   background-color: $mercury;
   border-radius: 50%;
+  @include tablet {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 
-.comment-container h3{
-  @include bodycopyMobile
+.conversation__comment-container{
+  display: flex;
+  justify-content: center
+}
+
+.comment-container h3 {
+  @include bodycopyMobile;
 }
 
 .comment-container li {
   @include bodycopyMobile;
 }
 
-::placeholder{
+::placeholder {
   @include bodycopyMobile;
   color: #000000;
-
 }
 
-input{
+input {
   width: 50%;
-  border: 1px solid  $mercury;
-  height: 36px;
+  border: 0.0625rem solid $mercury;
+  height: 2.25rem;
 }
 
-textarea{
-  margin: 0 50px;
+input:invalid, textarea:invalid{
+ border-color: red;
+}
+
+textarea {
+  margin: 0 3.125rem;
   width: 50%;
-  border: 1px solid $mercury;
+  border: 0.0625rem solid $mercury;
 }
 
-.comment-btn{
+.comment-btn {
   width: 100%;
   display: flex;
-  justify-content:center;
-  padding: 0 32px;
+  justify-content: center;
+  padding: 0 2rem;
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -5.625rem;
+  }
 }
 
 button {
@@ -432,10 +438,11 @@ button {
   width: 50%;
   color: #ffff;
   background-color: $bandsite-black;
-  height: 40px;
-  margin: 10px;
-
-
+  height: 2.5rem;
+  margin: 0.625rem;
+  @include tablet {
+    width: 9.375rem;
+  }
 }
 
 //primary CTA hover
@@ -443,70 +450,69 @@ button:hover {
   background-color: #000000;
 }
 
- hr{
-  border-top: 4px solid $mercury;
+hr{
+  border-top: .0625rem solid $mercury;
+
 }
 
-
-.comments{
+.comments {
   width: 50%;
   @include bodycopyMobile;
   display: flex;
   flex-direction: column;
- 
 }
 
-
-
-
-.comment-section{
+.comment-section {
   display: flex;
   flex-direction: column;
 }
 
-.comment__list{
+.comment__list {
   position: relative;
 }
 
-// .conversation__avatar{
-//   position: relative;
-//   top: 50px;
-//   right: 40px;
-// }
-
-
-// .comment-container{
-//   display: flex;
-//   justify-content: center;
-
-// }
-
-
-.heading{
+.heading {
   display: flex;
   justify-content: space-between;
 }
 
-  
-// .date{
-//   d
-// }
-
-
-.avatar__img{
-  position:relative;
-  right: 40px;
-  top: 40px;
+.avatar__img {
+  position: relative;
+  right: 2.5rem;
+  top: 2.5rem;
+  @include tablet {
+  }
 }
 
-.date{
-  position: absolute;
-  right: 400px;
-  bottom: 100px;
+.comment__date {
+  display: flex;
+  justify-content: flex-end;
+  color: $silver;
 }
 
+.comment__name {
+  position: relative;
+  bottom: 2.5rem;
+  left: 10px;
+  @include tablet {
+    left: 0.625rem;
+  }
+}
 
+.comment-container {
+ 
+  @include tablet {
+    margin: 4.375rem;
+  }
+  @include desktop {
+    margin: 0 43.75rem;
+  }
+}
 
+.comment{
+  display: flex;
+  justify-content: center;
+}
 
 
 

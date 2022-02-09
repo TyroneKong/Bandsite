@@ -38,8 +38,9 @@ comments.push({Name:nameInput, Comment:commentInput})
 console.log(comments)
 
 commentList.innerText = ""
-    
+
  displayComment()
+
 
 }
 
@@ -57,24 +58,25 @@ const displayComment=()=>{
         const commentList = document.querySelector('.comment__list')
         const heading = document.querySelector('.heading')
 
-        const p = document.createElement('p')
+        const date = document.createElement('p')
         const nameTitle = document.createElement('h3')
         const commenting = document.createElement('li')
         const avatar = document.createElement('img')
         const divider = document.createElement('hr')
 
-        p.classList.add('date')
+        date.classList.add('comment__date')
         avatar.classList.add('avatar__img')
-        nameTitle.classList.add('name')
-        commenting.classList.add('comm')
+        nameTitle.classList.add('comment__name')
+        commenting.classList.add('comment__item')
         commentList.appendChild(avatar)
+        commentList.appendChild(date)
         commentList.appendChild(nameTitle)
-        commentList.appendChild(p)
+       
      
         commentList.appendChild(commenting)
         commentList.appendChild(divider)
         nameTitle.innerText = comments[i].Name
-        p.innerText = comments[i].Date    
+        date.innerText = comments[i].Date    
         commenting.innerText = comments[i].Comment
 
     }

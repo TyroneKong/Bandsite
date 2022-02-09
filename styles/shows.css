@@ -415,6 +415,62 @@ header {
   box-sizing: border-box;
   margin-left: 20px;
 }
+@media screen and (min-width: 48rem) {
+  .show__details {
+    margin-left: -100px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .show1 {
+    display: flex;
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .show1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .show1 li {
+    flex-wrap: wrap;
+    list-style: none;
+    flex: 0 0 25%;
+  }
+}
+
+li {
+  list-style: none;
+  margin-left: -2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  li {
+    margin-top: 1.875rem;
+  }
+}
+
+.show1 h3 {
+  margin-left: -40px;
+}
+@media screen and (min-width: 48rem) {
+  .show1 h3 {
+    margin-left: 0;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .date__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .show-section h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -424,7 +480,12 @@ header {
 
 .buy button {
   display: flex;
-  justify-content: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .buy {
+    margin-left: 120px;
+  }
 }
 
 .show__title {
@@ -439,13 +500,6 @@ header {
   font-family: "Avenir Next Regular";
 }
 
-.buy-btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 32px;
-}
-
 button {
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -455,6 +509,16 @@ button {
   background-color: #323232;
   height: 40px;
   margin: 10px;
+}
+@media screen and (min-width: 48rem) {
+  button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  button {
+    width: 10%;
+  }
 }
 
 button:hover {
