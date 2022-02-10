@@ -28,17 +28,16 @@ const commentBtn = document.querySelector('.comment-btn')
 
 //apply new comment
 
-const applyNewComment=()=>{
+const applyNewComment=(event)=>{
 
 const nameInput = document.querySelector('.input').value
 const commentInput = document.querySelector('.text').value
-const newComment = document.querySelector('.newComment')
 const commentList = document.querySelector('.comment__list')
 comments.push({Name:nameInput, Comment:commentInput})
 console.log(comments)
 
 commentList.innerText = ""
-
+event.preventDefault()
  displayComment()
 
 
@@ -47,9 +46,9 @@ commentList.innerText = ""
 
 //button event
 
-commentBtn.addEventListener('click', applyNewComment)
+commentBtn.addEventListener('click', (applyNewComment))
 
-
+   
 
 
 // display default comments 
@@ -80,7 +79,6 @@ const displayComment=()=>{
         commenting.innerText = comments[i].Comment
 
     }
-    
 }
 
 displayComment()

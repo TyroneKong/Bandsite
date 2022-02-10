@@ -26,6 +26,9 @@ header {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
+
+
 //Header
 
 .header {
@@ -139,7 +142,7 @@ header {
     @include pageheaderDesktopTablet;
   }
   @include desktop {
-    bottom: 25rem;
+    bottom: 30rem;
   }
 }
 
@@ -334,6 +337,11 @@ header {
 
 //conversation section
 
+.conversation__form * {
+  box-sizing: border-box;
+}
+
+
 .conversation-section {
   display: flex;
   flex-direction: column;
@@ -373,6 +381,11 @@ header {
   background-size: cover;
   border-radius: 50%;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
+  position: relative;
+  bottom: -70px;
+  @include tablet{
+    left: 170px;
+  }
 }
 
 .comment-container img {
@@ -387,9 +400,14 @@ header {
 }
 
 
+
 .conversation__comment-container{
   display: flex;
-  justify-content: center
+  justify-content: center;
+  @include tablet{
+    width:100%;
+    margin-top: -100px
+  }
 }
 
 .comment-container h3 {
@@ -409,6 +427,9 @@ input {
   width: 50%;
   border: 0.0625rem solid $mercury;
   height: 2.25rem;
+  @include tablet{
+    width: 40%;
+  }
 }
 
 input:invalid, textarea:invalid{
@@ -419,6 +440,9 @@ textarea {
   margin: 0 3.125rem;
   width: 50%;
   border: 0.0625rem solid $mercury;
+  @include tablet{
+    width: 40%;
+  }
 }
 
 .comment-btn {
@@ -429,7 +453,7 @@ textarea {
   @include tablet {
     display: flex;
     justify-content: flex-end;
-    margin-left: -5.625rem;
+    margin-left: -350px;
   }
 }
 
@@ -479,7 +503,7 @@ hr{
 .avatar__img {
   position: relative;
   right: 2.5rem;
-  top: 2.5rem;
+  top: 3.75rem;
   @include tablet {
   }
 }
@@ -505,15 +529,33 @@ hr{
     margin: 4.375rem;
   }
   @include desktop {
-    margin: 0 43.75rem;
+    margin: 0 400px;
   }
 }
 
 .comment{
   display: flex;
   justify-content: center;
+
+  .comment__item{
+    margin-left: .625rem;
+  }
 }
 
+.conversation__input-container{
+  margin-bottom: 100px;
+    @include tablet{
+      bottom: 100px;
+    }
+  
+}
+
+.conversation__label{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 100px
+}
 
 
 //Footer section

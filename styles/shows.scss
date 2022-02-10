@@ -125,24 +125,19 @@ header {
   position: relative;
 }
 
-
-
-
 .hero-section__title {
   position: absolute;
-
   z-index: 100;
   margin-left: 5.25rem;
   color: $primary-text-color;
   @include pageheaderMobile;
   @include tablet {
-    bottom: 4.5rem;
-    bottom: 200px;
+    bottom: 40rem;
     margin-left: 6.25rem;
     @include pageheaderDesktopTablet;
   }
   @include desktop {
-    bottom: 25rem;
+    bottom: 40rem;
   }
 }
 
@@ -157,9 +152,17 @@ header {
   opacity: 0.5;
 }
 
-// .hero-section__soundcloud-player{
-
-// }
+.hero-section__soundcloud-player {
+  position: absolute;
+  top: 240px;
+  left: 40px;
+  z-index: 100;
+  width: 70%;
+  @include tablet {
+    top: 600px;
+    width: 60%;
+  }
+}
 
 //About section
 
@@ -341,147 +344,147 @@ header {
 
 //conversation section
 
-.show-section{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left: 20px;
-  @include tablet{
-      
-      
-  }
-
-}
-
-.show__details{
-
-    @include tablet{
-        margin-left: -100px;
-       
-    }
-}
-
-.show1{
-    @include tablet{
-        display:flex;
-        margin-left: 200px;
-      
-    }
-  
-}
-
-.show1 ul{
-    @include tablet{
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-    }
-  
-}
-
-.show1 li{
-    @include tablet{
-        flex-wrap: wrap;
-        list-style: none;
-        flex: 0 0 25%;
-    }
-  
-}
-
-li{
-    list-style: none;
-    margin-left: -2.5rem;
-    @include tablet{
-        margin-top: 1.875rem;
-    }
-    
-}
-
-.show1 h3{
-    margin-left: -40px;
-    @include tablet{
-        margin-left: 0;
-        display: none;
-    }
-}
-
-
-
-
-.date__info{
-   
-   @include tablet{
-    display: flex;
-    flex-wrap: wrap;
-   }
-}
-
-
-.show-section h3{
-    @include subheaderMobile;
-    color: $silver
-}
-
-
-.buy button{
-    display: flex;
-}
-
-
-.buy{
-    @include tablet{
-    margin-left: 120px
-    }
-}
-
-
-.show__title {
-  @include sectionheaderMobile;
-  
-}
-
-.show_date p{
-    @include bodycopyMobile;
-}
-
-
-
-// .buy{
-//   width: 100%;
+// .show-section {
 //   display: flex;
-//   justify-content: center;
-//   padding: 0 32px;
-  
+//   flex-direction: column;
+//   align-items: flex-start;
+//   border-radius: 4px;
+//   box-sizing: border-box;
+//   margin-left: 20px;
+//   @include tablet {
+//   }
 // }
 
-button {
+.show__details {
+   display: flex;
+ justify-content: center;
+  @include tablet {
+    margin-left: 140px;
+
+  }
+  @include desktop {
+    margin-left: 400px;
+  }
+}
+
+
+.show__items ul {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+}
+
+.show__items li {
+  @include tablet {
+    flex-wrap: wrap;
+    list-style: none;
+    flex: 0 0 25%;
+  }
+}
+
+li {
+  list-style: none;
+  margin-left: -40px;
+  @include tablet {
+    margin-top: 1.875rem;
+    margin-left: -30px;
+  }
+}
+
+.show__items h3 {
+  margin-left: -40px;
+  @include tablet {
+    margin-left: 0;
+    display: none;
+  }
+}
+
+
+
+.show-section h3 {
   @include subheaderMobile;
-  width: 100%;
+  color: $silver;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -2.5rem;
+  @include subheaderMobile;
+  @include tablet {
+    @include subheaderDesktopTablet;
+    margin-left: 10px;
+  }
+}
+
+
+.show__date {
+  font-weight: bold;
+  @include tablet {
+
+  }
+  @include desktop{
+    margin-left: -1.625rem;
+  }
+}
+
+.show__titles {
+  display: none;
+  @include tablet {
+    @include bodycopyDesktopTablet;
+    color: $silver;
+    display: flex;
+    justify-content: space-evenly;
+    position:relative;
+    right: 200px;
+  }
+  @include desktop{
+
+  }
+}
+
+
+
+button {
+  border-radius: 7px;
+  @include subheaderMobile;
+  width: 300px;
   color: #ffff;
   background-color: $bandsite-black;
   height: 40px;
   margin: 10px;
-  @include tablet{
-    width: 20%;
-  }
-  @include desktop{
-      width: 10%;
-  }
+  padding: 16px;
 
+  @include tablet {
+    @include bodycopyDesktopTablet;
+    width: 190px;
+    padding: 24px 18px;
+  }
+  @include desktop {
+    @include bodycopyDesktopTablet;
+    width: 190px;
+  }
 }
+
+.show__divider {
+border: 1px solid  $mercury;
+  width: 100%;
+  
+  @include tablet {
+    width: 100%;
+  }
+}
+
+
+
 
 //primary CTA hover
 button:hover {
   background-color: #000000;
 }
-
- hr.show__divider{
-  border-top: 4px solid $mercury;
-}
-
-
 
 //Footer section
 
@@ -489,8 +492,9 @@ footer {
   background-color: $bandsite-black;
   color: $primary-text-color;
   padding: 2.25rem;
+  margin-top: 30px;
   @include tablet {
-    padding-left: 0%;
+    margin-top: 200px;
   }
   @include desktop {
     padding-left: 100px;

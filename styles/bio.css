@@ -144,7 +144,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .hero-section__title {
-    bottom: 25rem;
+    bottom: 30rem;
   }
 }
 
@@ -408,6 +408,10 @@ header {
   }
 }
 
+.conversation__form * {
+  box-sizing: border-box;
+}
+
 .conversation-section {
   display: flex;
   flex-direction: column;
@@ -448,6 +452,13 @@ header {
   background-size: cover;
   border-radius: 50%;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
+  position: relative;
+  bottom: -70px;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__avatar {
+    left: 170px;
+  }
 }
 
 .comment-container img {
@@ -466,6 +477,12 @@ header {
 .conversation__comment-container {
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__comment-container {
+    width: 100%;
+    margin-top: -100px;
+  }
 }
 
 .comment-container h3 {
@@ -506,6 +523,11 @@ input {
   border: 0.0625rem solid #e1e1e1;
   height: 2.25rem;
 }
+@media screen and (min-width: 48rem) {
+  input {
+    width: 40%;
+  }
+}
 
 input:invalid, textarea:invalid {
   border-color: red;
@@ -515,6 +537,11 @@ textarea {
   margin: 0 3.125rem;
   width: 50%;
   border: 0.0625rem solid #e1e1e1;
+}
+@media screen and (min-width: 48rem) {
+  textarea {
+    width: 40%;
+  }
 }
 
 .comment-btn {
@@ -527,7 +554,7 @@ textarea {
   .comment-btn {
     display: flex;
     justify-content: flex-end;
-    margin-left: -5.625rem;
+    margin-left: -350px;
   }
 }
 
@@ -581,7 +608,7 @@ hr {
 .avatar__img {
   position: relative;
   right: 2.5rem;
-  top: 2.5rem;
+  top: 3.75rem;
 }
 .comment__date {
   display: flex;
@@ -607,13 +634,32 @@ hr {
 }
 @media screen and (min-width: 80.625rem) {
   .comment-container {
-    margin: 0 43.75rem;
+    margin: 0 400px;
   }
 }
 
 .comment {
   display: flex;
   justify-content: center;
+}
+.comment .comment__item {
+  margin-left: 0.625rem;
+}
+
+.conversation__input-container {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__input-container {
+    bottom: 100px;
+  }
+}
+
+.conversation__label {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 100px;
 }
 
 footer {

@@ -133,8 +133,7 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .hero-section__title {
-    bottom: 4.5rem;
-    bottom: 200px;
+    bottom: 40rem;
     margin-left: 6.25rem;
     font-size: 60px;
     line-height: 68px;
@@ -143,7 +142,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .hero-section__title {
-    bottom: 25rem;
+    bottom: 40rem;
   }
 }
 
@@ -156,6 +155,20 @@ header {
   z-index: 10;
   background-color: #323232;
   opacity: 0.5;
+}
+
+.hero-section__soundcloud-player {
+  position: absolute;
+  top: 240px;
+  left: 40px;
+  z-index: 100;
+  width: 70%;
+}
+@media screen and (min-width: 48rem) {
+  .hero-section__soundcloud-player {
+    top: 600px;
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 48rem) {
@@ -407,29 +420,23 @@ header {
   }
 }
 
-.show-section {
+.show__details {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left: 20px;
+  justify-content: center;
 }
 @media screen and (min-width: 48rem) {
   .show__details {
-    margin-left: -100px;
+    margin-left: 140px;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .show__details {
+    margin-left: 400px;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .show1 {
-    display: flex;
-    margin-left: 200px;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .show1 ul {
+  .show__items ul {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -437,7 +444,7 @@ header {
 }
 
 @media screen and (min-width: 48rem) {
-  .show1 li {
+  .show__items li {
     flex-wrap: wrap;
     list-style: none;
     flex: 0 0 25%;
@@ -446,28 +453,22 @@ header {
 
 li {
   list-style: none;
-  margin-left: -2.5rem;
+  margin-left: -40px;
 }
 @media screen and (min-width: 48rem) {
   li {
     margin-top: 1.875rem;
+    margin-left: -30px;
   }
 }
 
-.show1 h3 {
+.show__items h3 {
   margin-left: -40px;
 }
 @media screen and (min-width: 48rem) {
-  .show1 h3 {
+  .show__items h3 {
     margin-left: 0;
     display: none;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .date__info {
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -478,46 +479,85 @@ li {
   color: #AFAFAF;
 }
 
-.buy button {
+.buy {
   display: flex;
-}
-
-@media screen and (min-width: 48rem) {
-  .buy {
-    margin-left: 120px;
-  }
-}
-
-.show__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "Avenir Next DEmi";
-}
-
-.show_date p {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
-}
-
-button {
+  justify-content: center;
+  align-items: center;
+  margin-left: -2.5rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir Next Demi";
-  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .buy {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Avenir Next Demi";
+    margin-left: 10px;
+  }
+}
+
+.show__date {
+  font-weight: bold;
+}
+@media screen and (min-width: 80.625rem) {
+  .show__date {
+    margin-left: -1.625rem;
+  }
+}
+
+.show__titles {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .show__titles {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Avenir Next Regular";
+    color: #AFAFAF;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    right: 200px;
+  }
+}
+button {
+  border-radius: 7px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Next Demi";
+  width: 300px;
   color: #ffff;
   background-color: #323232;
   height: 40px;
   margin: 10px;
+  padding: 16px;
 }
 @media screen and (min-width: 48rem) {
   button {
-    width: 20%;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Avenir Next Regular";
+    width: 190px;
+    padding: 24px 18px;
   }
 }
 @media screen and (min-width: 80.625rem) {
   button {
-    width: 10%;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Avenir Next Regular";
+    width: 190px;
+  }
+}
+
+.show__divider {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .show__divider {
+    width: 100%;
   }
 }
 
@@ -525,18 +565,15 @@ button:hover {
   background-color: #000000;
 }
 
-hr.show__divider {
-  border-top: 4px solid #e1e1e1;
-}
-
 footer {
   background-color: #323232;
   color: #ffff;
   padding: 2.25rem;
+  margin-top: 30px;
 }
 @media screen and (min-width: 48rem) {
   footer {
-    padding-left: 0%;
+    margin-top: 200px;
   }
 }
 @media screen and (min-width: 80.625rem) {

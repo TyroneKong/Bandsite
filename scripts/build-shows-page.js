@@ -32,21 +32,12 @@ const shows = [
   ];
   
   
-  //elements 
-//   const showDate = document.querySelector(".show__date");
-//   const showButtons = document.querySelector('.show__buttons')
-//   const dateInfo = document.querySelector('.date__info')
-//   const venueInfo = document.querySelector('.venue__info')
+ 
   const showInfo = document.querySelector('.show__list')
   
   // loop
   for (let i = 0; i < shows.length; i++) {
-    // const datep = document.createElement("p");
-    // const date = document.createElement("h3");
-    // const venuep = document.createElement("p");
-    // const venue = document.createElement("h3");
-    // const locationp = document.createElement("p");
-    // const location = document.createElement("h3");
+  
 
     const listDate = document.createElement('li')
     const listVenue = document.createElement('li')
@@ -55,8 +46,13 @@ const shows = [
     const titleVenue = document.createElement('h3')
     const titleLocation = document.createElement('h3')
     const button = document.createElement("button");
+    const divider = document.createElement('hr')
 
+    listDate.classList.add('show__date')
+    listVenue.classList.add('.show__venue')
+    listLocation.classList.add('.show__location')
     button.classList.add('buy')
+    divider.classList.add('show__divider')
     showInfo.appendChild(titleDate)
     showInfo.appendChild(listDate)
     showInfo.appendChild(titleVenue)
@@ -64,6 +60,7 @@ const shows = [
     showInfo.appendChild(titleLocation)
     showInfo.appendChild(listLocation)
     showInfo.appendChild(button)
+    showInfo.appendChild(divider)
     listDate.innerText = shows[i].DATE
     listVenue.innerText = shows[i].VENUE
     listLocation.innerText = shows[i].LOCATION
@@ -72,42 +69,9 @@ const shows = [
     titleLocation.innerText = 'LOCATION'
     button.innerText = 'BUY TICKETS'
     
+    
 
-    //date
-    // date.classList.add("show__date-title");
-    // datep.classList.add("showing");
-    // dateInfo.appendChild(date);
-  
-    // dateInfo.appendChild(datep);
-  
-    //venue
-    // venue.classList.add("show__date-title");
-    // venuep.classList.add("showing");
-    // dateInfo.appendChild(venue);
-  
-    // dateInfo.appendChild(venuep);
-  
-    //location
-  
-    // location.classList.add("show__date-title");
-    // locationp.classList.add("showing");
-    // dateInfo.appendChild(location);
-  
-    // dateInfo.appendChild(locationp);
-  
-
-  
    
-  
-  // text
-  
-    // date.innerText = "DATE";
-    // datep.innerText = shows[i].DATE;
-    // venue.innerText = "VENUE";
-    // venuep.innerText = shows[i].VENUE;
-    // location.innerText = "LOCATION";
-    // locationp.innerText = shows[i].LOCATION;
-    // button.innerText = 'BUY TICKETS'
   }
   
   
