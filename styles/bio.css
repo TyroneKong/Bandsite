@@ -311,14 +311,24 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .about__band-image {
-    width: 90%;
+    width: 100%;
     height: 30rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .about__band-image {
     width: 90%;
-    height: 50rem;
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .about__container-info {
+    margin-left: -3.125rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .about__container-info {
+    margin-left: 1.25rem;
   }
 }
 
@@ -443,6 +453,7 @@ header {
 .conversation__comment-container {
   display: flex;
   justify-content: center;
+  margin-top: -50px;
 }
 @media screen and (min-width: 48rem) {
   .conversation__comment-container {
@@ -451,7 +462,7 @@ header {
   }
 }
 .conversation__input-container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .comment__list li {
   list-style: none;
@@ -591,6 +602,10 @@ button:hover {
   position: relative;
 }
 
+.comment-container .comment__name {
+  font-weight: bold;
+}
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -615,7 +630,7 @@ button:hover {
 
 .comment__name {
   position: relative;
-  bottom: 2.5rem;
+  bottom: 1.5rem;
   left: 10px;
 }
 @media screen and (min-width: 48rem) {
@@ -624,9 +639,12 @@ button:hover {
   }
 }
 
+.comment-container {
+  margin-bottom: 1.25rem;
+}
 @media screen and (min-width: 48rem) {
   .comment-container {
-    margin: 2.375rem;
+    margin: 6.375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -643,6 +661,20 @@ button:hover {
 .comment__item {
   margin-top: -1.875rem;
   margin-left: 0.625rem;
+}
+
+label {
+  display: block;
+  margin: 1px;
+  padding: 1px;
+}
+
+input {
+  border: 1px solid #e1e1e1;
+}
+
+input:required:invalid {
+  border-color: #c00000;
 }
 
 footer {
