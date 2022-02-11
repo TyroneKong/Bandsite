@@ -11,6 +11,10 @@ body {
 
 /* header section */
 @include header;
+.nav__shows {
+  font-weight: bold;
+  border-bottom: 3px solid #ffff;
+}
 
 /*Hero section*/
 .hero {
@@ -19,11 +23,11 @@ body {
   }
 
   &__title {
+    @include pageheaderMobile;
     position: absolute;
     z-index: 100;
     margin-left: 5.25rem;
     color: $primary-text-color;
-    @include pageheaderMobile;
     @include tablet {
       bottom: 20rem;
       margin-left: 6.25rem;
@@ -59,34 +63,33 @@ body {
   }
 }
 
-//show section
+/* Show section */
 
 .show {
   &__details {
     display: flex;
     justify-content: center;
     @include tablet {
-      margin-left: 140px;
+      flex-direction: column;
     }
     @include desktop {
-      margin-left: 420px;
     }
   }
-  &__items ul {
+  &__list {
     @include tablet {
       display: flex;
-      flex-wrap: wrap;
-      padding-left: 0;
+      flex-direction: column;
     }
   }
-  &__items li {
-    @include tablet {
-      flex-wrap: wrap;
-      list-style: none;
-      flex: 0 0 25%;
-    }
-  }
+  // &__items li {
+  //   @include tablet {
+  //     flex-wrap: wrap;
+  //     list-style: none;
+  //     flex: 0 0 25%;
+  //   }
+  // }
   &__items h3 {
+    font-size: 14px;
     margin-left: -40px;
     @include tablet {
       margin-left: 0;
@@ -95,66 +98,64 @@ body {
   }
   &__date {
     font-weight: bold;
-    @include tablet {
-    }
+
     @include desktop {
       margin-left: 1px;
+    }
+    &:hover {
+      background-color: grey;
+      + li {
+        background-color: grey;
+      }
     }
   }
   &__titles {
     display: none;
     @include tablet {
-      @include bodycopyDesktopTablet;
       color: $silver;
       display: flex;
       justify-content: space-evenly;
       position: relative;
-      left: -200px;
-    }
-    @include desktop {
+      left: -12.5rem;
     }
   }
-  &__divider {
-    border: 1px solid $mercury;
-    width: 100%;
-
-    @include tablet {
-      width: 100%;
-    }
-  }
+  // &__divider {
+  //   border: 1px solid $mercury;
+  //   width: 100%;
+  // }
   &__date-title {
-    margin-left: 270px;
+    margin-left: 16.875rem;
   }
   &__venue-title {
-    margin-left: -10px;
+    margin-left: -0.625rem;
   }
   &__location-title {
-    margin-right: 150px;
+    margin-right: 9.375rem;
   }
   &__title {
     @include desktop {
-      @include subheaderDesktopTablet;
-      margin-left: 150px;
-      margin-top: 70px;
+      font-size: 24px;
+      margin-left: 9.375rem;
+      margin-top: 4.375rem;
     }
   }
 }
 
 li {
   list-style: none;
-  margin-left: -40px;
+  margin-left: -2.5rem;
   @include tablet {
-    margin-top: 1.875rem;
-    margin-left: -30px;
+    // margin-top: 1.875rem;
+    // margin-left: -1.875rem;
   }
 }
 
 .show h3 {
-  @include subheaderMobile;
   color: $silver;
 }
 
 .buy {
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +167,6 @@ li {
 
 button {
   border-radius: 0.25rem;
-  @include subheaderMobile;
   width: 18.75rem;
   color: #ffff;
   background-color: $bandsite-black;
@@ -176,13 +176,11 @@ button {
   font-size: 1rem;
 
   @include tablet {
-    @include subheaderDesktopTablet;
     font-size: 1.25rem;
     width: 12.5rem;
     padding: 1.5rem 1.125rem;
   }
   @include desktop {
-    @include subheaderDesktopTablet;
     font-size: 1.25rem;
     width: 12.5rem;
   }
@@ -195,3 +193,11 @@ button:hover {
 
 /* footer section */
 @include footer;
+
+.list {
+  @include tablet {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid orange;
+  }
+}

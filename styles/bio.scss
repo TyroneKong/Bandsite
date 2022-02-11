@@ -9,25 +9,29 @@ body {
   font-family: $font-style;
 }
 
-//header
+/* header section*/
+
 @include header;
 
-//Hero section
+.nav__bio {
+  font-weight: bold;
+  border-bottom: 3px solid #ffff;
+}
 
+/* hero section */
 .hero {
   &__section {
     position: relative;
   }
   &__title {
     position: absolute;
-    bottom: 4.5rem;
+    bottom: 8.5rem;
     z-index: 100;
     margin-left: 5.25rem;
     color: $primary-text-color;
     @include pageheaderMobile;
     @include tablet {
-      bottom: 4.5rem;
-      bottom: 200px;
+      bottom: 12.5rem;
       margin-left: 6.25rem;
       @include pageheaderDesktopTablet;
     }
@@ -47,7 +51,7 @@ body {
   }
 }
 
-//About section
+/* about section */
 
 .about {
   @include tablet {
@@ -61,14 +65,13 @@ body {
     margin-left: 1.0625rem;
     @include tablet {
       margin-left: 0.3125rem;
-      @include sectionheaderDesktopTablet;
     }
     @include desktop {
-      @include sectionheaderDesktopTablet;
       margin-left: 3.875rem;
     }
   }
   &__info-quote {
+    line-height: 22px;
     margin-left: 1rem;
     @include tablet {
       margin-left: 0.5rem;
@@ -78,11 +81,10 @@ body {
     }
   }
   &__info-quote p {
-    @include subheaderMobile;
+    line-height: 22px;
     font-weight: bold;
     margin: 1rem;
     @include tablet {
-      @include subheaderDesktopTablet;
       font-weight: bold;
       margin: 0 6.25rem;
     }
@@ -91,9 +93,7 @@ body {
     }
   }
   &__info-quote span {
-    @include bodycopyMobile;
     @include tablet {
-      @include bodycopyDesktopTablet;
     }
   }
   &__image {
@@ -118,24 +118,22 @@ body {
     }
   }
   &__first-column {
+    line-height: 22px;
     margin: 0 1.875rem;
-    @include bodycopyMobile;
     @include tablet {
       flex: 50%;
       margin-left: 6.25rem;
-      @include bodycopyDesktopTablet;
     }
     @include desktop {
       margin-left: 9.5rem;
     }
   }
   &__second-column {
-    @include bodycopyMobile;
+    line-height: 22px;
     margin: 0.625rem 1.875rem;
     @include tablet {
       flex: 50%;
       margin: 0 2.25rem;
-      @include bodycopyDesktopTablet;
     }
     @include desktop {
       margin-right: 9.5rem;
@@ -154,9 +152,8 @@ body {
   }
   &__bees-knees-title {
     margin-left: 0.75rem;
-    @include subheaderMobile;
+
     @include tablet {
-      @include subheaderDesktopTablet;
       line-height: 2rem;
     }
   }
@@ -181,7 +178,7 @@ body {
   }
 }
 
-// gallery
+/* gallery section*/
 
 .gallery {
   background-color: $alabasta;
@@ -196,16 +193,17 @@ body {
     }
   }
   &__title {
+    @include sectionheaderMobile;
     margin-bottom: 1rem;
     margin-top: 5rem;
-    @include sectionheaderMobile;
+
     margin-left: 1.25rem;
     @include tablet {
       @include sectionheaderDesktopTablet;
-      margin-left: 2.875rem;
+      margin-left: 3.875rem;
     }
     @include desktop {
-      margin-left: 4.5rem;
+      margin-left: 7.1875rem;
     }
   }
 
@@ -230,7 +228,7 @@ body {
   }
 }
 
-//conversation section
+/* conversation section */
 
 .conversation {
   display: flex;
@@ -244,36 +242,48 @@ body {
   &__title {
     @include sectionheaderMobile;
     @include tablet {
-      @include sectionheaderDesktopTablet;
       margin-left: 2.625rem;
+      @include sectionheaderDesktopTablet;
     }
     @include desktop {
       margin-left: 3.75rem;
     }
   }
   &__input-container {
-    width: 100%;
+    width: 130%;
     height: 2.25rem;
     padding: 0.75rem;
     display: flex;
     justify-content: center;
+    @include tablet {
+      width: 100%;
+      justify-content: center;
+    }
+    @include desktop {
+      margin-left: 200px;
+      width: 80%;
+    }
   }
   &__label-name {
-    @include bodycopyMobile;
     margin-left: 9.1875rem;
     color: $silver;
     display: flex;
     @include tablet {
       margin-left: 14.375rem;
     }
+    @include desktop {
+      margin-left: 300px;
+    }
   }
   &__label-comment {
-    @include bodycopyMobile;
     margin-left: 9.1875rem;
     color: $silver;
     display: flex;
     @include tablet {
       margin-left: 14.3125rem;
+    }
+    @include desktop {
+      margin-left: 300px;
     }
   }
   &__avatar {
@@ -284,26 +294,33 @@ body {
     background-image: url("../assets/Images/Mohan-muruge.jpg");
     position: relative;
     bottom: -4.375rem;
+    right: -0.625rem;
     @include tablet {
       height: 3rem;
       width: 3rem;
-      left: 4.375rem;
+      left: 5.375rem;
       @include desktop {
-        margin-left: 17.875rem;
+        margin-left: 19.375rem;
       }
     }
   }
   &__comment-container {
+    width: 170%;
     display: flex;
-    justify-content: center;
-    margin-top: -50px;
+    justify-content: flex-start;
+    margin-top: -3.125rem;
     @include tablet {
+      justify-content: center;
       width: 100%;
-      margin-top: -40px;
+      margin-top: -2.5rem;
+    }
+    @include desktop {
+      margin-left: 200px;
+      width: 80%;
     }
   }
   &__input-container {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     @include tablet {
     }
   }
@@ -325,12 +342,10 @@ body {
 }
 
 .comment-container {
-  @include bodycopyMobile;
-  margin: 100px;
+  margin: 6.25rem;
 }
 
 ::placeholder {
-  @include bodycopyMobile;
   color: #000000;
 }
 
@@ -338,26 +353,42 @@ input {
   width: 50%;
   border: 0.0625rem solid $mercury;
   height: 2.25rem;
+  &:invalid {
+    border-color: #c00000;
+  }
+  &:active {
+    border-color: $bandsite-black;
+  }
+  &:focus {
+    outline: none;
+  }
+
   @include tablet {
-    width: 40%;
+    width: 70%;
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 
-input:not(:focus):invalid {
-  border-color: $mercury;
-}
+// input:not(:focus):invalid {
+//   border-color: $mercury;
+// }
 
 textarea {
   margin: 3rem 3.125rem;
   width: 50%;
   border: 0.0625rem solid $mercury;
   @include tablet {
-    width: 40%;
+    width: 70%;
+  }
+  @include desktop {
+    width: 60%;
   }
 }
 
 .comment-btn {
-  width: 100%;
+  width: 120%;
   display: flex;
   justify-content: center;
   padding: 0 2rem;
@@ -367,19 +398,23 @@ textarea {
 }
 
 button {
-  @include subheaderMobile;
-  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0.25rem;
   width: 50%;
   color: #ffff;
   background-color: $bandsite-black;
   height: 3.5rem;
   margin: 0.625rem;
   @include tablet {
-    width: 15%;
-    margin-left: 17.5rem;
+    font-size: 24px;
+    width: 20%;
+    margin-left: 20.5rem;
   }
   @include desktop {
-    margin-left: 25rem;
+    font-size: 24px;
+    width: 12%;
+    margin-left: 20rem;
   }
 }
 
@@ -390,12 +425,12 @@ button:hover {
 
 .divider {
   border-top: 0.0625rem solid $mercury;
-  margin-bottom: -10px;
+  margin-bottom: -0.625rem;
 }
 
 .comments {
   width: 50%;
-  @include bodycopyMobile;
+
   display: flex;
   flex-direction: column;
 }
@@ -432,20 +467,19 @@ button:hover {
 .comment__name {
   position: relative;
   bottom: 1.5rem;
-  left: 10px;
+  left: 0.625rem;
   @include tablet {
     left: 0.625rem;
   }
 }
 
 .comment-container {
-  margin-bottom: 1.25rem;
+  margin: 1.25rem 10px;
   @include tablet {
-    @include bodycopyDesktopTablet;
     margin: 6.375rem;
   }
   @include desktop {
-    margin: 50px 530px;
+    margin: 3.125rem 25.875rem;
   }
 }
 
@@ -456,16 +490,8 @@ button:hover {
 
 label {
   display: block;
-  margin: 1px;
-  padding: 1px;
-}
-
-input {
-  border: 1px solid $mercury;
-}
-
-input:required:invalid {
-  border-color: #c00000;
+  margin: 0.0625rem;
+  padding: 0.0625rem;
 }
 
 //Footer section

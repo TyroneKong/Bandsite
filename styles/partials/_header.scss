@@ -12,7 +12,7 @@
     margin: 0 auto;
   }
 
-  //Header
+  /*Header*/
 
   .header {
     background-color: $bandsite-black;
@@ -63,7 +63,7 @@
 
     &__shows:hover {
       color: $primary-text-color;
-      border-bottom: 1px solid #ffff;
+      border-bottom: 3px solid #ffff;
 
       @include desktop {
         height: 4.3125rem;
@@ -74,9 +74,15 @@
         margin-left: 2.5rem;
       }
     }
+    &__bio a {
+      display: block;
+      color: #f2f2f2;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+    }
     &__bio:hover {
       color: $primary-text-color;
-      border-bottom: 1px solid #ffff;
+      border-bottom: 3px solid #ffff;
       @include desktop {
         height: 4.3125rem;
       }

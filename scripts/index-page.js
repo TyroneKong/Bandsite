@@ -66,21 +66,21 @@ const displayComment = () => {
     const nameTitle = document.createElement("h3");
     const commenting = document.createElement("li");
     const avatar = document.createElement("img");
-    const divider = document.createElement("hr");
+    // const divider = document.createElement("hr");
 
     // add classes to new elements
     date.classList.add("comment__date");
     avatar.classList.add("avatar__img");
     nameTitle.classList.add("comment__name");
     commenting.classList.add("comment__item");
-    divider.classList.add("divider");
+    // divider.classList.add("divider");
 
     // append children to parent element
     commentList.appendChild(avatar);
     commentList.appendChild(date);
     commentList.appendChild(nameTitle);
     commentList.appendChild(commenting);
-    commentList.appendChild(divider);
+    // commentList.appendChild(divider);
 
     // add content
     nameTitle.innerText = comments[i].Name;

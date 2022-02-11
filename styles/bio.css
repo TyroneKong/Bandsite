@@ -15,6 +15,7 @@ body {
   font-family: "AvenirNextLTPro";
 }
 
+/* header section*/
 header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -25,6 +26,7 @@ header {
   margin: 0 auto;
 }
 
+/*Header*/
 .header {
   background-color: #323232;
 }
@@ -82,7 +84,7 @@ header {
 }
 .nav__shows:hover {
   color: #ffff;
-  border-bottom: 1px solid #ffff;
+  border-bottom: 3px solid #ffff;
 }
 @media screen and (min-width: 80.625rem) {
   .nav__shows:hover {
@@ -94,9 +96,15 @@ header {
     margin-left: 2.5rem;
   }
 }
+.nav__bio a {
+  display: block;
+  color: #f2f2f2;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
 .nav__bio:hover {
   color: #ffff;
-  border-bottom: 1px solid #ffff;
+  border-bottom: 3px solid #ffff;
 }
 @media screen and (min-width: 80.625rem) {
   .nav__bio:hover {
@@ -104,12 +112,18 @@ header {
   }
 }
 
+.nav__bio {
+  font-weight: bold;
+  border-bottom: 3px solid #ffff;
+}
+
+/* hero section */
 .hero__section {
   position: relative;
 }
 .hero__title {
   position: absolute;
-  bottom: 4.5rem;
+  bottom: 8.5rem;
   z-index: 100;
   margin-left: 5.25rem;
   color: #ffff;
@@ -119,8 +133,7 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
-    bottom: 4.5rem;
-    bottom: 200px;
+    bottom: 12.5rem;
     margin-left: 6.25rem;
     font-size: 60px;
     line-height: 68px;
@@ -143,6 +156,7 @@ header {
   opacity: 0.5;
 }
 
+/* about section */
 @media screen and (min-width: 48rem) {
   .about {
     margin-top: 3rem;
@@ -157,20 +171,15 @@ header {
 @media screen and (min-width: 48rem) {
   .about__subheading {
     margin-left: 0.3125rem;
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 600;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .about__subheading {
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 600;
     margin-left: 3.875rem;
   }
 }
 .about__info-quote {
+  line-height: 22px;
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -184,17 +193,12 @@ header {
   }
 }
 .about__info-quote p {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
+  line-height: 22px;
   font-weight: bold;
   margin: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .about__info-quote p {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 600;
     font-weight: bold;
     margin: 0 6.25rem;
   }
@@ -202,18 +206,6 @@ header {
 @media screen and (min-width: 80.625rem) {
   .about__info-quote p {
     margin: 0 12.5rem;
-  }
-}
-.about__info-quote span {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media screen and (min-width: 48rem) {
-  .about__info-quote span {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
   }
 }
 .about__image {
@@ -242,18 +234,13 @@ header {
   }
 }
 .about__first-column {
+  line-height: 22px;
   margin: 0 1.875rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
   .about__first-column {
     flex: 50%;
     margin-left: 6.25rem;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -262,18 +249,13 @@ header {
   }
 }
 .about__second-column {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
+  line-height: 22px;
   margin: 0.625rem 1.875rem;
 }
 @media screen and (min-width: 48rem) {
   .about__second-column {
     flex: 50%;
     margin: 0 2.25rem;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -302,15 +284,9 @@ header {
 }
 .about__bees-knees-title {
   margin-left: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
   .about__bees-knees-title {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 600;
     line-height: 2rem;
   }
 }
@@ -340,6 +316,7 @@ header {
   }
 }
 
+/* gallery section*/
 .gallery {
   background-color: #fafafa;
 }
@@ -354,11 +331,11 @@ header {
   }
 }
 .gallery__title {
-  margin-bottom: 1rem;
-  margin-top: 5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
   margin-left: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
@@ -366,12 +343,12 @@ header {
     font-size: 36px;
     line-height: 44px;
     font-weight: 600;
-    margin-left: 2.875rem;
+    margin-left: 3.875rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .gallery__title {
-    margin-left: 4.5rem;
+    margin-left: 7.1875rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -395,6 +372,7 @@ header {
   -webkit-filter: grayscale(0%);
 }
 
+/* conversation section */
 .conversation {
   display: flex;
   flex-direction: column;
@@ -411,10 +389,10 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .conversation__title {
+    margin-left: 2.625rem;
     font-size: 36px;
     line-height: 44px;
     font-weight: 600;
-    margin-left: 2.625rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -423,16 +401,25 @@ header {
   }
 }
 .conversation__input-container {
-  width: 100%;
+  width: 130%;
   height: 2.25rem;
   padding: 0.75rem;
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 48rem) {
+  .conversation__input-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__input-container {
+    margin-left: 200px;
+    width: 80%;
+  }
+}
 .conversation__label-name {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   margin-left: 9.1875rem;
   color: #afafaf;
   display: flex;
@@ -442,10 +429,12 @@ header {
     margin-left: 14.375rem;
   }
 }
+@media screen and (min-width: 80.625rem) {
+  .conversation__label-name {
+    margin-left: 300px;
+  }
+}
 .conversation__label-comment {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   margin-left: 9.1875rem;
   color: #afafaf;
   display: flex;
@@ -453,6 +442,11 @@ header {
 @media screen and (min-width: 48rem) {
   .conversation__label-comment {
     margin-left: 14.3125rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__label-comment {
+    margin-left: 300px;
   }
 }
 .conversation__avatar {
@@ -463,32 +457,41 @@ header {
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   position: relative;
   bottom: -4.375rem;
+  right: -0.625rem;
 }
 @media screen and (min-width: 48rem) {
   .conversation__avatar {
     height: 3rem;
     width: 3rem;
-    left: 4.375rem;
+    left: 5.375rem;
   }
 }
 @media screen and (min-width: 48rem) and (min-width: 80.625rem) {
   .conversation__avatar {
-    margin-left: 17.875rem;
+    margin-left: 19.375rem;
   }
 }
 .conversation__comment-container {
+  width: 170%;
   display: flex;
-  justify-content: center;
-  margin-top: -50px;
+  justify-content: flex-start;
+  margin-top: -3.125rem;
 }
 @media screen and (min-width: 48rem) {
   .conversation__comment-container {
+    justify-content: center;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -2.5rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__comment-container {
+    margin-left: 200px;
+    width: 80%;
   }
 }
 .conversation__input-container {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 .comment__list {
   list-style: none;
@@ -508,30 +511,18 @@ header {
 }
 
 .comment-container {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  margin: 100px;
+  margin: 6.25rem;
 }
 
 ::-moz-placeholder {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   color: #000000;
 }
 
 :-ms-input-placeholder {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   color: #000000;
 }
 
 ::placeholder {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   color: #000000;
 }
 
@@ -540,14 +531,24 @@ input {
   border: 0.0625rem solid #e1e1e1;
   height: 2.25rem;
 }
+input:invalid {
+  border-color: #c00000;
+}
+input:active {
+  border-color: #323232;
+}
+input:focus {
+  outline: none;
+}
 @media screen and (min-width: 48rem) {
   input {
-    width: 40%;
+    width: 70%;
   }
 }
-
-input:not(:focus):invalid {
-  border-color: #e1e1e1;
+@media screen and (min-width: 80.625rem) {
+  input {
+    width: 60%;
+  }
 }
 
 textarea {
@@ -557,12 +558,17 @@ textarea {
 }
 @media screen and (min-width: 48rem) {
   textarea {
-    width: 40%;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  textarea {
+    width: 60%;
   }
 }
 
 .comment-btn {
-  width: 100%;
+  width: 120%;
   display: flex;
   justify-content: center;
   padding: 0 2rem;
@@ -574,10 +580,9 @@ textarea {
 }
 
 button {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0.25rem;
   width: 50%;
   color: #ffff;
   background-color: #323232;
@@ -586,13 +591,16 @@ button {
 }
 @media screen and (min-width: 48rem) {
   button {
-    width: 15%;
-    margin-left: 17.5rem;
+    font-size: 24px;
+    width: 20%;
+    margin-left: 20.5rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   button {
-    margin-left: 25rem;
+    font-size: 24px;
+    width: 12%;
+    margin-left: 20rem;
   }
 }
 
@@ -602,14 +610,11 @@ button:hover {
 
 .divider {
   border-top: 0.0625rem solid #e1e1e1;
-  margin-bottom: -10px;
+  margin-bottom: -0.625rem;
 }
 
 .comments {
   width: 50%;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -648,7 +653,7 @@ button:hover {
 .comment__name {
   position: relative;
   bottom: 1.5rem;
-  left: 10px;
+  left: 0.625rem;
 }
 @media screen and (min-width: 48rem) {
   .comment__name {
@@ -657,19 +662,16 @@ button:hover {
 }
 
 .comment-container {
-  margin-bottom: 1.25rem;
+  margin: 1.25rem 10px;
 }
 @media screen and (min-width: 48rem) {
   .comment-container {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
     margin: 6.375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .comment-container {
-    margin: 50px 530px;
+    margin: 3.125rem 25.875rem;
   }
 }
 
@@ -680,22 +682,14 @@ button:hover {
 
 label {
   display: block;
-  margin: 1px;
-  padding: 1px;
-}
-
-input {
-  border: 1px solid #e1e1e1;
-}
-
-input:required:invalid {
-  border-color: #c00000;
+  margin: 0.0625rem;
+  padding: 0.0625rem;
 }
 
 footer {
   background-color: #323232;
   color: #ffff;
-  padding: 2.25rem;
+  padding: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
   footer {
@@ -738,6 +732,11 @@ footer span {
   .contact {
     justify-content: flex-start;
   }
+}
+.contact__get-in-touch {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
   .contact__get-in-touch {

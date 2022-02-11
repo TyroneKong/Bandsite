@@ -38,38 +38,34 @@ const showInfo = document.querySelector(".show__list");
 // display shows
 for (let i = 0; i < shows.length; i++) {
   // create new elements
-  const listDate = document.createElement("li");
-  const listVenue = document.createElement("li");
-  const listLocation = document.createElement("li");
-  const titleDate = document.createElement("h3");
-  const titleVenue = document.createElement("h3");
-  const titleLocation = document.createElement("h3");
+  const container = document.createElement("div");
+  const list = document.createElement("li");
+  const listDate = document.createElement("p");
+  const listVenue = document.createElement("p");
+  const listLocation = document.createElement("p");
+
   const button = document.createElement("button");
   const divider = document.createElement("hr");
 
   // add class names
+  list.classList.add("list");
   listDate.classList.add("show__date");
-  listVenue.classList.add(".show__venue");
-  listLocation.classList.add(".show__location");
+  listVenue.classList.add("show__venue");
+  listLocation.classList.add("show__location");
   button.classList.add("buy");
   divider.classList.add("show__divider");
 
-  // append children to parent
-  showInfo.appendChild(titleDate);
-  showInfo.appendChild(listDate);
-  showInfo.appendChild(titleVenue);
-  showInfo.appendChild(listVenue);
-  showInfo.appendChild(titleLocation);
-  showInfo.appendChild(listLocation);
-  showInfo.appendChild(button);
-  showInfo.appendChild(divider);
+  list.appendChild(listDate);
+  list.appendChild(listVenue);
 
-  // add inner text
+  list.appendChild(listLocation);
+  list.appendChild(button);
+  // list.appendChild(divider);
+  showInfo.appendChild(list);
+
   listDate.innerText = shows[i].DATE;
   listVenue.innerText = shows[i].VENUE;
   listLocation.innerText = shows[i].LOCATION;
-  titleDate.innerText = "DATE";
-  titleVenue.innerText = "VENUE";
-  titleLocation.innerText = "LOCATION";
+
   button.innerText = "BUY TICKETS";
 }
