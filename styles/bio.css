@@ -2,16 +2,9 @@
   font-family: "Avenir Next Regular";
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
 }
-@font-face {
-  font-family: "Avenir Next Demi";
-  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
-}
-@font-face {
-  font-family: "Avenir Next Bold";
-  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-}
 body {
   position: relative;
+  font-family: "Avenir Next Regular";
 }
 
 header {
@@ -24,42 +17,39 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .header {
-    padding: 1.875rem 6.25rem;
+    padding: 10px 6.25rem;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .main-nav {
+  .nav {
     display: flex;
     justify-content: flex-start;
   }
 }
-
-.main-nav__logo {
+.nav__logo {
   display: flex;
   justify-content: center;
   background-color: #323232;
 }
-
-.main-nav__logo-image {
+.nav__logo-image {
   width: 7.5rem;
   height: 1.25rem;
   background-position: center;
 }
 @media screen and (min-width: 48rem) {
-  .main-nav__logo-image {
-    margin: 1.25rem 0 0 1rem;
+  .nav__logo-image {
+    margin: 1.25rem 1rem;
   }
 }
-
-.nav-list {
+.nav__list {
   display: flex;
   font-size: 0.875rem;
   justify-content: space-around;
   height: 1.875rem;
 }
 @media screen and (min-width: 48rem) {
-  .nav-list {
+  .nav__list {
     height: 5rem;
     font-size: 1.5rem;
     margin-left: 4.375rem;
@@ -67,62 +57,49 @@ header {
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .nav-list {
+  .nav__list {
     margin-left: 4.375rem;
     height: 3.75rem;
   }
 }
-
-.nav-list a {
+.nav__list a {
   color: #e1e1e1;
   text-decoration: none;
   font-family: "Avenir Next Regular";
 }
-
 @media screen and (min-width: 48rem) {
-  .nav-list__bio {
+  .nav__bio {
     height: 5.625rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .nav-list__bio {
+  .nav__bio {
     height: 4.375rem;
     margin-left: 1.875rem;
   }
 }
-
 @media screen and (min-width: 48rem) {
-  .nav-list__shows:hover,
-.nav-list__bio:hover {
-    height: 6.3125rem;
+  .nav__shows:hover, .nav__bio:hover {
+    height: 10px;
     color: #ffff;
     border-bottom: 1px solid #ffff;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .nav-list__shows:hover,
-.nav-list__bio:hover {
+  .nav__shows:hover, .nav__bio:hover {
     height: 5.3125rem;
   }
 }
-
-.nav-list__bio:active,
-.nav-list__shows:active {
-  font-weight: 700;
-  border-bottom: 0.0625rem solid #ffff;
-}
-
 @media screen and (min-width: 48rem) {
-  .nav-list__shows {
+  .nav__shows {
     margin-left: 2.5rem;
   }
 }
 
-.hero-section {
+.hero__section {
   position: relative;
 }
-
-.hero-section__title {
+.hero__title {
   position: absolute;
   bottom: 4.5rem;
   z-index: 100;
@@ -130,25 +107,24 @@ header {
   color: #ffff;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Bold";
+  font-weight: 700;
 }
 @media screen and (min-width: 48rem) {
-  .hero-section__title {
+  .hero__title {
     bottom: 4.5rem;
     bottom: 200px;
     margin-left: 6.25rem;
     font-size: 60px;
     line-height: 68px;
-    font-family: "Avenir Next Bold";
+    font-weight: 700;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .hero-section__title {
+  .hero__title {
     bottom: 30rem;
   }
 }
-
-.hero-section__overlay {
+.hero__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -167,264 +143,267 @@ header {
     padding: 1.5rem;
   }
 }
-
-.about-section__subheading {
+.about__subheading {
   margin-left: 1.0625rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__subheading {
+  .about__subheading {
     margin-left: 0.3125rem;
     font-size: 36px;
     line-height: 44px;
-    font-family: "Avenir Next Demi";
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__subheading {
+  .about__subheading {
     font-size: 36px;
     line-height: 44px;
-    font-family: "Avenir Next Demi";
+    font-weight: 600;
     margin-left: 3.875rem;
   }
 }
-
-.about-section__info-quote {
+.about__info-quote {
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__info-quote {
+  .about__info-quote {
     margin-left: 0.5rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__info-quote {
+  .about__info-quote {
     margin-left: -2.5rem;
   }
 }
-
-.about-section__info-quote p {
+.about__info-quote p {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-weight: 600;
   font-weight: bold;
   margin: 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__info-quote p {
+  .about__info-quote p {
     font-size: 24px;
     line-height: 32px;
-    font-family: "Avenir Next Demi";
+    font-weight: 600;
     font-weight: bold;
     margin: 0 6.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__info-quote p {
+  .about__info-quote p {
     margin: 0 12.5rem;
   }
 }
-
-.about-section__info-quote span {
+.about__info-quote span {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__info-quote span {
+  .about__info-quote span {
     font-size: 14px;
     line-height: 22px;
-    font-family: "Avenir Next Regular";
+    font-weight: 400;
   }
 }
-
-.about-section__image {
+.about__image {
   margin: 0 1.875rem;
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__image {
+  .about__image {
     margin: 3.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__image {
+  .about__image {
     margin: 5.75rem;
   }
 }
-
 @media screen and (min-width: 48rem) {
-  .about-section__bio h3 {
+  .about__bio h3 {
     margin-left: 6.25rem;
   }
 }
-
 @media screen and (min-width: 48rem) {
-  .about-section__row {
+  .about__row {
     display: flex;
   }
 }
-
-.about-section__first-column {
+.about__first-column {
   margin: 0 1.875rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__first-column {
+  .about__first-column {
     flex: 50%;
     margin-left: 6.25rem;
     font-size: 14px;
     line-height: 22px;
-    font-family: "Avenir Next Regular";
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__first-column {
+  .about__first-column {
     margin-left: 9.5rem;
   }
 }
-
-.about-section__second-column {
+.about__second-column {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   margin: 0.625rem 1.875rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__second-column {
+  .about__second-column {
     flex: 50%;
     margin: 0 2.25rem;
     font-size: 14px;
     line-height: 22px;
-    font-family: "Avenir Next Regular";
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__second-column {
+  .about__second-column {
     margin-right: 9.5rem;
   }
 }
-
-.about-section__about-musicians-title {
+.about__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next DEmi";
+  font-weight: 600;
   margin: 1rem 2rem;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__about-musicians-title {
+  .about__title {
     font-size: 36px;
     line-height: 44px;
-    font-family: "Avenir Next Demi";
+    font-weight: 600;
     margin-left: 3.125rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__about-musicians-title {
+  .about__title {
     margin: 1rem 120px;
   }
 }
-
-.about-section__bees-knees-title {
+.about__bees-knees-title {
   margin-left: 0.75rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__bees-knees-title {
+  .about__bees-knees-title {
     font-size: 24px;
     line-height: 32px;
-    font-family: "Avenir Next Demi";
+    font-weight: 600;
     line-height: 2rem;
   }
 }
-
-.about-section__band-image {
+.about__band-image {
   max-width: 100%;
 }
 @media screen and (min-width: 48rem) {
-  .about-section__band-image {
+  .about__band-image {
     width: 90%;
     height: 30rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .about-section__band-image {
+  .about__band-image {
     width: 90%;
     height: 50rem;
   }
 }
 
 .gallery {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
-
-.photo-gallery__container-photo {
+.gallery__photo {
   margin: 1.3rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
-  .photo-gallery__container-photo {
+  .gallery__photo {
     width: 27%;
   }
 }
-
-.photo-gallery__title {
+.gallery__title {
   margin-bottom: 1rem;
+  margin-top: 5rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next DEmi";
+  font-weight: 600;
   margin-left: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
-  .photo-gallery__title {
+  .gallery__title {
     font-size: 36px;
     line-height: 44px;
-    font-family: "Avenir Next Demi";
-    margin-left: 3.75rem;
+    font-weight: 600;
+    margin-left: 2.875rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .photo-gallery__title {
-    margin-left: 7.5rem;
+  .gallery__title {
+    margin-left: 4.5rem;
   }
 }
-
 @media screen and (min-width: 48rem) {
-  .photo-gallery__container {
+  .gallery__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .photo-gallery__container {
+  .gallery__container {
     display: flex;
     justify-self: center;
   }
 }
-
-.conversation__form * {
-  box-sizing: border-box;
+.gallery__photo {
+  -webkit-filter: grayscale(100%);
+}
+.gallery__photo:hover {
+  -webkit-filter: hue-rotate(50deg);
+  -webkit-filter: grayscale(0%);
 }
 
-.conversation-section {
+.conversation {
   display: flex;
   flex-direction: column;
   border-radius: 0.25rem;
   box-sizing: border-box;
 }
-
+.conversation__form * {
+  box-sizing: border-box;
+}
 .conversation__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next DEmi";
+  font-weight: 600;
 }
-
+@media screen and (min-width: 48rem) {
+  .conversation__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    margin-left: 2.625rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__title {
+    margin-left: 3.75rem;
+  }
+}
 .conversation__input-container {
   width: 100%;
   height: 2.25rem;
@@ -432,20 +411,14 @@ header {
   display: flex;
   justify-content: center;
 }
-
-.comment__list li {
-  list-style: none;
-}
-
 .conversation__label {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   margin: 0.25rem;
-  color: #AFAFAF;
+  color: #afafaf;
   display: flex;
 }
-
 .conversation__avatar {
   height: 2.25rem;
   width: 2.25rem;
@@ -453,12 +426,35 @@ header {
   border-radius: 50%;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   position: relative;
-  bottom: -70px;
+  bottom: -4.375rem;
 }
 @media screen and (min-width: 48rem) {
   .conversation__avatar {
-    left: 170px;
+    height: 3rem;
+    width: 3rem;
+    left: 4.375rem;
   }
+}
+@media screen and (min-width: 48rem) and (min-width: 80.625rem) {
+  .conversation__avatar {
+    margin-left: 17.875rem;
+  }
+}
+.conversation__comment-container {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__comment-container {
+    width: 100%;
+    margin-top: -100px;
+  }
+}
+.conversation__input-container {
+  margin-bottom: 100px;
+}
+.comment__list li {
+  list-style: none;
 }
 
 .comment-container img {
@@ -474,47 +470,36 @@ header {
   }
 }
 
-.conversation__comment-container {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__comment-container {
-    width: 100%;
-    margin-top: -100px;
-  }
-}
-
 .comment-container h3 {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
 }
 
 .comment-container li {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
 }
 
 ::-moz-placeholder {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   color: #000000;
 }
 
 :-ms-input-placeholder {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   color: #000000;
 }
 
 ::placeholder {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   color: #000000;
 }
 
@@ -529,12 +514,12 @@ input {
   }
 }
 
-input:invalid, textarea:invalid {
-  border-color: red;
+input:not(:focus):invalid {
+  border-color: #e1e1e1;
 }
 
 textarea {
-  margin: 0 3.125rem;
+  margin: 3rem 3.125rem;
   width: 50%;
   border: 0.0625rem solid #e1e1e1;
 }
@@ -553,24 +538,29 @@ textarea {
 @media screen and (min-width: 48rem) {
   .comment-btn {
     display: flex;
-    justify-content: flex-end;
-    margin-left: -350px;
   }
 }
 
 button {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-weight: 600;
+  border-radius: 4px;
   width: 50%;
   color: #ffff;
   background-color: #323232;
-  height: 2.5rem;
+  height: 3.5rem;
   margin: 0.625rem;
 }
 @media screen and (min-width: 48rem) {
   button {
-    width: 9.375rem;
+    width: 15%;
+    margin-left: 17.5rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  button {
+    margin-left: 25rem;
   }
 }
 
@@ -578,15 +568,16 @@ button:hover {
   background-color: #000000;
 }
 
-hr {
+.divider {
   border-top: 0.0625rem solid #e1e1e1;
+  margin-bottom: -10px;
 }
 
 .comments {
   width: 50%;
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -610,10 +601,16 @@ hr {
   right: 2.5rem;
   top: 3.75rem;
 }
+@media screen and (min-width: 48rem) {
+  .avatar__img {
+    margin-left: -20px;
+  }
+}
+
 .comment__date {
   display: flex;
   justify-content: flex-end;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .comment__name {
@@ -629,12 +626,12 @@ hr {
 
 @media screen and (min-width: 48rem) {
   .comment-container {
-    margin: 4.375rem;
+    margin: 2.375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .comment-container {
-    margin: 0 400px;
+    margin: 0 330px;
   }
 }
 
@@ -642,24 +639,10 @@ hr {
   display: flex;
   justify-content: center;
 }
-.comment .comment__item {
+
+.comment__item {
+  margin-top: -1.875rem;
   margin-left: 0.625rem;
-}
-
-.conversation__input-container {
-  margin-bottom: 100px;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__input-container {
-    bottom: 100px;
-  }
-}
-
-.conversation__label {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  right: 100px;
 }
 
 footer {
@@ -678,29 +661,13 @@ footer {
   }
 }
 
-.footer-main-title {
-  color: #ffff;
-  position: relative;
-  bottom: -0.625rem;
-}
-@media screen and (min-width: 48rem) {
-  .footer-main-title {
-    font-size: 0.875rem;
-    display: flex;
-    left: 1.25rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .footer-main-title {
-    display: flex;
-    left: 6.875rem;
-  }
+footer span {
+  font-weight: bold;
 }
 
 .footer {
   font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-family: "Avenir Next Regular";
+  font-weight: 400;
   margin-left: 1rem;
   margin-right: 1.25rem;
 }
@@ -710,31 +677,91 @@ footer {
     flex-direction: column;
     font-size: 14px;
     line-height: 20px;
-    font-family: "Avenir Next Regular";
+    font-weight: 400;
   }
 }
 
-footer span {
-  font-weight: bold;
-}
-
 @media screen and (min-width: 48rem) {
-  .contact-info {
+  .contact {
     display: flex;
     justify-content: space-around;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .contact-info {
+  .contact {
     justify-content: flex-start;
   }
 }
-
 @media screen and (min-width: 48rem) {
-  .contact-info__get-in-touch {
+  .contact__get-in-touch {
     font-size: 2.1875rem;
     display: flex;
   }
+}
+@media screen and (min-width: 48rem) {
+  .contact__Cam-Adams, .contact__Pearl-Gregg, .contact__Carson-Whyte {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .contact__Cam-Adams {
+    position: relative;
+    bottom: 2.5rem;
+    margin-left: 1.25rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .contact__Pearl-Gregg {
+    position: relative;
+    bottom: -0.4375rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .contact__Pearl-Gregg {
+    margin-left: 6.25rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .contact__Carson-Whyte {
+    position: relative;
+    bottom: -1.875rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .contact__Carson-Whyte {
+    margin-left: 6.25rem;
+  }
+}
+.contact__facebook, .contact__twitter {
+  margin-left: 1.25rem;
+}
+.contact__instagram {
+  margin-left: 0.3125rem;
+}
+@media screen and (min-width: 48rem) {
+  .contact__mobile-socialIcons {
+    display: none;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .contact__mobile-socialIcons {
+    display: none;
+  }
+}
+.contact__media {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .contact__media {
+    display: flex;
+    position: relative;
+    bottom: 1.25rem;
+  }
+}
+.contact__email a {
+  text-decoration: none;
+  color: #ffff;
 }
 
 @media screen and (min-width: 48rem) {
@@ -742,7 +769,6 @@ footer span {
     display: flex;
   }
 }
-
 @media screen and (min-width: 48rem) {
   .social__bandsite {
     width: 100%;
@@ -750,113 +776,36 @@ footer span {
     justify-content: flex-end;
   }
 }
-
-@media screen and (min-width: 48rem) {
-  .contact-info__Cam-Adams,
-.contact-info__Pearl-Gregg,
-.contact-info__Carson-Whyte {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .contact-info__Cam-Adams {
-    position: relative;
-    bottom: 2.5rem;
-    margin-left: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .contact-info__Pearl-Gregg {
-    position: relative;
-    bottom: -0.4375rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .contact-info__Pearl-Gregg {
-    margin-left: 6.25rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .contact-info__Carson-Whyte {
-    position: relative;
-    bottom: -1.875rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .contact-info__Carson-Whyte {
-    margin-left: 6.25rem;
-  }
-}
-
-.copyright {
-  display: flex;
-}
-@media screen and (min-width: 48rem) {
-  .copyright {
-    margin-left: 5rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .copyright {
-    margin-left: 6.25rem;
-  }
-}
-
-.contact-info-image__facebook,
-.contact-info-image__twitter {
-  margin-left: 1.25rem;
-}
-
-.contact-info-image__instagram {
-  margin-left: 0.3125rem;
-}
-
-.mobile-logo {
-  width: 7.5rem;
-  height: 1.25rem;
-}
-@media screen and (min-width: 48rem) {
-  .mobile-logo {
-    display: none;
-  }
-}
-
-.mobile-logo p {
-  background: #323232;
-}
-
-.social-bandsite__logo {
+.social__bandsite-logo {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .social-bandsite__logo {
+  .social__bandsite-logo {
     display: flex;
     width: 7.5rem;
     height: 1.25rem;
   }
 }
 
-.contact-info__media {
-  display: none;
+.mobile {
+  width: 7.5rem;
+  height: 1.25rem;
 }
 @media screen and (min-width: 48rem) {
-  .contact-info__media {
-    display: flex;
-    position: relative;
-    bottom: 1.25rem;
+  .mobile {
+    display: none;
   }
 }
-
-.mobile-logo__container {
+.mobile__logo p {
+  background: #323232;
+}
+.mobile__container {
   margin-top: 3.25rem;
 }
 
 @media screen and (min-width: 48rem) {
   .copyright {
+    margin-left: 5rem;
     display: flex;
     justify-content: flex-start;
     margin-left: 4.0625rem;
@@ -864,30 +813,6 @@ footer span {
 }
 @media screen and (min-width: 80.625rem) {
   .copyright {
-    margin-left: 1.25rem;
+    margin-left: 6.25rem;
   }
-}
-
-@media screen and (min-width: 48rem) {
-  .contact-info__mobile-socialIcons {
-    display: none;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .contact-info__mobile-socialIcons {
-    display: none;
-  }
-}
-
-.contact-info__email a {
-  text-decoration: none;
-  color: #ffff;
-}
-
-.photo-gallery__container-photo {
-  transition: filter 0.5s;
-}
-
-.photo-gallery__container-photo:hover {
-  filter: contrast(150%);
 }/*# sourceMappingURL=bio.css.map */

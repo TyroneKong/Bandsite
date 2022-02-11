@@ -2,24 +2,9 @@
 @use "./partials/mixin" as *;
 @use "./partials/variables" as *;
 
-@font-face {
-  font-family: "Avenir Next Regular";
-  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Avenir Next Demi";
-  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Avenir Next Bold";
-  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
-}
-///////////////////////////////////////
-
 body {
   position: relative;
+  font-family: $font-style;
 }
 
 header {
@@ -27,134 +12,114 @@ header {
   line-height: 2rem;
 }
 
-
-
 //Header
 
 .header {
   background-color: $bandsite-black;
   @include tablet {
-    padding: 1.875rem 6.25rem;
+    padding: 10px 6.25rem;
   }
 }
 
-.main-nav {
+.nav {
   @include tablet {
     display: flex;
     justify-content: flex-start;
   }
-}
-
-.main-nav__logo {
-  display: flex;
-  justify-content: center;
-  background-color: $bandsite-black;
-}
-
-.main-nav__logo-image {
-  width: 7.5rem;
-  height: 1.25rem;
-  background-position: center;
-  @include tablet {
-    margin: 1.25rem 0 0 1rem;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    background-color: $bandsite-black;
   }
-}
-
-.nav-list {
-  display: flex;
-  font-size: 0.875rem;
-  justify-content: space-around;
-  height: 1.875rem;
-  @include tablet {
-    height: 5rem;
-    font-size: 1.5rem;
-    margin-left: 4.375rem;
-    margin-top: 0.9375rem;
+  &__logo-image {
+    width: 7.5rem;
+    height: 1.25rem;
+    background-position: center;
+    @include tablet {
+      margin: 1.25rem 1rem;
+    }
   }
-  @include desktop {
-    margin-left: 4.375rem;
-    height: 3.75rem;
+  &__list {
+    display: flex;
+    font-size: 0.875rem;
+    justify-content: space-around;
+    height: 1.875rem;
+    @include tablet {
+      height: 5rem;
+      font-size: 1.5rem;
+      margin-left: 4.375rem;
+      margin-top: 0.9375rem;
+    }
+    @include desktop {
+      margin-left: 4.375rem;
+      height: 3.75rem;
+    }
   }
-}
-
-.nav-list a {
-  color: $mercury;
-  text-decoration: none;
-  font-family: "Avenir Next Regular";
-}
-
-.nav-list__bio {
-  @include tablet {
-    height: 5.625rem;
+  &__list a {
+    color: $mercury;
+    text-decoration: none;
+    font-family: "Avenir Next Regular";
   }
-  @include desktop {
-    height: 4.375rem;
-    margin-left: 1.875rem;
+  &__bio {
+    @include tablet {
+      height: 5.625rem;
+    }
+    @include desktop {
+      height: 4.375rem;
+      margin-left: 1.875rem;
+    }
   }
-}
-.nav-list__shows:hover,
-.nav-list__bio:hover {
-  @include tablet {
-    height: 6.3125rem;
-    color: $primary-text-color;
-    border-bottom: 1px solid #ffff;
+  &__shows:hover,
+  &__bio:hover {
+    @include tablet {
+      height: 10px;
+      color: $primary-text-color;
+      border-bottom: 1px solid #ffff;
+    }
+    @include desktop {
+      height: 5.3125rem;
+    }
   }
-  @include desktop {
-    height: 5.3125rem;
-  }
-}
-
-// .nav-list__bio:hover,
-// .nav-list__shows:hover {
-//   color: $primary-text-color;
-//   border-bottom: 1px solid #ffff;
-// }
-
-.nav-list__bio:active,
-.nav-list__shows:active {
-  font-weight: 700;
-  border-bottom: 0.0625rem solid $primary-text-color;
-}
-
-.nav-list__shows {
-  @include tablet {
-    margin-left: 2.5rem;
+  &__shows {
+    @include tablet {
+      margin-left: 2.5rem;
+    }
   }
 }
 
 //Hero section
 
-.hero-section {
-  position: relative;
-}
-
-.hero-section__title {
-  position: absolute;
-  bottom: 4.5rem;
-  z-index: 100;
-  margin-left: 5.25rem;
-  color: $primary-text-color;
-  @include pageheaderMobile;
-  @include tablet {
+.hero {
+  &__section {
+    position: relative;
+  }
+  &__title {
+    position: absolute;
     bottom: 4.5rem;
-    bottom: 200px;
-    margin-left: 6.25rem;
-    @include pageheaderDesktopTablet;
+    z-index: 100;
+    margin-left: 5.25rem;
+    color: $primary-text-color;
+    @include pageheaderMobile;
+    @include tablet {
+      bottom: 4.5rem;
+      bottom: 200px;
+      margin-left: 6.25rem;
+      @include pageheaderDesktopTablet;
+    }
+    @include desktop {
+      bottom: 30rem;
+    }
   }
-  @include desktop {
-    bottom: 30rem;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #323232;
+    opacity: 0.5;
   }
-}
-
-.hero-section__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  background-color: #323232;
-  opacity: 0.5;
 }
 
 //About section
@@ -166,226 +131,240 @@ header {
     justify-content: center;
     padding: 1.5rem;
   }
-}
 
-.about-section__subheading {
-  margin-left: 1.0625rem;
-  @include tablet {
-    margin-left: 0.3125rem;
-    @include sectionheaderDesktopTablet;
+  &__subheading {
+    margin-left: 1.0625rem;
+    @include tablet {
+      margin-left: 0.3125rem;
+      @include sectionheaderDesktopTablet;
+    }
+    @include desktop {
+      @include sectionheaderDesktopTablet;
+      margin-left: 3.875rem;
+    }
   }
-  @include desktop {
-    @include sectionheaderDesktopTablet;
-    margin-left: 3.875rem;
+  &__info-quote {
+    margin-left: 1rem;
+    @include tablet {
+      margin-left: 0.5rem;
+    }
+    @include desktop {
+      margin-left: -2.5rem;
+    }
   }
-}
-
-.about-section__info-quote {
-  margin-left: 1rem;
-  @include tablet {
-    margin-left: 0.5rem;
-  }
-  @include desktop {
-    margin-left: -2.5rem;
-  }
-}
-
-.about-section__info-quote p {
-  @include subheaderMobile;
-  font-weight: bold;
-  margin: 1rem;
-  @include tablet {
-    @include subheaderDesktopTablet;
+  &__info-quote p {
+    @include subheaderMobile;
     font-weight: bold;
-    margin: 0 6.25rem;
+    margin: 1rem;
+    @include tablet {
+      @include subheaderDesktopTablet;
+      font-weight: bold;
+      margin: 0 6.25rem;
+    }
+    @include desktop {
+      margin: 0 12.5rem;
+    }
   }
-  @include desktop {
-    margin: 0 12.5rem;
+  &__info-quote span {
+    @include bodycopyMobile;
+    @include tablet {
+      @include bodycopyDesktopTablet;
+    }
   }
-}
-
-.about-section__info-quote span {
-  @include bodycopyMobile;
-  @include tablet {
-    @include bodycopyDesktopTablet;
-  }
-}
-
-.about-section__image {
-  margin: 0 1.875rem;
-  display: flex;
-  justify-content: center;
-  @include tablet {
-    margin: 3.25rem;
-  }
-  @include desktop {
-    margin: 5.75rem;
-  }
-}
-
-.about-section__bio h3 {
-  @include tablet {
-    margin-left: 6.25rem;
-  }
-}
-
-.about-section__row {
-  @include tablet {
+  &__image {
+    margin: 0 1.875rem;
     display: flex;
+    justify-content: center;
+    @include tablet {
+      margin: 3.25rem;
+    }
+    @include desktop {
+      margin: 5.75rem;
+    }
+  }
+  &__bio h3 {
+    @include tablet {
+      margin-left: 6.25rem;
+    }
+  }
+  &__row {
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__first-column {
+    margin: 0 1.875rem;
+    @include bodycopyMobile;
+    @include tablet {
+      flex: 50%;
+      margin-left: 6.25rem;
+      @include bodycopyDesktopTablet;
+    }
+    @include desktop {
+      margin-left: 9.5rem;
+    }
+  }
+  &__second-column {
+    @include bodycopyMobile;
+    margin: 0.625rem 1.875rem;
+    @include tablet {
+      flex: 50%;
+      margin: 0 2.25rem;
+      @include bodycopyDesktopTablet;
+    }
+    @include desktop {
+      margin-right: 9.5rem;
+    }
+  }
+  &__title {
+    @include sectionheaderMobile;
+    margin: 1rem 2rem;
+    @include tablet {
+      @include sectionheaderDesktopTablet;
+      margin-left: 3.125rem;
+    }
+    @include desktop {
+      margin: 1rem 120px;
+    }
+  }
+  &__bees-knees-title {
+    margin-left: 0.75rem;
+    @include subheaderMobile;
+    @include tablet {
+      @include subheaderDesktopTablet;
+      line-height: 2rem;
+    }
+  }
+  &__band-image {
+    max-width: 100%;
+    @include tablet {
+      width: 90%;
+      height: 30rem;
+    }
+    @include desktop {
+      width: 90%;
+      height: 50rem;
+    }
   }
 }
 
-.about-section__first-column {
-  margin: 0 1.875rem;
-  @include bodycopyMobile;
-  @include tablet {
-    flex: 50%;
-    margin-left: 6.25rem;
-    @include bodycopyDesktopTablet;
-  }
-  @include desktop {
-    margin-left: 9.5rem;
-  }
-}
-
-.about-section__second-column {
-  @include bodycopyMobile;
-  margin: 0.625rem 1.875rem;
-  @include tablet {
-    flex: 50%;
-    margin: 0 2.25rem;
-    @include bodycopyDesktopTablet;
-  }
-  @include desktop {
-    margin-right: 9.5rem;
-  }
-}
-
-.about-section__about-musicians-title {
-  @include sectionheaderMobile;
-  margin: 1rem 2rem;
-  @include tablet {
-    @include sectionheaderDesktopTablet;
-    margin-left: 3.125rem;
-  }
-  @include desktop {
-    margin: 1rem 120px;
-  }
-}
-
-.about-section__bees-knees-title {
-  margin-left: 0.75rem;
-  @include subheaderMobile;
-  @include tablet {
-    @include subheaderDesktopTablet;
-    line-height: 2rem;
-  }
-}
-
-.about-section__band-image {
-  max-width: 100%;
-  @include tablet {
-    width: 90%;
-    height: 30rem;
-  }
-  @include desktop {
-    width: 90%;
-    height: 50rem;
-  }
-}
-
-//Gallery section
+// gallery
 
 .gallery {
   background-color: $alabasta;
-}
 
-.photo-gallery__container-photo {
-  margin: 1.3rem;
-  display: flex;
-  flex-direction: column;
-
-  @include tablet {
-    width: 27%;
-  }
-}
-
-.photo-gallery__title {
-  margin-bottom: 1rem;
-  @include sectionheaderMobile;
-  margin-left: 1.25rem;
-  @include tablet {
-    @include sectionheaderDesktopTablet;
-    margin-left: 3.75rem;
-  }
-  @include desktop {
-    margin-left: 7.5rem;
-  }
-}
-
-.photo-gallery__container {
-  @include tablet {
+  &__photo {
+    margin: 1.3rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+      width: 27%;
+    }
   }
-  @include desktop {
-    display: flex;
-    justify-self: center;
+  &__title {
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    @include sectionheaderMobile;
+    margin-left: 1.25rem;
+    @include tablet {
+      @include sectionheaderDesktopTablet;
+      margin-left: 2.875rem;
+    }
+    @include desktop {
+      margin-left: 4.5rem;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include desktop {
+      display: flex;
+      justify-self: center;
+    }
+  }
+  &__photo {
+    -webkit-filter: grayscale(100%);
+  }
+
+  &__photo:hover {
+    -webkit-filter: hue-rotate(50deg);
+    -webkit-filter: grayscale(0%);
   }
 }
 
 //conversation section
 
-.conversation__form * {
-  box-sizing: border-box;
-}
-
-
-.conversation-section {
+.conversation {
   display: flex;
   flex-direction: column;
   border-radius: 0.25rem;
   box-sizing: border-box;
+
+  &__form * {
+    box-sizing: border-box;
+  }
+  &__title {
+    @include sectionheaderMobile;
+    @include tablet {
+      @include sectionheaderDesktopTablet;
+      margin-left: 2.625rem;
+    }
+    @include desktop {
+      margin-left: 3.75rem;
+    }
+  }
+  &__input-container {
+    width: 100%;
+    height: 2.25rem;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__label {
+    @include bodycopyMobile;
+    margin: 0.25rem;
+    color: $silver;
+    display: flex;
+  }
+  &__avatar {
+    height: 2.25rem;
+    width: 2.25rem;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("../assets/Images/Mohan-muruge.jpg");
+    position: relative;
+    bottom: -4.375rem;
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+      left: 4.375rem;
+      @include desktop {
+        margin-left: 17.875rem;
+      }
+    }
+  }
+  &__comment-container {
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      width: 100%;
+      margin-top: -100px;
+    }
+  }
+  &__input-container {
+    margin-bottom: 100px;
+    @include tablet {
+    }
+  }
 }
-
-
-
-.conversation__title {
-  @include sectionheaderMobile;
-}
-
-.conversation__input-container {
-  width: 100%;
-  height: 2.25rem;
-  padding: 0.75rem;
-  display: flex;
-  justify-content: center;
-}
-
 
 .comment__list li {
   list-style: none;
-}
-
-.conversation__label {
-  @include bodycopyMobile;
-  margin: 0.25rem;
-  color: $silver;
-  display: flex;
-}
-
-.conversation__avatar {
-  height: 2.25rem;
-  width: 2.25rem;
-  background-size: cover;
-  border-radius: 50%;
-  background-image: url("../assets/Images/Mohan-muruge.jpg");
-  position: relative;
-  bottom: -70px;
-  @include tablet{
-    left: 170px;
-  }
 }
 
 .comment-container img {
@@ -396,17 +375,6 @@ header {
   @include tablet {
     height: 3rem;
     width: 3rem;
-  }
-}
-
-
-
-.conversation__comment-container{
-  display: flex;
-  justify-content: center;
-  @include tablet{
-    width:100%;
-    margin-top: -100px
   }
 }
 
@@ -427,20 +395,20 @@ input {
   width: 50%;
   border: 0.0625rem solid $mercury;
   height: 2.25rem;
-  @include tablet{
+  @include tablet {
     width: 40%;
   }
 }
 
-input:invalid, textarea:invalid{
- border-color: red;
+input:not(:focus):invalid {
+  border-color: $mercury;
 }
 
 textarea {
-  margin: 0 3.125rem;
+  margin: 3rem 3.125rem;
   width: 50%;
   border: 0.0625rem solid $mercury;
-  @include tablet{
+  @include tablet {
     width: 40%;
   }
 }
@@ -452,20 +420,23 @@ textarea {
   padding: 0 2rem;
   @include tablet {
     display: flex;
-    justify-content: flex-end;
-    margin-left: -350px;
   }
 }
 
 button {
   @include subheaderMobile;
+  border-radius: 4px;
   width: 50%;
   color: #ffff;
   background-color: $bandsite-black;
-  height: 2.5rem;
+  height: 3.5rem;
   margin: 0.625rem;
   @include tablet {
-    width: 9.375rem;
+    width: 15%;
+    margin-left: 17.5rem;
+  }
+  @include desktop {
+    margin-left: 25rem;
   }
 }
 
@@ -474,9 +445,9 @@ button:hover {
   background-color: #000000;
 }
 
-hr{
-  border-top: .0625rem solid $mercury;
-
+.divider {
+  border-top: 0.0625rem solid $mercury;
+  margin-bottom: -10px;
 }
 
 .comments {
@@ -505,6 +476,7 @@ hr{
   right: 2.5rem;
   top: 3.75rem;
   @include tablet {
+    margin-left: -20px;
   }
 }
 
@@ -524,39 +496,23 @@ hr{
 }
 
 .comment-container {
- 
   @include tablet {
-    margin: 4.375rem;
+    margin: 2.375rem;
   }
   @include desktop {
-    margin: 0 400px;
+    margin: 0 330px;
   }
 }
 
-.comment{
+.comment {
   display: flex;
   justify-content: center;
-
-  .comment__item{
-    margin-left: .625rem;
-  }
 }
 
-.conversation__input-container{
-  margin-bottom: 100px;
-    @include tablet{
-      bottom: 100px;
-    }
-  
+.comment__item {
+  margin-top: -1.875rem;
+  margin-left: 0.625rem;
 }
-
-.conversation__label{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  right: 100px
-}
-
 
 //Footer section
 
@@ -572,20 +528,8 @@ footer {
   }
 }
 
-.footer-main-title {
-  color: $primary-text-color;
-  position: relative;
-  bottom: -0.625rem;
-
-  @include tablet {
-    font-size: 0.875rem;
-    display: flex;
-    left: 1.25rem;
-  }
-  @include desktop {
-    display: flex;
-    left: 6.875rem;
-  }
+footer span {
+  font-weight: bold;
 }
 
 .footer {
@@ -600,11 +544,7 @@ footer {
   }
 }
 
-footer span {
-  font-weight: bold;
-}
-
-.contact-info {
+.contact {
   @include tablet {
     display: flex;
     justify-content: space-around;
@@ -612,12 +552,72 @@ footer span {
   @include desktop {
     justify-content: flex-start;
   }
-}
+  &__get-in-touch {
+    @include tablet {
+      font-size: 2.1875rem;
+      display: flex;
+    }
+  }
+  &__Cam-Adams,
+  &__Pearl-Gregg,
+  &__Carson-Whyte {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__Cam-Adams {
+    @include tablet {
+      position: relative;
+      bottom: 2.5rem;
+      margin-left: 1.25rem;
+    }
+  }
+  &__Pearl-Gregg {
+    @include tablet {
+      position: relative;
+      bottom: -0.4375rem;
+    }
+    @include desktop {
+      margin-left: 6.25rem;
+    }
+  }
+  &__Carson-Whyte {
+    @include tablet {
+      position: relative;
+      bottom: -1.875rem;
+    }
+    @include desktop {
+      margin-left: 6.25rem;
+    }
+  }
+  &__facebook,
+  &__twitter {
+    margin-left: 1.25rem;
+  }
 
-.contact-info__get-in-touch {
-  @include tablet {
-    font-size: 2.1875rem;
-    display: flex;
+  &__instagram {
+    margin-left: 0.3125rem;
+  }
+  &__mobile-socialIcons {
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__media {
+    display: none;
+    @include tablet {
+      display: flex;
+      position: relative;
+      bottom: 1.25rem;
+    }
+  }
+  &__email a {
+    text-decoration: none;
+    color: $primary-text-color;
   }
 }
 
@@ -625,134 +625,45 @@ footer span {
   @include tablet {
     display: flex;
   }
-}
-
-.social__bandsite {
-  @include tablet {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  &__bandsite {
+    @include tablet {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
-}
-.contact-info__Cam-Adams,
-.contact-info__Pearl-Gregg,
-.contact-info__Carson-Whyte {
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.contact-info__Cam-Adams {
-  @include tablet {
-    position: relative;
-    bottom: 2.5rem;
-    margin-left: 1.25rem;
+  &__bandsite-logo {
+    display: none;
+    @include tablet {
+      display: flex;
+      width: 7.5rem;
+      height: 1.25rem;
+    }
   }
 }
 
-.contact-info__Pearl-Gregg {
-  @include tablet {
-    position: relative;
-    bottom: -0.4375rem;
-  }
-  @include desktop {
-    margin-left: 6.25rem;
-  }
-}
-
-.contact-info__Carson-Whyte {
-  @include tablet {
-    position: relative;
-    bottom: -1.875rem;
-  }
-  @include desktop {
-    margin-left: 6.25rem;
-  }
-}
-
-.copyright {
-  display: flex;
-  @include tablet {
-    margin-left: 5rem;
-  }
-  @include desktop {
-    margin-left: 6.25rem;
-  }
-}
-
-.contact-info-image__facebook,
-.contact-info-image__twitter {
-  margin-left: 1.25rem;
-}
-
-.contact-info-image__instagram {
-  margin-left: 0.3125rem;
-}
-
-.mobile-logo {
+.mobile {
   width: 7.5rem;
   height: 1.25rem;
   @include tablet {
     display: none;
   }
-}
-
-.mobile-logo p {
-  background: $bandsite-black;
-}
-
-.social-bandsite__logo {
-  display: none;
-  @include tablet {
-    display: flex;
-    width: 7.5rem;
-    height: 1.25rem;
+  &__logo p {
+    background: $bandsite-black;
   }
-}
-
-.contact-info__media {
-  display: none;
-  @include tablet {
-    display: flex;
-    position: relative;
-    bottom: 1.25rem;
+  &__container {
+    margin-top: 3.25rem;
   }
-}
-
-.mobile-logo__container {
-  margin-top: 3.25rem;
 }
 
 .copyright {
   @include tablet {
+    margin-left: 5rem;
     display: flex;
     justify-content: flex-start;
     margin-left: 4.0625rem;
   }
   @include desktop {
-    margin-left: 1.25rem;
+    margin-left: 6.25rem;
   }
-}
-
-.contact-info__mobile-socialIcons {
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: none;
-  }
-}
-
-.contact-info__email a {
-  text-decoration: none;
-  color: $primary-text-color;
-}
-
-.photo-gallery__container-photo {
-  transition: filter 0.5s;
-}
-
-.photo-gallery__container-photo:hover {
-  filter: contrast(150%);
 }
