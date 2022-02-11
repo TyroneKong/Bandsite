@@ -1,15 +1,28 @@
 @font-face {
-  font-family: "Avenir Next Regular";
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 body {
   position: relative;
-  font-family: "Avenir Next Regular";
+  font-family: "AvenirNextLTPro";
 }
 
 header {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header {
@@ -65,34 +78,29 @@ header {
 .nav__list a {
   color: #e1e1e1;
   text-decoration: none;
-  font-family: "Avenir Next Regular";
+  font-family: "AvenirNextLTPro";
 }
-@media screen and (min-width: 48rem) {
-  .nav__bio {
-    height: 5.625rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .nav__bio {
-    height: 4.375rem;
-    margin-left: 1.875rem;
-  }
-}
-@media screen and (min-width: 48rem) {
-  .nav__shows:hover, .nav__bio:hover {
-    height: 10px;
-    color: #ffff;
-    border-bottom: 1px solid #ffff;
-  }
+.nav__shows:hover {
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
 }
 @media screen and (min-width: 80.625rem) {
-  .nav__shows:hover, .nav__bio:hover {
-    height: 5.3125rem;
+  .nav__shows:hover {
+    height: 4.3125rem;
   }
 }
 @media screen and (min-width: 48rem) {
   .nav__shows {
     margin-left: 2.5rem;
+  }
+}
+.nav__bio:hover {
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
+}
+@media screen and (min-width: 80.625rem) {
+  .nav__bio:hover {
+    height: 4.3125rem;
   }
 }
 
@@ -421,13 +429,31 @@ header {
   display: flex;
   justify-content: center;
 }
-.conversation__label {
+.conversation__label-name {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  margin: 0.25rem;
+  margin-left: 9.1875rem;
   color: #afafaf;
   display: flex;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__label-name {
+    margin-left: 14.375rem;
+  }
+}
+.conversation__label-comment {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin-left: 9.1875rem;
+  color: #afafaf;
+  display: flex;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__label-comment {
+    margin-left: 14.3125rem;
+  }
 }
 .conversation__avatar {
   height: 2.25rem;
@@ -458,13 +484,13 @@ header {
 @media screen and (min-width: 48rem) {
   .conversation__comment-container {
     width: 100%;
-    margin-top: -100px;
+    margin-top: -40px;
   }
 }
 .conversation__input-container {
   margin-bottom: 50px;
 }
-.comment__list li {
+.comment__list {
   list-style: none;
 }
 
@@ -481,16 +507,11 @@ header {
   }
 }
 
-.comment-container h3 {
+.comment-container {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-}
-
-.comment-container li {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
+  margin: 100px;
 }
 
 ::-moz-placeholder {
@@ -598,10 +619,6 @@ button:hover {
   flex-direction: column;
 }
 
-.comment__list {
-  position: relative;
-}
-
 .comment-container .comment__name {
   font-weight: bold;
 }
@@ -644,18 +661,16 @@ button:hover {
 }
 @media screen and (min-width: 48rem) {
   .comment-container {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
     margin: 6.375rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .comment-container {
-    margin: 0 330px;
+    margin: 50px 530px;
   }
-}
-
-.comment {
-  display: flex;
-  justify-content: center;
 }
 
 .comment__item {

@@ -1,6 +1,16 @@
-//font face rules 
+//font face rules
 
 @font-face {
-    font-family: "Avenir Next Regular";
-    src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
-  }
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+}

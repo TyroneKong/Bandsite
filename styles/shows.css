@@ -1,15 +1,29 @@
 @font-face {
-  font-family: "Avenir Next Regular";
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 body {
-  font-family: "Avenir Next Regular";
+  font-family: "AvenirNextLTPro";
   position: relative;
 }
 
+/* header section */
 header {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header {
@@ -65,28 +79,15 @@ header {
 .nav__list a {
   color: #e1e1e1;
   text-decoration: none;
+  font-family: "AvenirNextLTPro";
 }
-@media screen and (min-width: 48rem) {
-  .nav__bio {
-    height: 5.625rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .nav__bio {
-    height: 4.375rem;
-    margin-left: 1.875rem;
-  }
-}
-@media screen and (min-width: 48rem) {
-  .nav__shows:hover, .nav__bio:hover {
-    height: 10px;
-    color: #ffff;
-    border-bottom: 1px solid #ffff;
-  }
+.nav__shows:hover {
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
 }
 @media screen and (min-width: 80.625rem) {
-  .nav__shows:hover, .nav__bio:hover {
-    height: 5.3125rem;
+  .nav__shows:hover {
+    height: 4.3125rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -94,7 +95,17 @@ header {
     margin-left: 2.5rem;
   }
 }
+.nav__bio:hover {
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
+}
+@media screen and (min-width: 80.625rem) {
+  .nav__bio:hover {
+    height: 4.3125rem;
+  }
+}
 
+/*Hero section*/
 .hero__container {
   position: relative;
 }
@@ -118,7 +129,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .hero__title {
-    bottom: 60rem;
+    bottom: 50rem;
   }
 }
 .hero__overlay {
@@ -133,17 +144,23 @@ header {
 }
 .hero__soundcloud-player {
   position: absolute;
-  top: 210px;
-  left: 40px;
+  top: 13.125rem;
+  left: 2.5rem;
   z-index: 100;
   width: 70%;
 }
 @media screen and (min-width: 48rem) {
   .hero__soundcloud-player {
-    top: 700px;
+    top: 43.75rem;
     width: 60%;
   }
 }
+@media screen and (min-width: 80.625rem) {
+  .hero__soundcloud-player {
+    top: 56.25rem;
+  }
+}
+
 .show__details {
   display: flex;
   justify-content: center;
@@ -295,10 +312,12 @@ button {
   }
 }
 
+/* CTA button */
 button:hover {
   background-color: #000000;
 }
 
+/* footer section */
 footer {
   background-color: #323232;
   color: #ffff;

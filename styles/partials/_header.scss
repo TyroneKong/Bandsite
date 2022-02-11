@@ -1,0 +1,85 @@
+@use "./mixin" as *;
+@use "./variables" as *;
+
+@mixin header {
+  header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  //Header
+
+  .header {
+    background-color: $bandsite-black;
+    @include tablet {
+      padding: 10px 6.25rem;
+    }
+  }
+
+  .nav {
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__logo {
+      display: flex;
+      justify-content: center;
+      background-color: $bandsite-black;
+    }
+    &__logo-image {
+      width: 7.5rem;
+      height: 1.25rem;
+      background-position: center;
+      @include tablet {
+        margin: 1.25rem 1rem;
+      }
+    }
+    &__list {
+      display: flex;
+      font-size: 0.875rem;
+      justify-content: space-around;
+      height: 1.875rem;
+      @include tablet {
+        height: 5rem;
+        font-size: 1.5rem;
+        margin-left: 4.375rem;
+        margin-top: 0.9375rem;
+      }
+      @include desktop {
+        margin-left: 4.375rem;
+        height: 3.75rem;
+      }
+    }
+    &__list a {
+      color: $mercury;
+      text-decoration: none;
+      font-family: "AvenirNextLTPro";
+    }
+
+    &__shows:hover {
+      color: $primary-text-color;
+      border-bottom: 1px solid #ffff;
+
+      @include desktop {
+        height: 4.3125rem;
+      }
+    }
+    &__shows {
+      @include tablet {
+        margin-left: 2.5rem;
+      }
+    }
+    &__bio:hover {
+      color: $primary-text-color;
+      border-bottom: 1px solid #ffff;
+      @include desktop {
+        height: 4.3125rem;
+      }
+    }
+  }
+}

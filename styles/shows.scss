@@ -1,92 +1,18 @@
 //font styles
 @use "./partials/mixin" as *;
 @use "./partials/variables" as *;
+@use "./partials/header" as *;
+@use "./partials/footer" as *;
 
 body {
   font-family: $font-style;
   position: relative;
 }
 
-header {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
+/* header section */
+@include header;
 
-//Header
-
-.header {
-  background-color: $bandsite-black;
-  @include tablet {
-    padding: 10px 6.25rem;
-  }
-}
-
-.nav {
-  @include tablet {
-    display: flex;
-    justify-content: flex-start;
-  }
-  &__logo {
-    display: flex;
-    justify-content: center;
-    background-color: $bandsite-black;
-  }
-  &__logo-image {
-    width: 7.5rem;
-    height: 1.25rem;
-    background-position: center;
-    @include tablet {
-      margin: 1.25rem 1rem;
-    }
-  }
-  &__list {
-    display: flex;
-    font-size: 0.875rem;
-    justify-content: space-around;
-    height: 1.875rem;
-    @include tablet {
-      height: 5rem;
-      font-size: 1.5rem;
-      margin-left: 4.375rem;
-      margin-top: 0.9375rem;
-    }
-    @include desktop {
-      margin-left: 4.375rem;
-      height: 3.75rem;
-    }
-  }
-  &__list a {
-    color: $mercury;
-    text-decoration: none;
-  }
-  &__bio {
-    @include tablet {
-      height: 5.625rem;
-    }
-    @include desktop {
-      height: 4.375rem;
-      margin-left: 1.875rem;
-    }
-  }
-  &__shows:hover,
-  &__bio:hover {
-    @include tablet {
-      height: 10px;
-      color: $primary-text-color;
-      border-bottom: 1px solid #ffff;
-    }
-    @include desktop {
-      height: 5.3125rem;
-    }
-  }
-  &__shows {
-    @include tablet {
-      margin-left: 2.5rem;
-    }
-  }
-}
-//Hero section
-
+/*Hero section*/
 .hero {
   &__container {
     position: relative;
@@ -104,7 +30,7 @@ header {
       @include pageheaderDesktopTablet;
     }
     @include desktop {
-      bottom: 60rem;
+      bottom: 50rem;
     }
   }
   &__overlay {
@@ -119,15 +45,16 @@ header {
   }
   &__soundcloud-player {
     position: absolute;
-    top: 210px;
-    left: 40px;
+    top: 13.125rem;
+    left: 2.5rem;
     z-index: 100;
     width: 70%;
     @include tablet {
-      top: 700px;
+      top: 43.75rem;
       width: 60%;
     }
     @include desktop {
+      top: 56.25rem;
     }
   }
 }
@@ -261,160 +188,10 @@ button {
   }
 }
 
-//primary CTA hover
+/* CTA button */
 button:hover {
   background-color: #000000;
 }
 
-//Footer section
-footer {
-  background-color: $bandsite-black;
-  color: $primary-text-color;
-  padding: 2.25rem;
-  @include tablet {
-    padding-left: 0%;
-  }
-  @include desktop {
-    padding-left: 100px;
-  }
-}
-
-footer span {
-  font-weight: bold;
-}
-
-.footer {
-  @include footercopyMobile;
-  margin-left: 1rem;
-  margin-right: 1.25rem;
-
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-    @include footercopyDesktopTablet;
-  }
-}
-
-.contact {
-  @include tablet {
-    display: flex;
-    justify-content: space-around;
-  }
-  @include desktop {
-    justify-content: flex-start;
-  }
-  &__get-in-touch {
-    @include tablet {
-      font-size: 2.1875rem;
-      display: flex;
-    }
-  }
-  &__Cam-Adams,
-  &__Pearl-Gregg,
-  &__Carson-Whyte {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  &__Cam-Adams {
-    @include tablet {
-      position: relative;
-      bottom: 2.5rem;
-      margin-left: 1.25rem;
-    }
-  }
-  &__Pearl-Gregg {
-    @include tablet {
-      position: relative;
-      bottom: -0.4375rem;
-    }
-    @include desktop {
-      margin-left: 6.25rem;
-    }
-  }
-  &__Carson-Whyte {
-    @include tablet {
-      position: relative;
-      bottom: -1.875rem;
-    }
-    @include desktop {
-      margin-left: 6.25rem;
-    }
-  }
-  &__facebook,
-  &__twitter {
-    margin-left: 1.25rem;
-  }
-
-  &__instagram {
-    margin-left: 0.3125rem;
-  }
-  &__mobile-socialIcons {
-    @include tablet {
-      display: none;
-    }
-    @include desktop {
-      display: none;
-    }
-  }
-  &__media {
-    display: none;
-    @include tablet {
-      display: flex;
-      position: relative;
-      bottom: 1.25rem;
-    }
-  }
-  &__email a {
-    text-decoration: none;
-    color: $primary-text-color;
-  }
-}
-
-.social {
-  @include tablet {
-    display: flex;
-  }
-  &__bandsite {
-    @include tablet {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-  &__bandsite-logo {
-    display: none;
-    @include tablet {
-      display: flex;
-      width: 7.5rem;
-      height: 1.25rem;
-    }
-  }
-}
-
-.mobile {
-  width: 7.5rem;
-  height: 1.25rem;
-  @include tablet {
-    display: none;
-  }
-  &__logo p {
-    background: $bandsite-black;
-  }
-  &__container {
-    margin-top: 3.25rem;
-  }
-}
-
-.copyright {
-  @include tablet {
-    margin-left: 5rem;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 4.0625rem;
-  }
-  @include desktop {
-    margin-left: 6.25rem;
-  }
-}
+/* footer section */
+@include footer;
