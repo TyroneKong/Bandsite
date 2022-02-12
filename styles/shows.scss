@@ -55,7 +55,7 @@ body {
     width: 70%;
     @include tablet {
       top: 43.75rem;
-      width: 60%;
+      width: 60vw;
     }
     @include desktop {
       top: 56.25rem;
@@ -66,50 +66,43 @@ body {
 /* Show section */
 
 .show {
+  
   &__details {
     display: flex;
-    justify-content: center;
     @include tablet {
       flex-direction: column;
+      
     }
     @include desktop {
     }
   }
   &__list {
+    list-style: none;
     @include tablet {
       display: flex;
       flex-direction: column;
+  
+    }
+  
+  }
+  &__items{
+    @include tablet{
+      display: flex;
     }
   }
-  // &__items li {
-  //   @include tablet {
-  //     flex-wrap: wrap;
-  //     list-style: none;
-  //     flex: 0 0 25%;
-  //   }
-  // }
+
   &__items h3 {
-    font-size: 14px;
-    margin-left: -40px;
+    font-size: 0.875rem;
     @include tablet {
       margin-left: 0;
       display: none;
     }
   }
+
   &__date {
     font-weight: bold;
-
-    @include desktop {
-      margin-left: 1px;
-    }
-    &:hover {
-      background-color: grey;
-      + li {
-        background-color: grey;
-      }
-    }
   }
-  &__titles {
+  &__sub-headings {
     display: none;
     @include tablet {
       color: $silver;
@@ -119,66 +112,44 @@ body {
       left: -12.5rem;
     }
   }
-  // &__divider {
-  //   border: 1px solid $mercury;
-  //   width: 100%;
-  // }
-  &__date-title {
+
+  &__date-mobile {
     margin-left: 16.875rem;
   }
-  &__venue-title {
+  &__venue-mobile {
     margin-left: -0.625rem;
   }
-  &__location-title {
+  &__location-mobile {
     margin-right: 9.375rem;
   }
   &__title {
     @include desktop {
-      font-size: 24px;
+      font-size: 1.5rem;
       margin-left: 9.375rem;
       margin-top: 4.375rem;
     }
   }
-}
-
-li {
-  list-style: none;
-  margin-left: -2.5rem;
-  @include tablet {
-    // margin-top: 1.875rem;
-    // margin-left: -1.875rem;
+  &__info-heading{
+    color: $silver;
   }
-}
 
-.show h3 {
-  color: $silver;
-}
-
-.buy {
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -2.5rem;
-  @include tablet {
-    margin-left: 0.625rem;
-  }
-}
-
-button {
+&__buy-button{
+  width: 70vw;
+  font-size: 1.25rem;
+  padding: 1.5rem 1.125rem;
   border-radius: 0.25rem;
-  width: 18.75rem;
-  color: #ffff;
+  font-weight: bold;
   background-color: $bandsite-black;
-  height: 2.5rem;
-  margin: 0.625rem;
-  padding: 1rem;
-  font-size: 1rem;
+  color: #ffff;
 
+  &:hover{
+    background-color: #000000;
+  }
   @include tablet {
     font-size: 1.25rem;
     width: 12.5rem;
     padding: 1.5rem 1.125rem;
+    margin: 0.625rem;
   }
   @include desktop {
     font-size: 1.25rem;
@@ -186,18 +157,23 @@ button {
   }
 }
 
-/* CTA button */
-button:hover {
-  background-color: #000000;
 }
 
 /* footer section */
 @include footer;
 
-.list {
+.show__list-tickets {
+  
+  &:hover{
+    background-color: $alabasta;
+  }
+  &:active{
+    background-color: $mercury;
+  }
   @include tablet {
     display: flex;
-    justify-content: space-evenly;
+    column-gap: 100px;
+    justify-content: space-around;
     border-bottom: 1px solid orange;
   }
 }

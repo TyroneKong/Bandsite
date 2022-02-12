@@ -26,7 +26,7 @@ const commentContainer = document.querySelector(".comment__list");
 const commentBtn = document.querySelector(".comment-btn");
 
 // current date
-const currentDate = new Date("10-Feburary-2022");
+const currentDate = new Date();
 const formattedDate = currentDate.toLocaleDateString("en-GB", {
   year: "numeric",
   month: "2-digit",

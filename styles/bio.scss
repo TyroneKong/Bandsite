@@ -426,6 +426,7 @@ button:hover {
 .divider {
   border-top: 0.0625rem solid $mercury;
   margin-bottom: -0.625rem;
+
 }
 
 .comments {
@@ -442,11 +443,6 @@ button:hover {
 
 .comment-container .comment__name {
   font-weight: bold;
-}
-
-.heading {
-  display: flex;
-  justify-content: space-between;
 }
 
 .avatar__img {

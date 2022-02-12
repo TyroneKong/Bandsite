@@ -628,11 +628,6 @@ button:hover {
   font-weight: bold;
 }
 
-.heading {
-  display: flex;
-  justify-content: space-between;
-}
-
 .avatar__img {
   position: relative;
   right: 2.5rem;
@@ -676,8 +671,7 @@ button:hover {
 }
 
 .comment__item {
-  margin-top: -1.875rem;
-  margin-left: 0.625rem;
+  margin-top: -10.875rem 0.625rem;
 }
 
 label {

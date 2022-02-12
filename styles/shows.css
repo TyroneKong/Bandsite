@@ -164,7 +164,7 @@ header {
 @media screen and (min-width: 48rem) {
   .hero__soundcloud-player {
     top: 43.75rem;
-    width: 60%;
+    width: 60vw;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -176,12 +176,14 @@ header {
 /* Show section */
 .show__details {
   display: flex;
-  justify-content: center;
 }
 @media screen and (min-width: 48rem) {
   .show__details {
     flex-direction: column;
   }
+}
+.show__list {
+  list-style: none;
 }
 @media screen and (min-width: 48rem) {
   .show__list {
@@ -189,9 +191,13 @@ header {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 48rem) {
+  .show__items {
+    display: flex;
+  }
+}
 .show__items h3 {
-  font-size: 14px;
-  margin-left: -40px;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 48rem) {
   .show__items h3 {
@@ -202,22 +208,11 @@ header {
 .show__date {
   font-weight: bold;
 }
-@media screen and (min-width: 80.625rem) {
-  .show__date {
-    margin-left: 1px;
-  }
-}
-.show__date:hover {
-  background-color: grey;
-}
-.show__date:hover + li {
-  background-color: grey;
-}
-.show__titles {
+.show__sub-headings {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .show__titles {
+  .show__sub-headings {
     color: #afafaf;
     display: flex;
     justify-content: space-evenly;
@@ -225,71 +220,50 @@ header {
     left: -12.5rem;
   }
 }
-.show__date-title {
+.show__date-mobile {
   margin-left: 16.875rem;
 }
-.show__venue-title {
+.show__venue-mobile {
   margin-left: -0.625rem;
 }
-.show__location-title {
+.show__location-mobile {
   margin-right: 9.375rem;
 }
 @media screen and (min-width: 80.625rem) {
   .show__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-left: 9.375rem;
     margin-top: 4.375rem;
   }
 }
-
-li {
-  list-style: none;
-  margin-left: -2.5rem;
-}
-.show h3 {
+.show__info-heading {
   color: #afafaf;
 }
-
-.buy {
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -2.5rem;
-}
-@media screen and (min-width: 48rem) {
-  .buy {
-    margin-left: 0.625rem;
-  }
-}
-
-button {
+.show__buy-button {
+  width: 70vw;
+  font-size: 1.25rem;
+  padding: 1.5rem 1.125rem;
   border-radius: 0.25rem;
-  width: 18.75rem;
-  color: #ffff;
+  font-weight: bold;
   background-color: #323232;
-  height: 2.5rem;
-  margin: 0.625rem;
-  padding: 1rem;
-  font-size: 1rem;
+  color: #ffff;
+}
+.show__buy-button:hover {
+  background-color: #000000;
 }
 @media screen and (min-width: 48rem) {
-  button {
+  .show__buy-button {
     font-size: 1.25rem;
     width: 12.5rem;
     padding: 1.5rem 1.125rem;
+    margin: 0.625rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  button {
+  .show__buy-button {
     font-size: 1.25rem;
     width: 12.5rem;
   }
-}
-
-/* CTA button */
-button:hover {
-  background-color: #000000;
 }
 
 /* footer section */
@@ -470,10 +444,18 @@ footer span {
   }
 }
 
+.show__list-tickets:hover {
+  background-color: #fafafa;
+}
+.show__list-tickets:active {
+  background-color: #e1e1e1;
+}
 @media screen and (min-width: 48rem) {
-  .list {
+  .show__list-tickets {
     display: flex;
-    justify-content: space-evenly;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    justify-content: space-around;
     border-bottom: 1px solid orange;
   }
 }/*# sourceMappingURL=shows.css.map */
