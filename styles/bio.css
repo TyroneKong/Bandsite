@@ -869,4 +869,8 @@ footer span {
   .conversation__label-comment {
     right: -8.75rem;
   }
+}
+
+.conversation__label-heading {
+  color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */
