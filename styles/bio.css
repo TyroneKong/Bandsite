@@ -37,6 +37,12 @@
 body {
   position: relative;
   font-family: "AvenirNextLTPro";
+  overflow-x: hidden !important;
+}
+
+.container {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 /* header section*/
@@ -203,7 +209,7 @@ header {
   }
 }
 .about__info-quote {
-  line-height: 22px;
+  line-height: 1.375rem;
   margin-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -258,7 +264,7 @@ header {
   }
 }
 .about__first-column {
-  line-height: 22px;
+  line-height: 1.375rem;
   margin: 0 1.875rem;
 }
 @media screen and (min-width: 48rem) {
@@ -273,7 +279,7 @@ header {
   }
 }
 .about__second-column {
-  line-height: 22px;
+  line-height: 1.375rem;
   margin: 0.625rem 1.875rem;
 }
 @media screen and (min-width: 48rem) {
@@ -303,7 +309,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .about__title {
-    margin: 1rem 120px;
+    margin: 1rem 7.5rem;
   }
 }
 .about__bees-knees-title {
@@ -437,17 +443,12 @@ header {
   .conversation__input-container {
     width: 80%;
     justify-content: center;
-    margin-left: 180px;
+    margin-left: 11.25rem;
   }
 }
-.conversation__input-label {
-  color: #afafaf;
+.conversation__label-heading {
   display: flex;
-  justify-content: flex-start;
-}
-.conversation__comment-label {
   color: #afafaf;
-  display: flex;
 }
 .conversation__avatar {
   height: 2.25rem;
@@ -469,6 +470,41 @@ header {
 @media screen and (min-width: 48rem) and (min-width: 80.625rem) {
   .conversation__avatar {
     margin-left: 19.375rem;
+  }
+}
+.conversation__comment-container {
+  margin-left: 0.625rem;
+  width: 170%;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__comment-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: -1.25rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__comment-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 10.0625rem;
+  }
+}
+.conversation__label-name {
+  position: relative;
+  top: -1.875rem;
+  right: -3.125rem;
+}
+.conversation__label-comment {
+  position: relative;
+  top: 1.5rem;
+  right: -3.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__label-comment {
+    right: -8.75rem;
   }
 }
 
@@ -543,7 +579,7 @@ textarea {
 }
 
 .conversation__btn {
-  width: 120%;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 0 2rem;
@@ -551,14 +587,20 @@ textarea {
 @media screen and (min-width: 48rem) {
   .conversation__btn {
     display: flex;
+    margin-left: -1.875rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__btn {
+    margin-left: 11.875rem;
   }
 }
 
 button {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 0.25rem;
-  width: 50%;
+  width: 100%;
   color: #ffff;
   background-color: #323232;
   height: 3.5rem;
@@ -566,14 +608,14 @@ button {
 }
 @media screen and (min-width: 48rem) {
   button {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 20%;
-    margin-left: 20.5rem;
+    margin-left: 40.625rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   button {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 12%;
     margin-left: 20rem;
   }
@@ -588,38 +630,20 @@ button:hover {
   margin-bottom: -0.625rem;
 }
 
-.comments {
-  width: 50%;
+.comment {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
-
 .comment-section {
   display: flex;
   flex-direction: column;
 }
-
-.comment-container .comment__name {
-  font-weight: bold;
-}
-
-.avatar__img {
-  position: relative;
-  right: 2.5rem;
-  top: 3.75rem;
-}
-@media screen and (min-width: 48rem) {
-  .avatar__img {
-    margin-left: -20px;
-  }
-}
-
 .comment__date {
   display: flex;
   justify-content: flex-end;
   color: #afafaf;
 }
-
 .comment__name {
   position: relative;
   bottom: 1.5rem;
@@ -630,7 +654,10 @@ button:hover {
     left: 0.625rem;
   }
 }
-
+.comment__item {
+  margin-top: -1.875rem;
+  margin-left: 0.625re;
+}
 .comment-container {
   margin: 1.25rem 10px;
 }
@@ -645,9 +672,15 @@ button:hover {
   }
 }
 
-.comment__item {
-  margin-top: -1.875rem;
-  margin-left: 0.625rem;
+.avatar__img {
+  position: relative;
+  right: 2.5rem;
+  top: 3.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .avatar__img {
+    margin-left: -20px;
+  }
 }
 
 label {
@@ -833,44 +866,6 @@ footer span {
   }
 }
 
-.conversation__comment-container {
-  margin-left: 0.625rem;
-  width: 170%;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__comment-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-left: -1.25rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .conversation__comment-container {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin-left: 10.0625rem;
-  }
-}
-
-.conversation__label-name {
-  position: relative;
-  top: -1.875rem;
-  right: -3.125rem;
-}
-
-.conversation__label-comment {
-  position: relative;
-  top: 1.5rem;
-  right: -60px;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__label-comment {
-    right: -8.75rem;
-  }
-}
-
-.conversation__label-heading {
-  color: #afafaf;
+.divide {
+  border: 1px solid #e1e1e1;
 }/*# sourceMappingURL=bio.css.map */

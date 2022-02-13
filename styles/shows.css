@@ -181,9 +181,9 @@ header {
 .hero__soundcloud-player {
   position: absolute;
   top: 13.125rem;
-  left: 2.5rem;
+  left: 10px;
   z-index: 100;
-  width: 70%;
+  width: 90vw;
 }
 @media screen and (min-width: 48rem) {
   .hero__soundcloud-player {
@@ -490,4 +490,14 @@ footer span {
   .copyright {
     margin-left: 6.25rem;
   }
+}
+
+.responsive-iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=shows.css.map */
