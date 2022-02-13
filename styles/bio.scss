@@ -29,11 +29,11 @@ body {
     z-index: 100;
     margin-left: 5.25rem;
     color: $primary-text-color;
-    @include pageheaderMobile;
+    @include sectionheaderMobile;
     @include tablet {
       bottom: 12.5rem;
       margin-left: 6.25rem;
-      @include pageheaderDesktopTablet;
+      @include sectionheaderDesktopTablet
     }
     @include desktop {
       bottom: 30rem;
@@ -140,7 +140,7 @@ body {
     }
   }
   &__title {
-    @include sectionheaderMobile;
+    @include subheaderMobile;
     margin: 1rem 2rem;
     @include tablet {
       @include sectionheaderDesktopTablet;
@@ -250,40 +250,36 @@ body {
     }
   }
   &__input-container {
-    width: 130%;
-    height: 2.25rem;
-    padding: 0.75rem;
+  
     display: flex;
     justify-content: center;
     @include tablet {
-      width: 100%;
+      
       justify-content: center;
     }
     @include desktop {
-      margin-left: 200px;
       width: 80%;
+    justify-content: center;
+    margin-left: 200px;
+ 
     }
   }
-  &__label-name {
-    margin-left: 9.1875rem;
+  &__input-label {
+  
+    color: $silver;
+    display: flex;
+    justify-content: flex-start;
+    @include tablet {
+    }
+    @include desktop {
+    }
+  }
+  &__comment-label {
     color: $silver;
     display: flex;
     @include tablet {
-      margin-left: 14.375rem;
     }
     @include desktop {
-      margin-left: 300px;
-    }
-  }
-  &__label-comment {
-    margin-left: 9.1875rem;
-    color: $silver;
-    display: flex;
-    @include tablet {
-      margin-left: 14.3125rem;
-    }
-    @include desktop {
-      margin-left: 300px;
     }
   }
   &__avatar {
@@ -304,26 +300,7 @@ body {
       }
     }
   }
-  &__comment-container {
-    width: 170%;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -3.125rem;
-    @include tablet {
-      justify-content: center;
-      width: 100%;
-      margin-top: -2.5rem;
-    }
-    @include desktop {
-      margin-left: 200px;
-      width: 80%;
-    }
-  }
-  &__input-container {
-    margin-bottom: 3.125rem;
-    @include tablet {
-    }
-  }
+
 }
 
 .comment__list {
@@ -341,18 +318,15 @@ body {
   }
 }
 
-.comment-container {
-  margin: 6.25rem;
-}
 
 ::placeholder {
   color: #000000;
 }
 
 input {
-  width: 50%;
+  width: 83%;
   border: 0.0625rem solid $mercury;
-  height: 2.25rem;
+  height: 4.25rem;
   &:invalid {
     border-color: #c00000;
   }
@@ -387,7 +361,7 @@ textarea {
   }
 }
 
-.comment-btn {
+.conversation__btn {
   width: 120%;
   display: flex;
   justify-content: center;
@@ -492,3 +466,20 @@ label {
 
 //Footer section
 @include footer;
+
+.conversation__comment-container{
+  margin-left: 180px;
+  @include tablet{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
+  }
+  @include desktop{ 
+    width:80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
+    
+  }
+}

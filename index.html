@@ -147,46 +147,30 @@
       <h2>Join the conversation</h2>
     </div>
 
-    <form class="conversation__form" action="">
+    <form name="form" class="conversation__form" action="">
 
 
       <div class="comment__section">
 
 
-        <div class="conversation__avatar"></div>
+        <!-- <div class="conversation__avatar"></div> -->
 
-
-        <div class="conversation__label-name">
-          <label for="">NAME
-
-
-          </label>
-        </div>
 
         <div class="conversation__input-container">
-
-
-
-          <input class="input" type="email" name="" id="input" placeholder="Enter your name">
+          <label for="">NAME </label>
+          <input class="input" type="text" name="fullname"  placeholder="Enter your name">
         </div>
 
 
 
-        <div class="conversation__label-comment">
-          <label for="">COMMENT</label>
-
-        </div>
-
+      
         <div class="conversation__comment-container">
-
-
-
+          <label for="">COMMENT</label>
           <textarea class="text" name="" id="" cols="40" rows="10" placeholder="Add a new comment" required></textarea>
-
         </div>
 
-        <div class="comment-btn">
-          <button>COMMENT</button>
+        <div class="conversation__btn">
+          <button class="comment__btn">COMMENT</button>
 
         </div>
 

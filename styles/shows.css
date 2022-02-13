@@ -10,6 +10,30 @@
   font-family: "AvenirNextLTPro";
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTProBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTProDemi.ttf") format("ttf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro.ttf") format("ttf");
+}
 body {
   font-family: "AvenirNextLTPro";
   position: relative;
@@ -191,9 +215,31 @@ header {
     flex-direction: column;
   }
 }
+.show__list-tickets:hover {
+  background-color: #fafafa;
+}
+.show__list-tickets:active {
+  background-color: #e1e1e1;
+}
+@media screen and (min-width: 48rem) {
+  .show__list-tickets {
+    display: flex;
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+    justify-content: space-around;
+    border-bottom: 1px solid orange;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .show__list-tickets {
+    -moz-column-gap: 250px;
+         column-gap: 250px;
+  }
+}
 @media screen and (min-width: 48rem) {
   .show__items {
     display: flex;
+    justify-content: space-around;
   }
 }
 .show__items h3 {
@@ -215,6 +261,8 @@ header {
   .show__sub-headings {
     color: #afafaf;
     display: flex;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
     justify-content: space-evenly;
     position: relative;
     left: -12.5rem;
@@ -441,21 +489,5 @@ footer span {
 @media screen and (min-width: 80.625rem) {
   .copyright {
     margin-left: 6.25rem;
-  }
-}
-
-.show__list-tickets:hover {
-  background-color: #fafafa;
-}
-.show__list-tickets:active {
-  background-color: #e1e1e1;
-}
-@media screen and (min-width: 48rem) {
-  .show__list-tickets {
-    display: flex;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
-    justify-content: space-around;
-    border-bottom: 1px solid orange;
   }
 }/*# sourceMappingURL=shows.css.map */

@@ -10,6 +10,30 @@
   font-family: "AvenirNextLTPro";
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTProBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTProDemi.ttf") format("ttf");
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../assets/Font/AvenirNextLTPro.ttf") format("ttf");
+}
 body {
   position: relative;
   font-family: "AvenirNextLTPro";
@@ -129,15 +153,15 @@ header {
   color: #ffff;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
     bottom: 12.5rem;
     margin-left: 6.25rem;
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -264,8 +288,8 @@ header {
   }
 }
 .about__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   margin: 1rem 2rem;
 }
@@ -401,53 +425,29 @@ header {
   }
 }
 .conversation__input-container {
-  width: 130%;
-  height: 2.25rem;
-  padding: 0.75rem;
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width: 48rem) {
   .conversation__input-container {
-    width: 100%;
     justify-content: center;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .conversation__input-container {
-    margin-left: 200px;
     width: 80%;
+    justify-content: center;
+    margin-left: 200px;
   }
 }
-.conversation__label-name {
-  margin-left: 9.1875rem;
+.conversation__input-label {
   color: #afafaf;
   display: flex;
+  justify-content: flex-start;
 }
-@media screen and (min-width: 48rem) {
-  .conversation__label-name {
-    margin-left: 14.375rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .conversation__label-name {
-    margin-left: 300px;
-  }
-}
-.conversation__label-comment {
-  margin-left: 9.1875rem;
+.conversation__comment-label {
   color: #afafaf;
   display: flex;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__label-comment {
-    margin-left: 14.3125rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .conversation__label-comment {
-    margin-left: 300px;
-  }
 }
 .conversation__avatar {
   height: 2.25rem;
@@ -471,28 +471,7 @@ header {
     margin-left: 19.375rem;
   }
 }
-.conversation__comment-container {
-  width: 170%;
-  display: flex;
-  justify-content: flex-start;
-  margin-top: -3.125rem;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__comment-container {
-    justify-content: center;
-    width: 100%;
-    margin-top: -2.5rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .conversation__comment-container {
-    margin-left: 200px;
-    width: 80%;
-  }
-}
-.conversation__input-container {
-  margin-bottom: 3.125rem;
-}
+
 .comment__list {
   list-style: none;
 }
@@ -510,10 +489,6 @@ header {
   }
 }
 
-.comment-container {
-  margin: 6.25rem;
-}
-
 ::-moz-placeholder {
   color: #000000;
 }
@@ -527,9 +502,9 @@ header {
 }
 
 input {
-  width: 50%;
+  width: 83%;
   border: 0.0625rem solid #e1e1e1;
-  height: 2.25rem;
+  height: 4.25rem;
 }
 input:invalid {
   border-color: #c00000;
@@ -567,14 +542,14 @@ textarea {
   }
 }
 
-.comment-btn {
+.conversation__btn {
   width: 120%;
   display: flex;
   justify-content: center;
   padding: 0 2rem;
 }
 @media screen and (min-width: 48rem) {
-  .comment-btn {
+  .conversation__btn {
     display: flex;
   }
 }
@@ -671,7 +646,8 @@ button:hover {
 }
 
 .comment__item {
-  margin-top: -10.875rem 0.625rem;
+  margin-top: -1.875rem;
+  margin-left: 0.625rem;
 }
 
 label {
@@ -854,5 +830,25 @@ footer span {
 @media screen and (min-width: 80.625rem) {
   .copyright {
     margin-left: 6.25rem;
+  }
+}
+
+.conversation__comment-container {
+  margin-left: 180px;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__comment-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__comment-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
   }
 }/*# sourceMappingURL=bio.css.map */

@@ -20,14 +20,46 @@ const comments = [
   },
 ];
 
+const inputField = document.querySelector(".input");
+
+// confirm alert
+
+const alerting = () => {
+  const ok = confirm("Please fill in name!");
+
+  // user clicks ok
+  if (ok) {
+    // location.reload();
+    inputField.style.borderColor = "#e1e1e1";
+    inputField.focus();
+  }
+
+  //user clicks cancel
+
+  else {
+    inputField.style.borderColor = "#e1e1e1";
+    inputField.focus();
+  }
+};
+
+// validate name input
+
+const formValidation = () => {
+  let userInput = document.querySelector(".input").value;
+
+  if (userInput === "") {
+    inputField.style.borderColor = "#D22D2D";
+    setTimeout(() => alerting(), 10);
+  }
+};
+
 // target dom elements
 
 const commentContainer = document.querySelector(".comment__list");
-const commentBtn = document.querySelector(".comment-btn");
-
+const commentBtn = document.querySelector(".comment__btn");
 // current date
 const currentDate = new Date();
-const formattedDate = currentDate.toLocaleDateString("en-GB", {
+const formattedDate = currentDate.toLocaleDateString("en-US", {
   year: "numeric",
   month: "2-digit",
   day: "2-digit",
@@ -39,16 +71,23 @@ const applyNewComment = (event) => {
   const nameInput = document.querySelector(".input").value;
   const commentInput = document.querySelector(".text").value;
   const commentList = document.querySelector(".comment__list");
-  comments.push({
-    Name: nameInput,
-    Date: formattedDate,
-    Comment: commentInput,
-  });
-  console.log(comments);
 
+  //only push object if name input not empty
+  if (nameInput !== "") {
+    comments.push({
+      Name: nameInput,
+      Date: formattedDate,
+      Comment: commentInput,
+    });
+  }
   commentList.innerText = "";
   event.preventDefault();
+  formValidation();
   displayComment();
+
+  //clears input and text area after submission
+  document.querySelector(".input").value = "";
+  document.querySelector(".text").value = "";
 };
 
 //button event
@@ -63,29 +102,31 @@ const displayComment = () => {
 
     // create new elements
     const date = document.createElement("p");
+    const comment = document.createElement("p");
     const nameTitle = document.createElement("h3");
-    const commenting = document.createElement("li");
+    const commentItem = document.createElement("li");
     const avatar = document.createElement("img");
-    // const divider = document.createElement("hr");
+    const divider = document.createElement("hr");
 
     // add classes to new elements
     date.classList.add("comment__date");
     avatar.classList.add("avatar__img");
     nameTitle.classList.add("comment__name");
-    commenting.classList.add("comment__item");
-    // divider.classList.add("divider");
+    commentItem.classList.add("comment__item");
+    divider.classList.add("divider");
 
     // append children to parent element
-    commentList.appendChild(avatar);
-    commentList.appendChild(date);
-    commentList.appendChild(nameTitle);
-    commentList.appendChild(commenting);
-    // commentList.appendChild(divider);
+    commentItem.appendChild(avatar);
+    commentItem.appendChild(date);
+    commentItem.appendChild(nameTitle);
+    commentItem.appendChild(comment);
+    commentList.appendChild(commentItem);
+    commentList.appendChild(divider);
 
     // add content
     nameTitle.innerText = comments[i].Name;
     date.innerText = comments[i].Date;
-    commenting.innerText = comments[i].Comment;
+    comment.innerText = comments[i].Comment;
   }
 };
 

@@ -85,9 +85,31 @@ body {
     }
   
   }
+  &__list-tickets{
+  
+  &:hover{
+  
+  background-color: $alabasta;
+  }
+  &:active{
+    background-color: $mercury;
+  }
+  @include tablet {
+    display: flex;
+    column-gap: 70px;
+    justify-content: space-around;
+    border-bottom: 1px solid orange;
+  }
+  @include desktop{
+    column-gap: 250px;
+  }
+  }
+
+
   &__items{
     @include tablet{
       display: flex;
+      justify-content: space-around;
     }
   }
 
@@ -107,9 +129,13 @@ body {
     @include tablet {
       color: $silver;
       display: flex;
+      column-gap: 100px;
       justify-content: space-evenly;
       position: relative;
       left: -12.5rem;
+    }
+    @include desktop{
+     
     }
   }
 
@@ -162,18 +188,10 @@ body {
 /* footer section */
 @include footer;
 
-.show__list-tickets {
-  
-  &:hover{
-    background-color: $alabasta;
+.show__date{
+  @include tablet{
+
   }
-  &:active{
-    background-color: $mercury;
-  }
-  @include tablet {
-    display: flex;
-    column-gap: 100px;
-    justify-content: space-around;
-    border-bottom: 1px solid orange;
-  }
+
 }
+
