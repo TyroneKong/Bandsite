@@ -250,7 +250,7 @@ body {
     }
   }
   &__input-container {
-  
+    
     display: flex;
     justify-content: center;
     @include tablet {
@@ -260,7 +260,7 @@ body {
     @include desktop {
       width: 80%;
     justify-content: center;
-    margin-left: 200px;
+    margin-left: 180px;
  
     }
   }
@@ -468,18 +468,35 @@ label {
 @include footer;
 
 .conversation__comment-container{
-  margin-left: 180px;
+  margin-left: .625rem;
+  width: 170%;
   @include tablet{
-    width:70%;
+    width:100%;
     display: flex;
     justify-content: center;
-    margin-left: 180px;
+    margin-left: -1.25rem;
   }
   @include desktop{ 
     width:80%;
     display: flex;
     justify-content: center;
-    margin-left: 180px;
+    margin-left: 10.0625rem;
     
   }
+}
+.conversation__label-name{
+  position: relative;
+  top: -1.875rem;
+  right: -3.125rem;
+}
+
+.conversation__label-comment{
+  position: relative;
+  top: 1.5rem;
+  right: -60px;
+  @include tablet{
+    right: -8.75rem;
+  }
+ 
+
 }

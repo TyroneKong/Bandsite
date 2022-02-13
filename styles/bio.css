@@ -437,7 +437,7 @@ header {
   .conversation__input-container {
     width: 80%;
     justify-content: center;
-    margin-left: 200px;
+    margin-left: 180px;
   }
 }
 .conversation__input-label {
@@ -834,14 +834,15 @@ footer span {
 }
 
 .conversation__comment-container {
-  margin-left: 180px;
+  margin-left: 0.625rem;
+  width: 170%;
 }
 @media screen and (min-width: 48rem) {
   .conversation__comment-container {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-left: 180px;
+    margin-left: -1.25rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
@@ -849,6 +850,23 @@ footer span {
     width: 80%;
     display: flex;
     justify-content: center;
-    margin-left: 180px;
+    margin-left: 10.0625rem;
+  }
+}
+
+.conversation__label-name {
+  position: relative;
+  top: -1.875rem;
+  right: -3.125rem;
+}
+
+.conversation__label-comment {
+  position: relative;
+  top: 1.5rem;
+  right: -60px;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__label-comment {
+    right: -8.75rem;
   }
 }/*# sourceMappingURL=bio.css.map */
