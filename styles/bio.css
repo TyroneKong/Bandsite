@@ -294,8 +294,8 @@ header {
   }
 }
 .about__title {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   margin: 1rem 2rem;
 }
@@ -668,7 +668,7 @@ button:hover {
   margin-left: 0.625re;
 }
 .comment-container {
-  margin: 1.25rem 10px;
+  margin: 1.25rem 0.625rem;
 }
 @media screen and (min-width: 48rem) {
   .comment-container {

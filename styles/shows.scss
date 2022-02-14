@@ -50,7 +50,7 @@ body {
   &__soundcloud-player {
     position: absolute;
     top: 13.125rem;
-    left: 10px;
+    left: .625rem;
     z-index: 100;
     width: 90vw;
     @include tablet {
@@ -96,12 +96,12 @@ body {
   }
   @include tablet {
     display: flex;
-    column-gap: 70px;
+    column-gap: 4.375rem;
     justify-content: space-around;
     border-bottom: 1px solid orange;
   }
   @include desktop{
-    column-gap: 250px;
+    column-gap: 15.625rem;
   }
   }
 

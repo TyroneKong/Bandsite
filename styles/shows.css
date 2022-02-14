@@ -181,7 +181,7 @@ header {
 .hero__soundcloud-player {
   position: absolute;
   top: 13.125rem;
-  left: 10px;
+  left: 0.625rem;
   z-index: 100;
   width: 90vw;
 }
@@ -224,16 +224,16 @@ header {
 @media screen and (min-width: 48rem) {
   .show__list-tickets {
     display: flex;
-    -moz-column-gap: 70px;
-         column-gap: 70px;
+    -moz-column-gap: 4.375rem;
+         column-gap: 4.375rem;
     justify-content: space-around;
     border-bottom: 1px solid orange;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .show__list-tickets {
-    -moz-column-gap: 250px;
-         column-gap: 250px;
+    -moz-column-gap: 15.625rem;
+         column-gap: 15.625rem;
   }
 }
 @media screen and (min-width: 48rem) {

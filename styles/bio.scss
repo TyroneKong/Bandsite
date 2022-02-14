@@ -147,7 +147,7 @@ body {
     }
   }
   &__title {
-    @include subheaderMobile;
+    @include sectionheaderMobile;
     margin: 1rem 2rem;
     @include tablet {
       @include sectionheaderDesktopTablet;
@@ -473,7 +473,7 @@ button:hover {
   margin-left: 0.625re
 }
 &-container{
-  margin: 1.25rem 10px;
+  margin: 1.25rem .625rem;
   @include tablet {
     margin: 6.375rem;
   }

@@ -46,9 +46,6 @@ for (let i = 0; i < shows.length; i++) {
   const titleDate = document.createElement("h3");
   const titleVenue = document.createElement("h3");
   const titleLocation = document.createElement("h3");
-  const divider = document.createElement('hr')
-  const container = document.createElement('div')
-
   const button = document.createElement("button");
 
   // add class names
@@ -63,7 +60,7 @@ for (let i = 0; i < shows.length; i++) {
   button.classList.add("show__buy-button");
   
 
-
+  //appending the parent
 
   list.appendChild(titleDate);
   list.appendChild(listDate);
@@ -72,10 +69,10 @@ for (let i = 0; i < shows.length; i++) {
   list.appendChild(titleLocation);
   list.appendChild(listLocation);
   list.appendChild(button);
-
-
-
   showInfo.appendChild(list);
+
+
+  // adding the content
 
   listDate.innerText = shows[i].DATE;
   listVenue.innerText = shows[i].VENUE;
