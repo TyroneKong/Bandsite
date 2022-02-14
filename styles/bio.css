@@ -40,11 +40,6 @@ body {
   overflow-x: hidden !important;
 }
 
-.container {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
 /* header section*/
 header {
   font-size: 1.5rem;
@@ -472,6 +467,9 @@ header {
     margin-left: 19.375rem;
   }
 }
+.conversation__comment {
+  margin: 0.625rem 0.625rem;
+}
 .conversation__comment-container {
   margin-left: 0.625rem;
   width: 170%;
@@ -866,8 +864,4 @@ footer span {
 
 .divide {
   border: 1px solid #e1e1e1;
-}
-
-.conversation__comment {
-  margin: 0.625rem 0.625rem;
 }/*# sourceMappingURL=bio.css.map */

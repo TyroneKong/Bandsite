@@ -11,10 +11,6 @@ body {
   font-family: $font-style;
   overflow-x: hidden !important;
 }
-.container {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
 
 /* header section*/
 
@@ -296,6 +292,9 @@ body {
       }
     }
   }
+  &__comment{
+    margin: .625rem .625rem;
+  }
 
 &__comment-container{
   margin-left: .625rem;
@@ -395,9 +394,6 @@ input {
   }
 }
 
-// input:not(:focus):invalid {
-//   border-color: $mercury;
-// }
 
 textarea {
   margin: 3rem 3.125rem;
@@ -498,6 +494,3 @@ label {
   border:1px solid $mercury ;
 }
 
-.conversation__comment{
-  margin: .625rem .625rem;
-}
