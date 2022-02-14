@@ -87,3 +87,13 @@ for (let i = 0; i < shows.length; i++) {
 
 
 
+
+[...document.querySelectorAll('.show__list-tickets ')].forEach(row => {
+
+  row.addEventListener('click',(item)=> {
+
+    const rowWithcClass = document.querySelector('.active');
+    rowWithcClass !== null? rowWithcClass.classList.remove('active'):row.classList.add('active')
+
+  })
+})

@@ -500,4 +500,8 @@ footer span {
   .copyright {
     margin-left: 6.25rem;
   }
+}
+
+.active {
+  background-color: #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */
