@@ -110,10 +110,11 @@ const displayComment = () => {
 
     // add classes to new elements
     date.classList.add("comment__date");
-    avatar.classList.add("avatar__img");
+    avatar.classList.add("conversation__avatar-img");
     nameTitle.classList.add("comment__name");
     commentItem.classList.add("comment__item");
     divider.classList.add("divider");
+    comment.classList.add('conversation__comment')
 
     // append children to parent element
     commentItem.appendChild(avatar);

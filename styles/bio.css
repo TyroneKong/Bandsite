@@ -507,6 +507,33 @@ header {
     right: -8.75rem;
   }
 }
+.conversation__avatar-img {
+  position: relative;
+  right: 2.5rem;
+  top: 3.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__avatar-img {
+    margin-left: -1.25rem;
+  }
+}
+.conversation__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .conversation__btn {
+    display: flex;
+    margin-left: -1.875rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .conversation__btn {
+    margin-left: 11.875rem;
+  }
+}
 
 .comment__list {
   list-style: none;
@@ -578,26 +605,8 @@ textarea {
   }
 }
 
-.conversation__btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-}
-@media screen and (min-width: 48rem) {
-  .conversation__btn {
-    display: flex;
-    margin-left: -1.875rem;
-  }
-}
-@media screen and (min-width: 80.625rem) {
-  .conversation__btn {
-    margin-left: 11.875rem;
-  }
-}
-
 button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.25rem;
   width: 100%;
@@ -669,17 +678,6 @@ button:hover {
 @media screen and (min-width: 80.625rem) {
   .comment-container {
     margin: 3.125rem 25.875rem;
-  }
-}
-
-.avatar__img {
-  position: relative;
-  right: 2.5rem;
-  top: 3.75rem;
-}
-@media screen and (min-width: 48rem) {
-  .avatar__img {
-    margin-left: -20px;
   }
 }
 
@@ -868,4 +866,8 @@ footer span {
 
 .divide {
   border: 1px solid #e1e1e1;
+}
+
+.conversation__comment {
+  margin: 0.625rem 0.625rem;
 }/*# sourceMappingURL=bio.css.map */
