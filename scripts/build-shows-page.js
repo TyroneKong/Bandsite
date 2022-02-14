@@ -82,3 +82,8 @@ for (let i = 0; i < shows.length; i++) {
   titleLocation.innerText = "LOCATION";
   button.innerText = "BUY TICKETS";
 }
+
+
+
+
+

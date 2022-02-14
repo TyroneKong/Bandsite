@@ -185,16 +185,6 @@ body {
 
 }
 
-/* footer section */
-@include footer;
-
-.show__date{
-  @include tablet{
-
-  }
-
-}
-
 
 .responsive-iframe{
   position: relative;
@@ -204,6 +194,17 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+
+/* footer section */
+@include footer;
+
+.show__date{
+  @include tablet{
+
+  }
+
 }
 
 
