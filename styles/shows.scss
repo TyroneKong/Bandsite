@@ -81,6 +81,7 @@ body {
     @include tablet {
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
   
     }
   
@@ -96,12 +97,13 @@ body {
   }
   @include tablet {
     display: flex;
-    column-gap: 4.375rem;
-    justify-content: space-around;
+    column-gap: .625rem;
+    justify-content: space-between;
     border-bottom: 1px solid orange;
   }
   @include desktop{
-    column-gap: 15.625rem;
+    column-gap:7.625rem;
+    margin-left: 18.5rem;
   }
   }
 
@@ -111,6 +113,7 @@ body {
       display: flex;
       justify-content: space-around;
     }
+    
   }
 
   &__items h3 {
@@ -123,19 +126,40 @@ body {
 
   &__date {
     font-weight: bold;
+    @include tablet{
+      width: 25%;
+      @include desktop{
+
+  
+      }
+    }
   }
+  &__venue{
+    @include tablet{
+      width: 25%;
+    }
+    @include desktop{
+     
+    }
+  }
+&__location{
+  @include tablet{
+    width: 25%;
+  }
+}
+
   &__sub-headings {
     display: none;
     @include tablet {
       color: $silver;
       display: flex;
-      column-gap: 100px;
+      column-gap: 1.25rem;
       justify-content: space-evenly;
       position: relative;
       left: -12.5rem;
     }
     @include desktop{
-     
+      left: -4.5rem;
     }
   }
 
@@ -160,7 +184,7 @@ body {
   }
 
 &__buy-button{
-  width: 70vw;
+  width: 60vw;
   font-size: 1.25rem;
   padding: 1.5rem 1.125rem;
   border-radius: 0.25rem;
@@ -172,14 +196,14 @@ body {
     background-color: #000000;
   }
   @include tablet {
+    width: 30vw;
     font-size: 1.25rem;
-    width: 12.5rem;
-    padding: 1.5rem 1.125rem;
+    padding: 0.625rem 2.125rem;
     margin: 0.625rem;
   }
   @include desktop {
     font-size: 1.25rem;
-    width: 12.5rem;
+    width: 30vw;
   }
 }
 
