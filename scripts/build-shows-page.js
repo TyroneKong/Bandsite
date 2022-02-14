@@ -87,13 +87,18 @@ for (let i = 0; i < shows.length; i++) {
 
 
 
+//using spread operator to spread items in an array before looping over each row 
 
-[...document.querySelectorAll('.show__list-tickets ')].forEach(row => {
+const tickets = document.querySelectorAll('.show__list-tickets ');
 
+[...tickets].forEach(row => {
+
+  
   row.addEventListener('click',(item)=> {
 
-    const rowWithcClass = document.querySelector('.active');
-    rowWithcClass !== null? rowWithcClass.classList.remove('active'):row.classList.add('active')
+    const activeRow = document.querySelector('.active');
+    //ternary checks condition
+    activeRow !== null? activeRow.classList.remove('active'):row.classList.add('active')
 
   })
 })
