@@ -480,6 +480,11 @@ button:hover {
 
 }
 
+.divide{
+  border:1px solid $mercury ;
+}
+
+
 
 label {
   display: block;
@@ -489,8 +494,4 @@ label {
 
 //Footer section
 @include footer;
-
-.divide{
-  border:1px solid $mercury ;
-}
 
