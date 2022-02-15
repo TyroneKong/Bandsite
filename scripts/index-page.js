@@ -1,5 +1,8 @@
 
-axios.get('https://project-1-api.herokuapp.com/comments?api_key=26f7fbd0-3fdd-499f-b4b6-45cd5a42c2c4')
+const apiKey = "26f7fbd0-3fdd-499f-b4b6-45cd5a42c2c4"
+
+
+axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
 .then(response=>{
  
 
