@@ -53,7 +53,7 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     month: "2-digit",
     day: "2-digit",
   });
-  console.log(formattedDate)
+
   //apply new comment
   
   const applyNewComment = (event) => {
@@ -68,7 +68,32 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
         timestamp: formattedDate,
         comment: commentInput,
       });
+
+      //post a comment to the backend
+      axios({
+        url: `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
+        method:"post",
+        data:{
+        name: nameInput,
+        comment: commentInput,
+        },
+        headers: { "Content-Type": "application/json" },
+      })
+        .then(response => {
+          //handle success
+          console.log(response);
+        })
+        .catch(response => {
+          //handle error
+          console.log(response);
+        });
+
+
+ 
     }
+
+  
+
     commentList.innerText = "";
     event.preventDefault();
     formValidation();
@@ -137,4 +162,43 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     displayComment()
   
 
+
+// comment list items
+const listItem =  document.querySelectorAll('li')
+
+const nodeArray = Array.from(listItem)
+console.log(nodeArray)
+
+nodeArray.reverse().forEach((item,index) => item.addEventListener('click', ()=> deleteComment(index)))
+
+
+
+//deletes comment
+
+const deleteComment=(index)=>{
+axios({
+method:"delete",
+url: `https://project-1-api.herokuapp.com/comments/${comments[index].id}?api_key=${apiKey}`,
+
+headers: { "Content-Type": "application/json" },
 })
+.then(response => {
+  //handle success
+  console.log(response);
+})
+.catch(response => {
+  //handle error
+  console.log(response);
+});
+
+
+setTimeout(()=>
+  location.reload()
+,1000)
+}
+
+
+  
+
+})
+
