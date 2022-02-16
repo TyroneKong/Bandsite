@@ -42,8 +42,7 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
   };
   
   // target dom elements
-  
-  // const commentContainer = document.querySelector(".comment__list");
+
   const commentBtn = document.querySelector(".comment__btn");
   // current date
   const currentDate = new Date();
@@ -122,12 +121,12 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     
         // add content
 
+        //convert epoch timestamp
        const convertedDate = new Date(comments[i].timestamp).toLocaleDateString("en-US", {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
       });
-       console.log(convertedDate)
 
         nameTitle.innerText = comments[i].name;
         date.innerText = convertedDate;
