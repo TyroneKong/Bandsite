@@ -62,13 +62,15 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     const commentList = document.querySelector(".comment__list");
   
     //only push object if name input not empty
+
     if (nameInput !== "") {
-      comments.push({
+      comments
+      .unshift({
         name: nameInput,
         timestamp: formattedDate,
         comment: commentInput,
       });
-
+      console.log(comments)
       //post a comment to the backend
       axios({
         url: `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
@@ -113,9 +115,11 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
 
 // display default comments  
     const displayComment = () => {
-
-  
-      for (let i = comments.length - 1; i >= 0; i--) {
+      const newComments = []
+      for(let i=0; i<comments.length; i++){
+        newComments.push(comments.sort((a,b)=> b.timestamp - a.timestamp))
+      }
+      for (let i=0; i<newComments.length; i++) {
       
         // target dom elements
         const commentList = document.querySelector(".comment__list");
@@ -152,12 +156,15 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
         month: "2-digit",
         day: "2-digit",
       });
-
+    
         nameTitle.innerText = comments[i].name;
         date.innerText = convertedDate;
         comment.innerText = comments[i].comment;
       }
+
+    
     };
+
 
     displayComment()
   
@@ -169,7 +176,7 @@ const listItem =  document.querySelectorAll('li')
 const nodeArray = Array.from(listItem)
 console.log(nodeArray)
 
-nodeArray.reverse().forEach((item,index) => item.addEventListener('click', ()=> deleteComment(index)))
+nodeArray.forEach((item,index) => item.addEventListener('click', ()=> deleteComment(index)))
 
 
 

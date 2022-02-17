@@ -50,7 +50,7 @@ for (let i = 0; i < response.data.length; i++) {
 
 
 
-  const convertedEpoch = new Date(Number(response.data[i].date)).toLocaleDateString("en-US", {
+  const convertedEpoch = new Date(Number(response.data[i].date)).toDateString("en-US", {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
