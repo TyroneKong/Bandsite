@@ -477,7 +477,25 @@ button:hover {
     margin: 3.125rem 25.875rem;
   }
 }
+&__deleteBtn-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  @include tablet{
+    margin-right: -40px;
+  }
+  @include desktop{
+    margin-right: -170px;
+  }
+}
+&__deleteBtn{
 
+  font-size: 16px;
+  width: 40%;;
+  @include tablet{
+
+  }
+}
 }
 
 .divide{
