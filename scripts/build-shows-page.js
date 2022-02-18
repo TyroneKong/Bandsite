@@ -8,7 +8,6 @@ console.log(response.data)
 
 //target dom element
 const showInfo = document.querySelector(".show__list");
-const buttonContainer = document.querySelector('.show__button-container')
 // display shows
 for (let i = 0; i < response.data.length; i++) {
   // create new elements
@@ -75,14 +74,15 @@ for (let i = 0; i < response.data.length; i++) {
 
 const tickets = document.querySelectorAll('.show__list-tickets ');
 
-[...tickets].forEach(row => {
+const ticketsArray = Array.from(tickets)
+ticketsArray.forEach(row => {
 
   
   row.addEventListener('click',(item)=> {
 
     const activeRow = document.querySelector('.active');
     //ternary checks condition
-    activeRow !== null? activeRow.classList.remove('active'):row.classList.add('active')
+    activeRow !== null? activeRow.classList.toggle('active'):row.classList.add('active')
 
   })
 })

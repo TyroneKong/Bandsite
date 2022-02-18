@@ -496,6 +496,12 @@ button:hover {
 
   }
 }
+&__likeBtn-container{
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 }
 
 .divide{

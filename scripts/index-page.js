@@ -1,10 +1,18 @@
+
+const url = "https://project-1-api.herokuapp.com/comments"
 const apiKey = "26f7fbd0-3fdd-499f-b4b6-45cd5a42c2c4";
 
+const header = {
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 axios
-  .get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
+  .get(`${url}?api_key=${apiKey}`)
   .then((response) => {
     const comments = response.data.map((item) => item);
-    console.log(comments);
+
     const inputField = document.querySelector(".input");
 
     // confirm alert
@@ -34,8 +42,6 @@ axios
       }
     };
 
-    // target dom elements
-    const commentBtn = document.querySelector(".comment__btn");
     // current date
     const currentDate = new Date();
 
@@ -58,25 +64,21 @@ axios
           timestamp: formattedDate,
           comment: commentInput,
         });
+
         console.log(comments);
-        //post a comment to the backend
-        axios({
-          url: `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
-          method: "post",
-          data: {
-            name: nameInput,
-            comment: commentInput,
-          },
-          headers: { "Content-Type": "application/json" },
-        })
-          .then((response) => {
-            //handle success
-            console.log(response);
-          })
-          .catch((response) => {
-            //handle error
-            console.log(response);
-          });
+
+        // post a comment to the backend
+
+        const body = { name: nameInput, comment: commentInput };
+
+        axios
+          .post(
+            `${url}?api_key=${apiKey}`,
+            body,
+            header
+          )
+          .then((response) => console.log(response))
+          .catch((error) => console.log(error));
       }
 
       commentList.innerText = "";
@@ -89,8 +91,9 @@ axios
       document.querySelector(".text").value = "";
     };
 
-    //button event
-    commentBtn.addEventListener("click", applyNewComment);
+    //button
+    const form = document.querySelector("form");
+    form.addEventListener("submit", applyNewComment);
 
     // display default comments
     const displayComment = () => {
@@ -98,16 +101,19 @@ axios
       const sortedComments = [];
 
       // sort comments by timestamp
-      for (let i = 0; i < comments.length; i++) {
+      comments.forEach((comment) => {
         sortedComments.push(comments.sort((a, b) => b.timestamp - a.timestamp));
-      }
+      });
+
       for (let i = 0; i < sortedComments.length; i++) {
         // target dom elements
         const commentList = document.querySelector(".comment__list");
 
         // create new elements
-        const deleteBtnContainer = document.createElement('div')
-        const deleteBtn = document.createElement('button')
+        const likeBtnContainer = document.createElement("div");
+        const deleteBtnContainer = document.createElement("div");
+        const likeBtn = document.createElement("button");
+        const deleteBtn = document.createElement("button");
         const date = document.createElement("p");
         const comment = document.createElement("p");
         const nameTitle = document.createElement("h3");
@@ -116,8 +122,10 @@ axios
         const divider = document.createElement("hr");
 
         // add classes to new elements
-        deleteBtnContainer.classList.add('comment__deleteBtn-container')
-        deleteBtn.classList.add('comment__deleteBtn')
+        likeBtnContainer.classList.add("comment__likeBtn-container");
+        deleteBtnContainer.classList.add("comment__deleteBtn-container");
+        likeBtn.classList.add("comment__likeBtn");
+        deleteBtn.classList.add("comment__deleteBtn");
         date.classList.add("comment__date");
         avatar.classList.add("conversation__avatar-img");
         nameTitle.classList.add("comment__name");
@@ -131,11 +139,9 @@ axios
         commentItem.appendChild(nameTitle);
         commentItem.appendChild(comment);
         commentList.appendChild(commentItem);
-        deleteBtnContainer.appendChild(deleteBtn)
-        commentItem.appendChild(deleteBtnContainer)
+        deleteBtnContainer.appendChild(deleteBtn);
+        commentItem.appendChild(deleteBtnContainer);
         commentList.appendChild(divider);
-
-        // add content
 
         //convert epoch timestamp
         const convertedDate = new Date(
@@ -149,41 +155,41 @@ axios
         nameTitle.innerText = comments[i].name;
         date.innerText = convertedDate;
         comment.innerText = comments[i].comment;
-        deleteBtn.innerText = 'DELETE COMMENT'
+        deleteBtn.innerText = "DELETE COMMENT";
       }
     };
 
     //invoke display comments
     displayComment();
 
-    // comment list items
+    //  // comment list items
     const listItem = document.querySelectorAll(".comment__deleteBtn");
 
     const nodeArray = Array.from(listItem);
     console.log(nodeArray);
 
+    //loop over the node list and attach an event listener to each item
     nodeArray.forEach((item, index) =>
-      item.addEventListener("click", () => deleteComment(index))
+      item.addEventListener("click", () =>
+        // location.reload()
+        deleteComment(index)
+      )
     );
-
-    //deletes comment
+    console.log(comments);
     const deleteComment = (index) => {
-      axios({
-        method: "delete",
-        url: `https://project-1-api.herokuapp.com/comments/${comments[index].id}?api_key=${apiKey}`,
-
-        headers: { "Content-Type": "application/json" },
-      })
+      axios
+        .delete(
+          `${url}/${comments[index].id}?api_key=${apiKey}`,
+          header
+        )
         .then((response) => {
           //handle success
           console.log(response);
-          setTimeout(() => location.reload(), 1000);
+          setTimeout(() => location.reload(), 10);
         })
         .catch((error) => {
           //handle error
           console.log(error);
         });
-
-
     };
   });
