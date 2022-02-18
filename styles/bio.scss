@@ -397,7 +397,8 @@ input {
 
 textarea {
   margin: 3rem 3.125rem;
-  width: 50%;
+  width: 80vw;
+  height: 10vh;
   border: 0.0625rem solid $mercury;
   @include tablet {
     width: 70%;
@@ -413,7 +414,7 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.25rem;
-  width: 100%;
+  width:70vw;
   color: #ffff;
   background-color: $bandsite-black;
   height: 3.5rem;
@@ -480,7 +481,7 @@ button:hover {
 &__deleteBtn-container{
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin-right: 50px;
   @include tablet{
     margin-right: -40px;
   }
@@ -491,16 +492,15 @@ button:hover {
 &__deleteBtn{
 
   font-size: 16px;
-  width: 40%;;
+ 
   @include tablet{
 
   }
+  @include desktop{
+    width: 10vw;
+  }
 }
-&__likeBtn-container{
-  width: 100px;
-  display: flex;
-  justify-content: flex-end;
-}
+
 
 }
 

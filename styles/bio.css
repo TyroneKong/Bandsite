@@ -589,7 +589,8 @@ input:focus {
 
 textarea {
   margin: 3rem 3.125rem;
-  width: 50%;
+  width: 80vw;
+  height: 10vh;
   border: 0.0625rem solid #e1e1e1;
 }
 @media screen and (min-width: 48rem) {
@@ -607,7 +608,7 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.25rem;
-  width: 100%;
+  width: 70vw;
   color: #ffff;
   background-color: #323232;
   height: 3.5rem;
@@ -681,7 +682,7 @@ button:hover {
 .comment__deleteBtn-container {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 @media screen and (min-width: 48rem) {
   .comment__deleteBtn-container {
@@ -695,12 +696,11 @@ button:hover {
 }
 .comment__deleteBtn {
   font-size: 16px;
-  width: 40%;
 }
-.comment__likeBtn-container {
-  width: 100px;
-  display: flex;
-  justify-content: flex-end;
+@media screen and (min-width: 80.625rem) {
+  .comment__deleteBtn {
+    width: 10vw;
+  }
 }
 
 .divide {

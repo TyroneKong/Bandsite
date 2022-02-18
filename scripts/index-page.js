@@ -142,6 +142,7 @@ axios
         deleteBtnContainer.appendChild(deleteBtn);
         commentItem.appendChild(deleteBtnContainer);
         commentList.appendChild(divider);
+        deleteBtn.addEventListener('click', ()=> deleteComment(i))
 
         //convert epoch timestamp
         const convertedDate = new Date(
@@ -162,20 +163,7 @@ axios
     //invoke display comments
     displayComment();
 
-    //  // comment list items
-    const listItem = document.querySelectorAll(".comment__deleteBtn");
-
-    const nodeArray = Array.from(listItem);
-    console.log(nodeArray);
-
-    //loop over the node list and attach an event listener to each item
-    nodeArray.forEach((item, index) =>
-      item.addEventListener("click", () =>
-        // location.reload()
-        deleteComment(index)
-      )
-    );
-    console.log(comments);
+  ;
     const deleteComment = (index) => {
       axios
         .delete(
