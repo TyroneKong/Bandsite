@@ -21,13 +21,13 @@ axios
 
       // user clicks ok
       if (ok) {
-        inputField.style.borderColor = "#e1e1e1";
+        inputField.classList.remove('conversation__input-border-red');
         inputField.focus();
       }
 
       //user clicks cancel
       else {
-        inputField.style.borderColor = "#e1e1e1";
+        inputField.classList.remove('conversation__input-border-red');
         inputField.focus();
       }
     };
@@ -37,7 +37,7 @@ axios
       let userInput = document.querySelector(".input").value;
 
       if (userInput === "") {
-        inputField.style.borderColor = "#D22D2D";
+        inputField.classList.add('conversation__input-border-red')
         setTimeout(() => alerting(), 10);
       }
     };

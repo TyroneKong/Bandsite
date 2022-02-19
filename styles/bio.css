@@ -505,6 +505,9 @@ header {
     right: -8.75rem;
   }
 }
+.conversation__input-border-red {
+  border: 1px solid #D22D2D;
+}
 .conversation__avatar-img {
   position: relative;
   right: 2.5rem;
