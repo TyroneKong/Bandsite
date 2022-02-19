@@ -37,7 +37,7 @@ axios
       let userInput = document.querySelector(".input").value;
 
       if (userInput === "") {
-        inputField.classList.add('conversation__input-border-red')
+        inputField.classList.add('input-border')
         setTimeout(() => alerting(), 10);
       }
     };
