@@ -1,136 +1,183 @@
-// comments array
-const comments = [
-  {
-    Name: "Mile Acosta",
-    Date: "12/20/2020",
-    Comment:
-      "I can stop listening Every time I hear once of their songs-the vocals - it gives me goosebumps.Shivers straight down my spine. What a beautiful expression of creativity. Cant get enough",
+
+const url = "https://project-1-api.herokuapp.com/comments"
+const apiKey = "26f7fbd0-3fdd-499f-b4b6-45cd5a42c2c4";
+
+const header = {
+  headers: {
+    "Content-Type": "application/json",
   },
-  {
-    Name: "Emilie Beach",
-    Date: "01/09/2021",
-    Comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    Name: "Connor Walton",
-    Date: "02/17/2021",
-    Comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-];
-
-const inputField = document.querySelector(".input");
-
-// confirm alert
-
-const alerting = () => {
-  const ok = confirm("Please fill in name!");
-
-  // user clicks ok
-  if (ok) {
-    // location.reload();
-    inputField.style.borderColor = "#e1e1e1";
-    inputField.focus();
-  }
-
-  //user clicks cancel
-
-  else {
-    inputField.style.borderColor = "#e1e1e1";
-    inputField.focus();
-  }
 };
 
-// validate name input
+axios
+  .get(`${url}?api_key=${apiKey}`)
+  .then((response) => {
+    const comments = response.data.map((item) => item);
 
-const formValidation = () => {
-  let userInput = document.querySelector(".input").value;
+    const inputField = document.querySelector(".input");
 
-  if (userInput === "") {
-    inputField.style.borderColor = "#D22D2D";
-    setTimeout(() => alerting(), 10);
-  }
-};
+    // confirm alert
+    const alerting = () => {
+      const ok = confirm("Please fill in name!");
 
-// target dom elements
+      // user clicks ok
+      if (ok) {
+        inputField.classList.remove('conversation__input-border-red');
+        inputField.focus();
+      }
 
-const commentContainer = document.querySelector(".comment__list");
-const commentBtn = document.querySelector(".comment__btn");
-// current date
-const currentDate = new Date();
-const formattedDate = currentDate.toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-});
+      //user clicks cancel
+      else {
+        inputField.classList.remove('conversation__input-border-red');
+        inputField.focus();
+      }
+    };
 
-//apply new comment
+    // validate name input
+    const formValidation = () => {
+      let userInput = document.querySelector(".input").value;
 
-const applyNewComment = (event) => {
-  const nameInput = document.querySelector(".input").value;
-  const commentInput = document.querySelector(".text").value;
-  const commentList = document.querySelector(".comment__list");
+      if (userInput === "") {
+        inputField.classList.add('input-border')
+        setTimeout(() => alerting(), 10);
+      }
+    };
 
-  //only push object if name input not empty
-  if (nameInput !== "") {
-    comments.push({
-      Name: nameInput,
-      Date: formattedDate,
-      Comment: commentInput,
+    // current date
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
     });
-  }
-  commentList.innerText = "";
-  event.preventDefault();
-  formValidation();
-  displayComment();
 
-  //clears input and text area after submission
-  document.querySelector(".input").value = "";
-  document.querySelector(".text").value = "";
-};
+    //apply new comment
+    const applyNewComment = (event) => {
+      const nameInput = document.querySelector(".input").value;
+      const commentInput = document.querySelector(".text").value;
+      const commentList = document.querySelector(".comment__list");
 
-//button event
+      //only push object if name input not empty
+      if (nameInput !== "") {
+        comments.unshift({
+          name: nameInput,
+          timestamp: formattedDate,
+          comment: commentInput,
+        });
 
-commentBtn.addEventListener("click", applyNewComment);
+        console.log(comments);
 
-// display default comments
-const displayComment = () => {
-  for (let i = comments.length - 1; i >= 0; i--) {
-    // target dom elements
-    const commentList = document.querySelector(".comment__list");
+        // post a comment to the backend
 
-    // create new elements
-    const date = document.createElement("p");
-    const comment = document.createElement("p");
-    const nameTitle = document.createElement("h3");
-    const commentItem = document.createElement("li");
-    const avatar = document.createElement("img");
-    const divider = document.createElement("hr");
+        const body = { name: nameInput, comment: commentInput };
 
-    // add classes to new elements
-    date.classList.add("comment__date");
-    avatar.classList.add("conversation__avatar-img");
-    nameTitle.classList.add("comment__name");
-    commentItem.classList.add("comment__item");
-    divider.classList.add("divider");
-    comment.classList.add('conversation__comment')
+        axios
+          .post(
+            `${url}?api_key=${apiKey}`,
+            body,
+            header
+          )
+          .then((response) => console.log(response))
+          .catch((error) => console.log(error));
+      }
 
-    // append children to parent element
-    commentItem.appendChild(avatar);
-    commentItem.appendChild(date);
-    commentItem.appendChild(nameTitle);
-    commentItem.appendChild(comment);
-    commentList.appendChild(commentItem);
-    commentList.appendChild(divider);
+      commentList.innerText = "";
+      event.preventDefault();
+      formValidation();
+      displayComment();
 
-    // add content
-    nameTitle.innerText = comments[i].Name;
-    date.innerText = comments[i].Date;
-    comment.innerText = comments[i].Comment;
-  }
-};
+      //clears input and text area after submission
+      document.querySelector(".input").value = "";
+      document.querySelector(".text").value = "";
+    };
 
-displayComment();
+    //button
+    const form = document.querySelector("form");
+    form.addEventListener("submit", applyNewComment);
 
+    // display default comments
+    const displayComment = () => {
+      //new sorted comments array
+      const sortedComments = [];
 
+      // sort comments by timestamp
+      comments.forEach((comment) => {
+        sortedComments.push(comments.sort((a, b) => b.timestamp - a.timestamp));
+      });
+
+      for (let i = 0; i < sortedComments.length; i++) {
+        // target dom elements
+        const commentList = document.querySelector(".comment__list");
+
+        // create new elements
+        const likeBtnContainer = document.createElement("div");
+        const deleteBtnContainer = document.createElement("div");
+        const likeBtn = document.createElement("button");
+        const deleteBtn = document.createElement("button");
+        const date = document.createElement("p");
+        const comment = document.createElement("p");
+        const nameTitle = document.createElement("h3");
+        const commentItem = document.createElement("li");
+        const avatar = document.createElement("img");
+        const divider = document.createElement("hr");
+
+        // add classes to new elements
+        likeBtnContainer.classList.add("comment__likeBtn-container");
+        deleteBtnContainer.classList.add("comment__deleteBtn-container");
+        likeBtn.classList.add("comment__likeBtn");
+        deleteBtn.classList.add("comment__deleteBtn");
+        date.classList.add("comment__date");
+        avatar.classList.add("conversation__avatar-img");
+        nameTitle.classList.add("comment__name");
+        commentItem.classList.add("comment__item");
+        divider.classList.add("divider");
+        comment.classList.add("conversation__comment");
+
+        // append children to parent element
+        commentItem.appendChild(avatar);
+        commentItem.appendChild(date);
+        commentItem.appendChild(nameTitle);
+        commentItem.appendChild(comment);
+        commentList.appendChild(commentItem);
+        deleteBtnContainer.appendChild(deleteBtn);
+        commentItem.appendChild(deleteBtnContainer);
+        commentList.appendChild(divider);
+        deleteBtn.addEventListener('click', ()=> deleteComment(i))
+
+        //convert epoch timestamp
+        const convertedDate = new Date(
+          comments[i].timestamp
+        ).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        });
+
+        nameTitle.innerText = comments[i].name;
+        date.innerText = convertedDate;
+        comment.innerText = comments[i].comment;
+        deleteBtn.innerText = "DELETE COMMENT";
+      }
+    };
+
+    //invoke display comments
+    displayComment();
+
+  ;
+    const deleteComment = (index) => {
+      axios
+        .delete(
+          `${url}/${comments[index].id}?api_key=${apiKey}`,
+          header
+        )
+        .then((response) => {
+          //handle success
+          console.log(response);
+          setTimeout(() => location.reload(), 10);
+        })
+        .catch((error) => {
+          //handle error
+          console.log(error);
+        });
+    };
+  });

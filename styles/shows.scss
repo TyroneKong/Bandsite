@@ -50,7 +50,7 @@ body {
   &__soundcloud-player {
     position: absolute;
     top: 13.125rem;
-    left: .625rem;
+    left: 0.625rem;
     z-index: 100;
     width: 90vw;
     @include tablet {
@@ -66,12 +66,10 @@ body {
 /* Show section */
 
 .show {
-  
   &__details {
     display: flex;
     @include tablet {
       flex-direction: column;
-      
     }
     @include desktop {
     }
@@ -81,33 +79,30 @@ body {
     @include tablet {
       display: flex;
       flex-direction: column;
-  
+      justify-content: flex-end;
     }
-  
   }
-  &__list-tickets{
-  
-  &:hover{
-  
-  background-color: $alabasta;
-  }
-  &:active{
-    background-color: $mercury;
-  }
-  @include tablet {
-    display: flex;
-    column-gap: 4.375rem;
-    justify-content: space-around;
-    border-bottom: 1px solid orange;
-  }
-  @include desktop{
-    column-gap: 15.625rem;
-  }
+  &__list-tickets {
+    &:hover {
+      background-color: $alabasta;
+    }
+    &:active {
+      background-color: $mercury;
+    }
+    @include tablet {
+      display: flex;
+      column-gap: 0.625rem;
+      justify-content: space-between;
+      border-bottom: 1px solid orange;
+    }
+    @include desktop {
+      column-gap: 7.625rem;
+      margin-left: 18.5rem;
+    }
   }
 
-
-  &__items{
-    @include tablet{
+  &__items {
+    @include tablet {
       display: flex;
       justify-content: space-around;
     }
@@ -123,19 +118,37 @@ body {
 
   &__date {
     font-weight: bold;
+    @include tablet {
+      width: 25%;
+      @include desktop {
+      }
+    }
   }
+  &__venue {
+    @include tablet {
+      width: 25%;
+    }
+    @include desktop {
+    }
+  }
+  &__location {
+    @include tablet {
+      width: 25%;
+    }
+  }
+
   &__sub-headings {
     display: none;
     @include tablet {
       color: $silver;
       display: flex;
-      column-gap: 100px;
+      column-gap: 1.25rem;
       justify-content: space-evenly;
       position: relative;
       left: -12.5rem;
     }
-    @include desktop{
-     
+    @include desktop {
+      left: -4.5rem;
     }
   }
 
@@ -155,38 +168,36 @@ body {
       margin-top: 4.375rem;
     }
   }
-  &__info-heading{
+  &__info-heading {
     color: $silver;
   }
 
-&__buy-button{
-  width: 70vw;
-  font-size: 1.25rem;
-  padding: 1.5rem 1.125rem;
-  border-radius: 0.25rem;
-  font-weight: bold;
-  background-color: $bandsite-black;
-  color: #ffff;
-
-  &:hover{
-    background-color: #000000;
-  }
-  @include tablet {
+  &__buy-button {
+    width: 60vw;
     font-size: 1.25rem;
-    width: 12.5rem;
     padding: 1.5rem 1.125rem;
-    margin: 0.625rem;
-  }
-  @include desktop {
-    font-size: 1.25rem;
-    width: 12.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    background-color: $bandsite-black;
+    color: #ffff;
+
+    &:hover {
+      background-color: #000000;
+    }
+    @include tablet {
+      width: 30vw;
+      font-size: 1.25rem;
+      padding: 0.625rem 2.125rem;
+      margin: 0.625rem;
+    }
+    @include desktop {
+      font-size: 1.25rem;
+      width: 30vw;
+    }
   }
 }
 
-}
-
-
-.responsive-iframe{
+.responsive-iframe {
   position: relative;
   top: 0;
   left: 0;
@@ -196,19 +207,14 @@ body {
   height: 100%;
 }
 
-
 /* footer section */
 @include footer;
 
-.show__date{
-  @include tablet{
-
+.show__date {
+  @include tablet {
   }
-
 }
-
 
 .active {
   background-color: $mercury;
- 
 }

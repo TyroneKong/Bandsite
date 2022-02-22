@@ -213,6 +213,7 @@ header {
   .show__list {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
   }
 }
 .show__list-tickets:hover {
@@ -224,16 +225,17 @@ header {
 @media screen and (min-width: 48rem) {
   .show__list-tickets {
     display: flex;
-    -moz-column-gap: 4.375rem;
-         column-gap: 4.375rem;
-    justify-content: space-around;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+    justify-content: space-between;
     border-bottom: 1px solid orange;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .show__list-tickets {
-    -moz-column-gap: 15.625rem;
-         column-gap: 15.625rem;
+    -moz-column-gap: 7.625rem;
+         column-gap: 7.625rem;
+    margin-left: 18.5rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -254,6 +256,21 @@ header {
 .show__date {
   font-weight: bold;
 }
+@media screen and (min-width: 48rem) {
+  .show__date {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .show__venue {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .show__location {
+    width: 25%;
+  }
+}
 .show__sub-headings {
   display: none;
 }
@@ -261,11 +278,16 @@ header {
   .show__sub-headings {
     color: #afafaf;
     display: flex;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
     justify-content: space-evenly;
     position: relative;
     left: -12.5rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .show__sub-headings {
+    left: -4.5rem;
   }
 }
 .show__date-mobile {
@@ -288,7 +310,7 @@ header {
   color: #afafaf;
 }
 .show__buy-button {
-  width: 70vw;
+  width: 60vw;
   font-size: 1.25rem;
   padding: 1.5rem 1.125rem;
   border-radius: 0.25rem;
@@ -301,16 +323,16 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .show__buy-button {
+    width: 30vw;
     font-size: 1.25rem;
-    width: 12.5rem;
-    padding: 1.5rem 1.125rem;
+    padding: 0.625rem 2.125rem;
     margin: 0.625rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .show__buy-button {
     font-size: 1.25rem;
-    width: 12.5rem;
+    width: 30vw;
   }
 }
 

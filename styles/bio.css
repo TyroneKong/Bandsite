@@ -505,6 +505,9 @@ header {
     right: -8.75rem;
   }
 }
+.conversation__input-border-red {
+  border: 1px solid #d22d2d;
+}
 .conversation__avatar-img {
   position: relative;
   right: 2.5rem;
@@ -589,7 +592,8 @@ input:focus {
 
 textarea {
   margin: 3rem 3.125rem;
-  width: 50%;
+  width: 80vw;
+  height: 10vh;
   border: 0.0625rem solid #e1e1e1;
 }
 @media screen and (min-width: 48rem) {
@@ -607,7 +611,7 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.25rem;
-  width: 100%;
+  width: 70vw;
   color: #ffff;
   background-color: #323232;
   height: 3.5rem;
@@ -642,6 +646,16 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 48rem) {
+  .comment {
+    margin-top: -6.25rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .comment {
+    margin-top: -4.25rem;
+  }
+}
 .comment-section {
   display: flex;
   flex-direction: column;
@@ -653,7 +667,7 @@ button:hover {
 }
 .comment__name {
   position: relative;
-  bottom: 1.5rem;
+  bottom: 2.5rem;
   left: 0.625rem;
 }
 @media screen and (min-width: 48rem) {
@@ -676,6 +690,29 @@ button:hover {
 @media screen and (min-width: 80.625rem) {
   .comment-container {
     margin: 3.125rem 25.875rem;
+  }
+}
+.comment__deleteBtn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+@media screen and (min-width: 48rem) {
+  .comment__deleteBtn-container {
+    margin-right: -40px;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .comment__deleteBtn-container {
+    margin-right: -170px;
+  }
+}
+.comment__deleteBtn {
+  font-size: 16px;
+}
+@media screen and (min-width: 80.625rem) {
+  .comment__deleteBtn {
+    width: 10vw;
   }
 }
 
