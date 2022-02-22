@@ -21,6 +21,22 @@ body {
   &__container {
     position: relative;
   }
+  &__paragraph{
+    @include sectionheaderMobile;
+    position: absolute;
+    z-index: 100;
+    margin-left: 5.25rem;
+    color: $primary-text-color;
+    bottom: 15rem;
+    @include tablet {
+      bottom: 30rem;
+      margin-left: 6.25rem;
+      @include sectionheaderDesktopTablet;
+    }
+    @include desktop {
+      bottom: 60rem;
+    }
+  }
 
   &__title {
     @include pageheaderMobile;
@@ -28,6 +44,7 @@ body {
     z-index: 100;
     margin-left: 5.25rem;
     color: $primary-text-color;
+    bottom: 10rem;
     @include tablet {
       bottom: 20rem;
       margin-left: 6.25rem;
@@ -151,6 +168,12 @@ body {
       left: -4.5rem;
     }
   }
+  &__heading{
+    @include subheaderMobile;
+    @include tablet{
+     @include subheaderDesktopTablet
+    }
+  }
 
   &__date-mobile {
     margin-left: 16.875rem;
@@ -175,11 +198,14 @@ body {
   &__buy-button {
     width: 60vw;
     font-size: 1.25rem;
-    padding: 1.5rem 1.125rem;
+    padding: 1rem 1.125rem;
     border-radius: 0.25rem;
     font-weight: bold;
     background-color: $bandsite-black;
     color: #ffff;
+    @include tablet{
+      height: 3.125rem;
+    }
 
     &:hover {
       background-color: #000000;
