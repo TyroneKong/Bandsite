@@ -157,7 +157,7 @@ header {
 }
 @media screen and (min-width: 48rem) {
   .hero__title-paragraph {
-    bottom: 50rem;
+    bottom: 30rem;
     margin-left: 6.25rem;
     font-size: 36px;
     line-height: 44px;
@@ -190,7 +190,7 @@ header {
 }
 @media screen and (min-width: 80.625rem) {
   .hero__title {
-    bottom: 50rem;
+    bottom: 48rem;
   }
 }
 .hero__overlay {
@@ -220,7 +220,7 @@ header {
     width: 37.5rem;
     height: 200px;
     margin-top: -25rem;
-    margin-left: 62.5rem;
+    margin-left: 42.5rem;
     top: 56.25rem;
   }
 }

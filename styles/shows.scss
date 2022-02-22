@@ -29,7 +29,7 @@ body {
   bottom: 17rem;
   color: $primary-text-color;
   @include tablet {
-    bottom: 50rem;
+    bottom: 30rem;
     margin-left: 6.25rem;
     @include sectionheaderDesktopTablet;
   }
@@ -51,7 +51,7 @@ body {
       @include pageheaderDesktopTablet;
     }
     @include desktop {
-      bottom: 50rem;
+      bottom: 48rem;
     }
   }
   &__overlay {
@@ -79,7 +79,7 @@ body {
       width: 37.5rem;
       height: 200px;
       margin-top: -25rem;
-      margin-left: 62.5rem;
+      margin-left: 42.5rem;
       top: 56.25rem;
     }
   }
