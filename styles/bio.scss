@@ -4,8 +4,6 @@
 @use "./partials/header" as *;
 @use "./partials/footer" as *;
 
-
-
 body {
   position: relative;
   font-family: $font-style;
@@ -36,7 +34,7 @@ body {
     @include tablet {
       bottom: 12.5rem;
       margin-left: 6.25rem;
-      @include sectionheaderDesktopTablet
+      @include sectionheaderDesktopTablet;
     }
     @include desktop {
       bottom: 30rem;
@@ -253,26 +251,22 @@ body {
     }
   }
   &__input-container {
-    
     display: flex;
     justify-content: center;
     @include tablet {
-      
       justify-content: center;
     }
     @include desktop {
       width: 80%;
-    justify-content: center;
-    margin-left: 11.25rem;
- 
+      justify-content: center;
+      margin-left: 11.25rem;
     }
   }
- 
 
-&__label-heading{
-  display: flex;
-  color: $silver;
-}
+  &__label-heading {
+    display: flex;
+    color: $silver;
+  }
 
   &__avatar {
     height: 2.25rem;
@@ -292,69 +286,65 @@ body {
       }
     }
   }
-  &__comment{
-    margin: .625rem .625rem;
+  &__comment {
+    margin: 0.625rem 0.625rem;
   }
 
-&__comment-container{
-  margin-left: .625rem;
-  width: 170%;
-  @include tablet{
-    width:100%;
-    display: flex;
-    justify-content: center;
-    margin-left: -1.25rem;
+  &__comment-container {
+    margin-left: 0.625rem;
+    width: 170%;
+    @include tablet {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: -1.25rem;
+    }
+    @include desktop {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      margin-left: 10.0625rem;
+    }
   }
-  @include desktop{ 
-    width:80%;
-    display: flex;
-    justify-content: center;
-    margin-left: 10.0625rem;
-    
-  }
-}
-  &__label-name{
+  &__label-name {
     position: relative;
     top: -1.875rem;
     right: -3.125rem;
   }
-  &__label-comment{
+  &__label-comment {
     position: relative;
     top: 1.5rem;
     right: -3.75rem;
-    @include tablet{
+    @include tablet {
       right: -8.75rem;
     }
-   
-}
-&__input-border-red{
-  border: 1px solid #D22D2D
-}
-
-
-&__avatar-img {
-  position: relative;
-  right: 2.5rem;
-  top: 3.75rem;
-  @include tablet {
-    margin-left: -1.25rem;
   }
-}
-&__btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-  @include tablet {
+  &__input-border-red {
+    border: 1px solid #d22d2d;
+  }
+
+  &__avatar-img {
+    position: relative;
+    right: 2.5rem;
+    top: 3.75rem;
+    @include tablet {
+      margin-left: -1.25rem;
+    }
+  }
+  &__btn {
+    width: 100%;
     display: flex;
-    margin-left: -1.875rem;
-  }
-  @include desktop{
-    margin-left: 11.875rem;
+    justify-content: center;
+    padding: 0 2rem;
+    @include tablet {
+      display: flex;
+      margin-left: -1.875rem;
+    }
+    @include desktop {
+      margin-left: 11.875rem;
+    }
   }
 }
-}
-
 
 .comment__list {
   list-style: none;
@@ -370,7 +360,6 @@ body {
     width: 3rem;
   }
 }
-
 
 ::placeholder {
   color: #000000;
@@ -398,7 +387,6 @@ input {
   }
 }
 
-
 textarea {
   margin: 3rem 3.125rem;
   width: 80vw;
@@ -412,13 +400,11 @@ textarea {
   }
 }
 
-
-
 button {
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.25rem;
-  width:70vw;
+  width: 70vw;
   color: #ffff;
   background-color: $bandsite-black;
   height: 3.5rem;
@@ -426,7 +412,7 @@ button {
   @include tablet {
     font-size: 1.5rem;
     width: 20%;
-    margin-left: 40.625rem
+    margin-left: 40.625rem;
   }
   @include desktop {
     font-size: 1.5rem;
@@ -443,7 +429,6 @@ button:hover {
 .divider {
   border-top: 0.0625rem solid $mercury;
   margin-bottom: -0.625rem;
-
 }
 
 .comment {
@@ -451,68 +436,67 @@ button:hover {
 
   display: flex;
   flex-direction: column;
-
-  &-section{
+  @include tablet {
+    margin-top: -6.25rem;
+  }
+  @include desktop {
+    margin-top: -4.25rem;
+  }
+  &-section {
     display: flex;
     flex-direction: column;
   }
-  &__date{
+  &__date {
     display: flex;
-  justify-content: flex-end;
-  color: $silver;
+    justify-content: flex-end;
+    color: $silver;
   }
-  &__name{
+  &__name {
     position: relative;
-    bottom: 1.5rem;
+    bottom: 2.5rem;
     left: 0.625rem;
     @include tablet {
       left: 0.625rem;
+    }
+  }
+  &__item {
+    margin-top: -1.875rem;
+    margin-left: 0.625re;
+  }
+  &-container {
+    margin: 1.25rem 0.625rem;
+    @include tablet {
+      margin: 6.375rem;
+    }
+    @include desktop {
+      margin: 3.125rem 25.875rem;
+    }
+  }
+  &__deleteBtn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    @include tablet {
+      margin-right: -40px;
+    }
+    @include desktop {
+      margin-right: -170px;
+    }
+  }
+  &__deleteBtn {
+    font-size: 16px;
+
+    @include tablet {
+    }
+    @include desktop {
+      width: 10vw;
+    }
   }
 }
-&__item{
-  margin-top: -1.875rem;
-  margin-left: 0.625re
+
+.divide {
+  border: 1px solid $mercury;
 }
-&-container{
-  margin: 1.25rem .625rem;
-  @include tablet {
-    margin: 6.375rem;
-  }
-  @include desktop {
-    margin: 3.125rem 25.875rem;
-  }
-}
-&__deleteBtn-container{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
-  @include tablet{
-    margin-right: -40px;
-  }
-  @include desktop{
-    margin-right: -170px;
-  }
-}
-&__deleteBtn{
-
-  font-size: 16px;
- 
-  @include tablet{
-
-  }
-  @include desktop{
-    width: 10vw;
-  }
-}
-
-
-}
-
-.divide{
-  border:1px solid $mercury ;
-}
-
-
 
 label {
   display: block;
@@ -522,4 +506,3 @@ label {
 
 //Footer section
 @include footer;
-

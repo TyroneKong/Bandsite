@@ -506,7 +506,7 @@ header {
   }
 }
 .conversation__input-border-red {
-  border: 1px solid #D22D2D;
+  border: 1px solid #d22d2d;
 }
 .conversation__avatar-img {
   position: relative;
@@ -646,6 +646,16 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 48rem) {
+  .comment {
+    margin-top: -6.25rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .comment {
+    margin-top: -4.25rem;
+  }
+}
 .comment-section {
   display: flex;
   flex-direction: column;
@@ -657,7 +667,7 @@ button:hover {
 }
 .comment__name {
   position: relative;
-  bottom: 1.5rem;
+  bottom: 2.5rem;
   left: 0.625rem;
 }
 @media screen and (min-width: 48rem) {
