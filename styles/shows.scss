@@ -20,6 +20,7 @@ body {
 .hero {
   &__container {
     position: relative;
+    
   }
   &__paragraph{
     @include sectionheaderMobile;
@@ -69,13 +70,14 @@ body {
     top: 13.125rem;
     left: 0.625rem;
     z-index: 100;
-    width: 90vw;
+    width: 80vw;
     @include tablet {
-      top: 43.75rem;
+      top: 33.75rem;
       width: 60vw;
     }
     @include desktop {
-      top: 56.25rem;
+      margin-left: 46.25rem;
+      top: 32.25rem;
     }
   }
 }
@@ -159,16 +161,18 @@ body {
     @include tablet {
       color: $silver;
       display: flex;
-      column-gap: 1.25rem;
+      column-gap: 6.25rem;
       justify-content: space-evenly;
       position: relative;
-      left: -12.5rem;
+      left: -10.5rem;
     }
     @include desktop {
-      left: -4.5rem;
+      column-gap: .3125rem;
+      left: -5.5rem;
     }
   }
   &__heading{
+    margin-left: 2.1875rem;
     @include subheaderMobile;
     @include tablet{
      @include subheaderDesktopTablet
@@ -243,4 +247,19 @@ body {
 
 .active {
   background-color: $mercury;
+}
+
+iframe{
+  width: 100%;
+  @include tablet{
+    width: 90%;
+  }
+  @include desktop{
+    width: 60%;
+  }
+}
+.copyright{
+  @include tablet{
+    margin-left: 1.25rem;
+  }
 }
