@@ -218,7 +218,7 @@ header {
   }
 }
 .about__info-quote p {
-  line-height: 22px;
+  line-height: 1.375rem;
   font-weight: bold;
   margin: 1rem;
 }
@@ -695,20 +695,20 @@ button:hover {
 .comment__deleteBtn-container {
   display: flex;
   justify-content: flex-end;
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
 @media screen and (min-width: 48rem) {
   .comment__deleteBtn-container {
-    margin-right: -40px;
+    margin-right: -2.5rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .comment__deleteBtn-container {
-    margin-right: -170px;
+    margin-right: -10.625rem;
   }
 }
 .comment__deleteBtn {
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media screen and (min-width: 80.625rem) {
   .comment__deleteBtn {

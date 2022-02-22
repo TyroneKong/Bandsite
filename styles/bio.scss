@@ -82,7 +82,7 @@ body {
     }
   }
   &__info-quote p {
-    line-height: 22px;
+    line-height: 1.375rem;
     font-weight: bold;
     margin: 1rem;
     @include tablet {
@@ -475,16 +475,16 @@ button:hover {
   &__deleteBtn-container {
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
+    margin-right: 3.125rem;
     @include tablet {
-      margin-right: -40px;
+      margin-right: -2.5rem;
     }
     @include desktop {
-      margin-right: -170px;
+      margin-right: -10.625rem;
     }
   }
   &__deleteBtn {
-    font-size: 16px;
+    font-size: 1rem;
 
     @include tablet {
     }
