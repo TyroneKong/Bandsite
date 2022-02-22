@@ -145,18 +145,43 @@ header {
 .hero__container {
   position: relative;
 }
+.hero__title-paragraph {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  position: absolute;
+  z-index: 100;
+  margin-left: 2.25rem;
+  bottom: 17rem;
+  color: #ffff;
+}
+@media screen and (min-width: 48rem) {
+  .hero__title-paragraph {
+    bottom: 50rem;
+    margin-left: 6.25rem;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .hero__title-paragraph {
+    bottom: 60rem;
+  }
+}
 .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   position: absolute;
   z-index: 100;
-  margin-left: 5.25rem;
+  margin-left: 2.25rem;
+  bottom: 12rem;
   color: #ffff;
 }
 @media screen and (min-width: 48rem) {
   .hero__title {
-    bottom: 20rem;
+    bottom: 30rem;
     margin-left: 6.25rem;
     font-size: 60px;
     line-height: 68px;
@@ -178,23 +203,29 @@ header {
   background-color: #323232;
   opacity: 0.5;
 }
-.hero__soundcloud-player {
+.hero__soundcloud-player iframe {
   position: absolute;
-  top: 13.125rem;
+  top: 15.125rem;
   left: 0.625rem;
   z-index: 100;
-  width: 90vw;
 }
 @media screen and (min-width: 48rem) {
-  .hero__soundcloud-player {
+  .hero__soundcloud-player iframe {
+    width: 31.25rem;
     top: 43.75rem;
-    width: 60vw;
   }
 }
 @media screen and (min-width: 80.625rem) {
-  .hero__soundcloud-player {
+  .hero__soundcloud-player iframe {
+    width: 37.5rem;
+    height: 200px;
+    margin-top: -25rem;
+    margin-left: 62.5rem;
     top: 56.25rem;
   }
+}
+.hero__soundcloud-player {
+  display: flex;
 }
 
 /* Show section */
@@ -236,6 +267,20 @@ header {
     -moz-column-gap: 7.625rem;
          column-gap: 7.625rem;
     margin-left: 18.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .show h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .show h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -282,12 +327,12 @@ header {
          column-gap: 1.25rem;
     justify-content: space-evenly;
     position: relative;
-    left: -12.5rem;
+    left: -10.5rem;
   }
 }
 @media screen and (min-width: 80.625rem) {
   .show__sub-headings {
-    left: -4.5rem;
+    left: -9.5rem;
   }
 }
 .show__date-mobile {
@@ -526,4 +571,15 @@ footer span {
 
 .active {
   background-color: #e1e1e1;
+}
+
+@media screen and (min-width: 48rem) {
+  .copyright {
+    margin-left: 7.1875rem;
+  }
+}
+@media screen and (min-width: 80.625rem) {
+  .copyright {
+    margin-left: 0.9375rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
